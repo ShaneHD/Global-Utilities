@@ -50,6 +50,23 @@ public class StringUtils {
 	}
 	
 	/**
+	 * Uses {@link #quote(Object)} on everything grouped
+	 * @see {@link #group(Object...)}
+	 */
+	public static String groupAndQuote(Object... objs) {
+		String grouped = "";
+		
+		for(int i = 0; i < objs.length; i++) {
+			grouped+= quote(objs[i]);
+			
+			if(i != objs.length - 1)
+				grouped+= " ";
+		}
+		
+		return grouped;
+	}
+	
+	/**
 	 * For {@link HashMap}s<br>
 	 * Uses {@link FileUtils#separator} to seperate keys and values
 	 * @see {@link #group(Object...)}
