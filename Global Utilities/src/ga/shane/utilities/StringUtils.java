@@ -51,14 +51,14 @@ public class StringUtils {
 	
 	/**
 	 * For {@link HashMap}s<br>
-	 * Uses {@link FileUtils#seperator} to seperate keys and values
+	 * Uses {@link FileUtils#separator} to seperate keys and values
 	 * @see {@link #group(Object...)}
 	 */
 	public static String group(HashMap<?, ?> hashmap) {
 		String grouped = "";
 		
 		for(Map.Entry<?, ?> entry : hashmap.entrySet())
-			grouped+= entry.getKey() + FileUtils.seperator + entry.getValue() + '\n';
+			grouped+= entry.getKey() + FileUtils.separator + entry.getValue() + '\n';
 		
 		grouped = replaceLast(grouped, "\n", "");
 		return grouped;

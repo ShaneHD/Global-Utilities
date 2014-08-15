@@ -15,7 +15,7 @@ import java.util.Scanner;
 /** @author http://www.shane.ga */
 public class FileUtils {
 	/** Used with files to seperate keys and values */
-	public static String seperator = ":";
+	public static String separator = ":";
 	public static File workingDirectory = null;
 	
 	/**
@@ -39,6 +39,9 @@ public class FileUtils {
 		return file;
 	}
 	
+	/**
+	 * Get a value from a file using {@link #separator} to separate the key and value
+	 */
 	public static String getValue(String key, File file) {
 		try {
 			Scanner scanner = new Scanner(file);
@@ -48,7 +51,7 @@ public class FileUtils {
 				String s = scanner.nextLine();
 				
 				if(s.contains(key)) {
-					value = s.split(seperator)[1];
+					value = s.split(separator)[1];
 					break;
 				}
 			}
@@ -73,7 +76,7 @@ public class FileUtils {
 		HashMap<String, String> map = new HashMap<String, String>();
 		
 		for(String line : getLinesFromFile(file)) {
-			String[] split = line.split(seperator);
+			String[] split = line.split(separator);
 			map.put(split[0], split[1]);
 		}
 		
