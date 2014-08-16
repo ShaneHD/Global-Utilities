@@ -15,7 +15,7 @@ import javax.swing.text.Document;
  * See {@link #setPlaceholder(String)} and {@link #getPlaceholder()}<br>
  * See {@link #setPlaceholderColor(Color)} and {@link #getPlaceholderColor()} for the placeholder's draw color
  * 
- * @see {@link JButton}
+ * @see {@link JTextField}
  * @author http://www.shane.ga 
 */
 public class BJTextField extends JTextField {
