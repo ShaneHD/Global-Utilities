@@ -63,7 +63,7 @@ public class WindowsUtils {
 	}
 	
 	/**
-	 * @return An absolute path to {@link #user}'s home directory<br>
+	 * @return An absolute path to <code>user</code>'s home directory<br>
 	 * <i>C:/Users/%name%/</i>
 	 */
 	public static String getCUserDrive(String user) {
