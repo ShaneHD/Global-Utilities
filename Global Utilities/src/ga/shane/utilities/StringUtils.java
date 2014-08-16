@@ -5,6 +5,9 @@ import java.util.Map;
 
 /** @author http://www.shane.ga */
 public class StringUtils {
+	/** The alphabet in {@link String} form */
+	public final static String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	
 	/**
 	 * Surround a {@link String} with quotation marks
 	 * @param obj The thing to be surrounded
