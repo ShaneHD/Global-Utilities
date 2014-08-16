@@ -3,8 +3,8 @@ package ga.shane.utilities.gui;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
- * A {@link DefaultMutableTreeNode} with an icon field ({@link #icon})<br>
- * <b>NOTE</b> {@link #icon} doesn't do anything by itself.<br>
+ * A {@link DefaultMutableTreeNode} with an icon field ({@link #getIcon()})<br>
+ * <b>NOTE</b> {@link #getIcon()} doesn't do anything by itself.<br>
  * This is simply something for you to use in whatever way you wish.<br><br>
  * I made this so that when adding nodes to a {@link javax.swing.JTree}, I could give them an icon image
  * 
