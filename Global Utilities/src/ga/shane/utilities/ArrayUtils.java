@@ -8,9 +8,9 @@ public class ArrayUtils {
 	/** 
 	 * Array equivalent of {@link List#contains(Object)}
 	 */
-	public static boolean contains(Object[] array, Object find) {
-		for(Object obj : array) {
-			if(obj == find)
+	public static <T> boolean contains(T[] array, T find) {
+		for(T t : array) {
+			if(t == find)
 				return true;
 		}
 		
