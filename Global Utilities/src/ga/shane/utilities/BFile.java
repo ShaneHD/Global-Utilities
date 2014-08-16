@@ -37,6 +37,10 @@ public class BFile extends File {
 		return super.createNewFile();
 	}
 	
+	/**
+	 * @return Has this {@link File} been created in this session?<br>
+	 * (has {@link #createNewFile()} been called)
+	 */
 	public boolean isNewFile() {
 		return newlyCreated;
 	}
