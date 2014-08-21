@@ -154,11 +154,14 @@ public class FileUtils {
 	 */
 	public static boolean write(Object toWrite, File file, boolean... append) {
 		String write = "";
-		
+
 		if(toWrite instanceof String)
 			write = (String) toWrite;
 		else if(toWrite instanceof Iterable<?>) {
 			for(Object obj : (Iterable<?>) toWrite)
+				write+= obj + "\n";
+		} else if(toWrite instanceof Object[]) {
+			for(Object obj : (Object[]) toWrite)
 				write+= obj + "\n";
 		} else if(toWrite instanceof HashMap<?, ?>)
 			write = StringUtils.group((HashMap<?, ?>) toWrite);
