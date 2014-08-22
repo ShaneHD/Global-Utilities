@@ -14,7 +14,7 @@ import android.content.IntentFilter;
 //It is NOT made by me off of the top of my head 
 
 /** @author http://www.shane.ga */
-public class BluetoothHelper extends BroadcastReceiver {
+public class BluetoothHelper {
 	private final BluetoothAdapter btAdapter;
 	private final Set<BluetoothDevice> devices;
 	
@@ -26,11 +26,6 @@ public class BluetoothHelper extends BroadcastReceiver {
 			AndroidUtils.toast("Bluetooth isn't supported!");
 			main.finish();
 		}
-		
-		main.registerReceiver(this, new IntentFilter(BluetoothDevice.ACTION_FOUND));
-		main.registerReceiver(this, new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_STARTED));
-		main.registerReceiver(this, new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED));
-		main.registerReceiver(this, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
 		
 		if(!btAdapter.isEnabled())
 			main.startActivityForResult(new Intent(btAdapter.ACTION_REQUEST_ENABLE), 1);
@@ -77,10 +72,5 @@ public class BluetoothHelper extends BroadcastReceiver {
 	 */
 	public boolean isBluetoothSupported() {
 		return btAdapter != null;
-	}
-	
-	@Override
-	public void onReceive(Context context, Intent intent) {
-		
 	}
 }
