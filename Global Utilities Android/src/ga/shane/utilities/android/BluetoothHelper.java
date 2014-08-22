@@ -10,6 +10,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
+//Note that most code below is made by viewing examples from google
+//It is NOT made by me off of the top of my head 
+
 /** @author http://www.shane.ga */
 public class BluetoothHelper extends BroadcastReceiver {
 	private final BluetoothAdapter btAdapter;
@@ -75,7 +78,7 @@ public class BluetoothHelper extends BroadcastReceiver {
 	public boolean isBluetoothSupported() {
 		return btAdapter != null;
 	}
-
+	
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		
