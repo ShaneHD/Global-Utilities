@@ -1,5 +1,6 @@
 package ga.shane.utilities.android;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import android.app.Activity;
@@ -13,7 +14,7 @@ import android.content.Intent;
 /** @author http://www.shane.ga */
 public class BluetoothHelper {
 	private final BluetoothAdapter btAdapter;
-	private final Set<BluetoothDevice> devices;
+	private final Set<BluetoothDeviceWrapper> devices;
 	
 	public BluetoothHelper() {
 		Activity main = AndroidUtils.getMainActivity();
@@ -27,7 +28,10 @@ public class BluetoothHelper {
 		if(!btAdapter.isEnabled())
 			main.startActivityForResult(new Intent(btAdapter.ACTION_REQUEST_ENABLE), 1);
 			
-		devices = btAdapter.getBondedDevices();
+		devices = new HashSet<BluetoothDeviceWrapper>();
+		
+		for(BluetoothDevice device : btAdapter.getBondedDevices())
+			devices.add(new BluetoothDeviceWrapper(device));
 	}
 	
 	/**
@@ -41,7 +45,7 @@ public class BluetoothHelper {
 	/**
 	 * @return A {@link Set} containing all paired devices
 	 */
-	public Set<BluetoothDevice> getPairedDevices() {
+	public Set<BluetoothDeviceWrapper> getPairedDevices() {
 		return devices;
 	}
 	
