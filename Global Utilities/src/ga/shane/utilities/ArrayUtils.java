@@ -18,6 +18,17 @@ public class ArrayUtils {
 	}
 	
 	/**
+	 * Set an array to another array
+	 */
+	public static void set(Object[] array, Object[] to) {
+		if(array.length != to.length)
+			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
+			
+		for(int i = 0; i < array.length; i++)
+			array[i] = to[i];
+	}
+	
+	/**
 	 * Checks whether an array contains a value more than once or not
 	 */
 	public static boolean isExclusivelyPopulated(Object[] array) {
