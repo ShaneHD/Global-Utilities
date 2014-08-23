@@ -1,6 +1,7 @@
 package ga.shane.utilities.android;
 
 import android.app.Activity;
+import android.util.Log;
 import android.widget.Toast;
 
 /** @author http://www.shane.ga */
@@ -34,5 +35,17 @@ public class AndroidUtils {
 	 */
 	public static void toast(String message) {
 		toast(message, Toast.LENGTH_LONG);
+	}
+	
+	/**
+	 * Log an error
+	 * @param message The message
+	 * @param throwable (optional) The cause ({@link Throwable})
+	 */
+	public static void error(String message, Throwable... throwable) {
+		if(throwable.length != 0)
+			Log.e("ERROR", message, throwable[0]);
+		else
+			Log.e("ERORR", message);
 	}
 }
