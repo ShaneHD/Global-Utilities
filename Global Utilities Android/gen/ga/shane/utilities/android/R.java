@@ -1091,52 +1091,52 @@ containing a value of this type.
         public static int action_menu_divider=0x7f050016;
         public static int action_menu_presenter=0x7f050017;
         public static int action_mode_close_button=0x7f050024;
-        public static int action_settings=0x7f05003c;
         public static int activity_chooser_view_content=0x7f050025;
         public static int always=0x7f05000b;
         public static int beginning=0x7f050011;
-        public static int checkbox=0x7f05002d;
+        public static int checkbox=0x7f05002e;
         public static int collapseActionView=0x7f05000d;
         public static int default_activity_button=0x7f050028;
         public static int dialog=0x7f05000e;
         public static int disableHome=0x7f050008;
         public static int dropdown=0x7f05000f;
-        public static int edit_query=0x7f050030;
+        public static int edit_query=0x7f050031;
         public static int end=0x7f050013;
         public static int expand_activities_button=0x7f050026;
-        public static int expanded_menu=0x7f05002c;
+        public static int expanded_menu=0x7f05002d;
         public static int home=0x7f050014;
         public static int homeAsUp=0x7f050005;
-        public static int icon=0x7f05002a;
+        public static int icon=0x7f05002b;
         public static int ifRoom=0x7f05000a;
         public static int image=0x7f050027;
+        public static int image1=0x7f050029;
         public static int listMode=0x7f050001;
-        public static int list_item=0x7f050029;
+        public static int list_item=0x7f05002a;
         public static int middle=0x7f050012;
         public static int never=0x7f050009;
         public static int none=0x7f050010;
         public static int normal=0x7f050000;
         public static int progress_circular=0x7f050018;
         public static int progress_horizontal=0x7f050019;
-        public static int radio=0x7f05002f;
-        public static int search_badge=0x7f050032;
-        public static int search_bar=0x7f050031;
-        public static int search_button=0x7f050033;
-        public static int search_close_btn=0x7f050038;
-        public static int search_edit_frame=0x7f050034;
-        public static int search_go_btn=0x7f05003a;
-        public static int search_mag_icon=0x7f050035;
-        public static int search_plate=0x7f050036;
-        public static int search_src_text=0x7f050037;
-        public static int search_voice_btn=0x7f05003b;
-        public static int shortcut=0x7f05002e;
+        public static int radio=0x7f050030;
+        public static int search_badge=0x7f050033;
+        public static int search_bar=0x7f050032;
+        public static int search_button=0x7f050034;
+        public static int search_close_btn=0x7f050039;
+        public static int search_edit_frame=0x7f050035;
+        public static int search_go_btn=0x7f05003b;
+        public static int search_mag_icon=0x7f050036;
+        public static int search_plate=0x7f050037;
+        public static int search_src_text=0x7f050038;
+        public static int search_voice_btn=0x7f05003c;
+        public static int shortcut=0x7f05002f;
         public static int showCustom=0x7f050007;
         public static int showHome=0x7f050004;
         public static int showTitle=0x7f050006;
         public static int split_action_bar=0x7f05001e;
-        public static int submit_area=0x7f050039;
+        public static int submit_area=0x7f05003a;
         public static int tabMode=0x7f050002;
-        public static int title=0x7f05002b;
+        public static int title=0x7f05002c;
         public static int top_action_bar=0x7f050020;
         public static int up=0x7f050021;
         public static int useLogo=0x7f050003;
@@ -1192,11 +1192,7 @@ containing a value of this type.
         public static int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static int abc_search_view=0x7f030016;
         public static int abc_simple_decor=0x7f030017;
-        public static int activity_main=0x7f030018;
-        public static int support_simple_spinner_dropdown_item=0x7f030019;
-    }
-    public static final class menu {
-        public static int main=0x7f0c0000;
+        public static int support_simple_spinner_dropdown_item=0x7f030018;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1239,9 +1235,6 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static int action_settings=0x7f0a000f;
-        public static int app_name=0x7f0a000d;
-        public static int hello_world=0x7f0a000e;
     }
     public static final class style {
         /** 
