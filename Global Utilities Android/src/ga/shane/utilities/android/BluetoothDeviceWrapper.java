@@ -26,19 +26,19 @@ public class BluetoothDeviceWrapper implements IBluetoothDevice {
 		OutputStream out;
 		InputStream in;
 		
-        try {
+		try {
 			BluetoothSocket socket = device.createRfcommSocketToServiceRecord(device.getUuids()[0].getUuid());
 			
 			out = socket.getOutputStream();
 			in = socket.getInputStream();
-        } catch (IOException e) {
+		} catch (IOException e) {
 			out = null;
 			in = null;
 			e.printStackTrace();
 		}
         
-        this.out = out;
-        this.in = in;
+		this.out = out;
+		this.in = in;
 	}
 	
 	/**
