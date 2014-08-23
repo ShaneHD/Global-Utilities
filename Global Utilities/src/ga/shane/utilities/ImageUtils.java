@@ -13,6 +13,11 @@ import javax.imageio.ImageIO;
 
 /** @author http://www.shane.ga */
 public class ImageUtils {
+	/** An array of common image formats */
+	public static final String[] FORMATS = {
+		"png", "jpg", "jpeg", "gif", "bmp"
+	};
+	
 	/**
 	 * Convert a {@link RenderedImage} to a byte array
 	 */
