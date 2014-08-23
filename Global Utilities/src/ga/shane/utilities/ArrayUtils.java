@@ -53,6 +53,8 @@ public class ArrayUtils {
 			array[i] = value;
 	}
 	
+//	Auto generated code
+	
 	/**
 	 * Converts a int array to its object equivalent ({@link Integer})[]
 	 */
@@ -118,6 +120,30 @@ public class ArrayUtils {
 	 */
 	public static Byte[] primToObj(byte[] array) {
 		Byte[] clone = new Byte[array.length];
+
+		for(int i = 0; i < array.length; i++)
+			clone[i] = array[i];
+
+		return clone;
+	}
+
+	/**
+	 * Converts a short array to its object equivalent ({@link Short})[]
+	 */
+	public static Short[] primToObj(short[] array) {
+		Short[] clone = new Short[array.length];
+
+		for(int i = 0; i < array.length; i++)
+			clone[i] = array[i];
+
+		return clone;
+	}
+
+	/**
+	 * Converts a long array to its object equivalent ({@link Long})[]
+	 */
+	public static Long[] primToObj(long[] array) {
+		Long[] clone = new Long[array.length];
 
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
@@ -197,5 +223,27 @@ public class ArrayUtils {
 		return clone;
 	}
 
+	/**
+	 * Converts a {@link Short} array to its primitive equivalent (short[])
+	 */
+	public static short[] objToPrim(Short[] array) {
+		short[] clone = new short[array.length];
 
+		for(int i = 0; i < array.length; i++)
+			clone[i] = array[i];
+
+		return clone;
+	}
+
+	/**
+	 * Converts a {@link Long} array to its primitive equivalent (long[])
+	 */
+	public static long[] objToPrim(Long[] array) {
+		long[] clone = new long[array.length];
+
+		for(int i = 0; i < array.length; i++)
+			clone[i] = array[i];
+
+		return clone;
+	}
 }

@@ -4,6 +4,9 @@ import javax.swing.UIManager;
 
 /** @author http://www.shane.ga */
 public class GuiUtils {
+	/**
+	 * Calls {@link UIManager#setLookAndFeel(javax.swing.LookAndFeel)} with {@link UIManager#getSystemLookAndFeelClassName()}
+	 */
 	public static void setDefaultLookandfeel() {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

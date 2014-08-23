@@ -6,7 +6,6 @@ import java.io.OutputStream;
 
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
-import android.util.Log;
 
 /**
  * Wraps around {@link BluetoothDevice} to add more functionality<br>
