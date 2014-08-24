@@ -34,6 +34,9 @@ public class ImageUtils {
 		return out.toByteArray();
 	}
 	
+	/**
+	 * Convert byte[] to {@link BufferedImage}
+	 */
 	public static BufferedImage fromByteArray(byte[] bytes) {
 		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
 		

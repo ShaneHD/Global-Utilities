@@ -19,6 +19,20 @@ public class FileUtils {
 	public static File workingDirectory = null;
 	
 	/**
+	 * Check if a {@link File} is an image or not
+	 */
+	public static boolean isImage(File file) {
+		String name = file.getName();
+		
+		for(String format : ImageUtils.FORMATS) {
+			if(name.endsWith(format))
+				return true;
+		}
+		
+		return false;
+	}
+	
+	/**
 	 * Create a new {@link BFile}
 	 * @param name Name of the file (including extention)
 	 * @param createNewIfNotExistsFlag If this optional argument is set, {@link File#createNewFile()} will be called
