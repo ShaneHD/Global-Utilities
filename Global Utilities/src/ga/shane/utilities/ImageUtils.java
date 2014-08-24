@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -17,6 +18,13 @@ public class ImageUtils {
 	public static final String[] FORMATS = {
 		"png", "jpg", "jpeg", "gif", "bmp"
 	};
+	
+	/**
+	 * @see {@link FileUtils#isImage(File)}
+	 */
+	public static boolean isImage(File file) {
+		return FileUtils.isImage(file);
+	}
 	
 	/**
 	 * Convert a {@link RenderedImage} to a byte array
