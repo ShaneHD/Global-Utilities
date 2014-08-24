@@ -1113,9 +1113,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1127,9 +1130,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1141,9 +1147,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1155,9 +1164,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1169,9 +1181,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1183,9 +1198,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1197,9 +1215,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1211,9 +1232,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1225,9 +1249,12 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(!array1[i].equals(array2[i]))
+			if(array1[i] == null || array2[i] == null) {
+				if(array1[i] != array2[i])
+					return false;
+			} else if(!array1[i].equals(array2[i]))
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1239,9 +1266,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1253,9 +1280,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1267,9 +1294,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1281,9 +1308,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1295,9 +1322,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1309,9 +1336,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1323,9 +1350,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
@@ -1337,9 +1364,9 @@ public class ArrayUtils {
 			return false;
 	
 		for(int i = 0; i < array1.length; i++) {
-			if(array1[i] != array2[i])
+			if(array1[1] != array2[i])
 				return false;
-			}
+		}
 	
 		return true;
 	}
