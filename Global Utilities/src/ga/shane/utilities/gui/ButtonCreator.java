@@ -4,13 +4,12 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /** @author http://www.shane.ga */
 public class ButtonCreator {
-	private final JPanel panel;
+	public final JPanel panel;
 	private final HashSet<IAction> actions;
 	public final ArrayList<JButton> buttons = new ArrayList<JButton>();
 	
@@ -18,7 +17,7 @@ public class ButtonCreator {
 		this.panel = panel;
 		this.actions = new HashSet<IAction>(Arrays.asList(actions));
 	}
-	
+		
 	public ButtonCreator add(Object... buttons) {
 		JButton last = null;
 		
@@ -37,9 +36,11 @@ public class ButtonCreator {
 			} else
 				throw new RuntimeException("Invalid param");
 			
-			last = button;
-			this.buttons.add(button);
-			panel.add(button);
+			if(button != null) {
+				last = button;
+				this.buttons.add(button);
+				panel.add(button);
+			}
 		}
 		
 		return this;
