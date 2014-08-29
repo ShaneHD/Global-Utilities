@@ -44,18 +44,7 @@ public class ButtonCreator {
 		
 		return this;
 	}
-	
-	public ButtonCreator add(JButton... buttons) {
-		for(JButton button : buttons) {
-			panel.add(button);
-			
-			for(IAction action : actions)
-				action.on(button);
-		}
-		
-		return this;
-	}
-	
+
 	public ButtonCreator remove(JButton button) {
 		buttons.remove(button);
 		panel.remove(button);
