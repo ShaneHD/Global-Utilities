@@ -37,6 +37,14 @@ public class WindowsUtils {
 	}
 	
 	/**
+	 * NoArg version
+	 * @see {@link #agreeBox(String)}
+	 */
+	public static boolean agreeBox() {
+		return agreeBox("Sure that you want to continue?");
+	}
+	
+	/**
 	 * Makes sure that the message is visible no matter what (on any window)
 	 * @see {@link #messagebox(String, String, int, Component...)}
 	 */
