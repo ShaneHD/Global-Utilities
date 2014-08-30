@@ -40,6 +40,9 @@ public class ButtonCreator {
 				last = button;
 				this.buttons.add(button);
 				panel.add(button);
+				
+				for(IAction action : actions)
+					action.on(button);
 			}
 		}
 		
