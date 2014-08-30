@@ -81,7 +81,7 @@ public class WindowsUtils {
 	public static void runVBScript(final String script, final String... args) {
 		new Thread() {
 			public void run() {
-				String arguments = StringUtils.groupAndQuote(args);
+				String arguments = StringUtils.groupAndQuote((Object[]) args);
 				File file = new File(FileUtils.workingDirectory, new Random().nextLong() + ".vbs");
 				
 				try {
