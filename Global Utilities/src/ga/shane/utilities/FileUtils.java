@@ -4,9 +4,14 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -192,6 +197,15 @@ public class FileUtils {
 		}
 		
 		return true;
+	}
+	
+	@SuppressWarnings("resource")
+	/**
+	 * Downloads a file and saves it to a location on the computer
+	 */
+	public void download(URL url, String save) throws IOException {
+		ReadableByteChannel channel = Channels.newChannel(url.openStream());
+		new FileOutputStream(save).getChannel().transferFrom(channel, 0, Long.MAX_VALUE);
 	}
 }
 
