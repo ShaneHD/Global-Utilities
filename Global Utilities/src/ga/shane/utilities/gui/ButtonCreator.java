@@ -45,20 +45,24 @@ public class ButtonCreator extends ArrayList<JButton> {
 			
 			if(o instanceof String)
 				button = new BJButton((String) o);
-			else if(o instanceof JButton)
-				button = (JButton) o;
-			else if(o instanceof ActionListener) {
-				if(last != null)
-					last.addActionListener((ActionListener) o);
-				else
-					throw new RuntimeException("Button needs to go before listener");
-			} else if(o instanceof IAction) {
-				if(last != null)
-					((IAction) o).on(last);
-				else
-					throw new RuntimeException("Button needs to go before IAction");
-			} else
-				throw new RuntimeException("Invalid param");
+			else {
+				if(o instanceof JButton)
+					button = (JButton) o;
+				
+				if(o instanceof ActionListener) {
+					if(last != null)
+						last.addActionListener((ActionListener) o);
+					else
+						throw new RuntimeException("Button needs to go before listener");
+				} 
+				
+				if(o instanceof IAction) {
+					if(last != null)
+						((IAction) o).on(last);
+					else
+						throw new RuntimeException("Button needs to go before IAction");
+				}
+			}
 			
 			if(button != null) {
 				last = button;
