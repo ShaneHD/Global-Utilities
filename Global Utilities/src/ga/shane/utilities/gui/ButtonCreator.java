@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 /**
  * A {@link JButton} creator<br>
+ * Creates and adds {@link JButton}s to a {@link JPanel}<br>
  * 
  * @author http://www.shane.ga
  */
@@ -26,7 +27,14 @@ public class ButtonCreator extends ArrayList<JButton> {
 	}
 	
 	/**
-	 * Add a {@link JButton}
+	 * Add a {@link JButton}<br>
+	 * You can add as many buttons as you want.<br>
+	 * arg can be a {@link String}, {@link JButton}, or a {@link ActionListener}<br>
+	 * A {@link String} will use <code>new {@link BJButton(String)}</code><br>
+	 * and an {@link ActionListener} will add that listener to the previously added button<br><br>
+	 * 
+	 * An arg can also be an {@link IAction}. It call the action on the previously added button
+	 * 
 	 * @return this
 	 */
 	public ButtonCreator add(Object... buttons) {
@@ -44,6 +52,11 @@ public class ButtonCreator extends ArrayList<JButton> {
 					last.addActionListener((ActionListener) o);
 				else
 					throw new RuntimeException("Button needs to go before listener");
+			} else if(o instanceof IAction) {
+				if(last != null)
+					((IAction) o).on(last);
+				else
+					throw new RuntimeException("Button needs to go before IAction");
 			} else
 				throw new RuntimeException("Invalid param");
 			
