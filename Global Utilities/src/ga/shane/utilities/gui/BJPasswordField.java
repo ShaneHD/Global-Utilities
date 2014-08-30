@@ -16,7 +16,8 @@ import javax.swing.text.Document;
  * 
  * @see {@link JPasswordField}
  * @author http://www.shane.ga 
-*/public class BJPasswordField extends JPasswordField implements IBJTextField {
+*/
+public class BJPasswordField extends JPasswordField implements IBJTextField {
 	private String placeholder;
 	private Color placeholderColor = Color.gray;
 	
