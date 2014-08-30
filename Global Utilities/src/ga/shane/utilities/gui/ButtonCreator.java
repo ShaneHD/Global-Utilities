@@ -3,21 +3,32 @@ package ga.shane.utilities.gui;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-/** @author http://www.shane.ga */
-public class ButtonCreator {
+/**
+ * A {@link JButton} creator<br>
+ * 
+ * @author http://www.shane.ga
+ */
+public class ButtonCreator extends ArrayList<JButton> {
+	/** The panel that the buttons have been added to */
 	public final JPanel panel;
 	private final HashSet<IAction> actions;
-	public final ArrayList<JButton> buttons = new ArrayList<JButton>();
-	
+	/** A {@link HashMap} containing all the buttons [buttonText, {@link JButton}] */
+	public final HashMap<String, JButton> map = new HashMap<String, JButton>();
+	 
 	public ButtonCreator(JPanel panel, IAction... actions) {
 		this.panel = panel;
 		this.actions = new HashSet<IAction>(Arrays.asList(actions));
 	}
-		
+	
+	/**
+	 * Add a {@link JButton}
+	 * @return this
+	 */
 	public ButtonCreator add(Object... buttons) {
 		JButton last = null;
 		
@@ -38,7 +49,8 @@ public class ButtonCreator {
 			
 			if(button != null) {
 				last = button;
-				this.buttons.add(button);
+				add(button);
+				map.put(button.getText(), button);
 				panel.add(button);
 				
 				for(IAction action : actions)
@@ -49,8 +61,12 @@ public class ButtonCreator {
 		return this;
 	}
 
+	/**
+	 * Remove a {@link JButton}
+	 * @return this
+	 */
 	public ButtonCreator remove(JButton button) {
-		buttons.remove(button);
+		remove(button);
 		panel.remove(button);
 		panel.revalidate();
 		panel.repaint();
@@ -58,11 +74,19 @@ public class ButtonCreator {
 		return this;
 	}
 	
+	/**
+	 * Add an {@link IAction}
+	 * @return this
+	 */
 	public ButtonCreator addAction(IAction action) {
 		actions.add(action);
 		return this;
 	}
 	
+	/**
+	 * Remove an {@link IAction}
+	 * @return this
+	 */
 	public ButtonCreator removeAction(IAction action) {
 		actions.remove(action);
 		return this;
