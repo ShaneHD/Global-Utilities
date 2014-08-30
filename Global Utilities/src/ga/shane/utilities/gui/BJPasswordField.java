@@ -5,39 +5,38 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-import javax.swing.JTextField;
+import javax.swing.JPasswordField;
 import javax.swing.text.Document;
 
 /** 
- * Stands for BetterJTextField<br>
+ * Stands for BetterJPasswordField<br>
  * Adds support for a placeholder (text that draws when nothing is entered)<br><br>
  * See {@link #setPlaceholder(String)} and {@link #getPlaceholder()}<br>
  * See {@link #setPlaceholderColor(Color)} and {@link #getPlaceholderColor()} for the placeholder's draw color
  * 
- * @see {@link JTextField}
+ * @see {@link JPasswordField}
  * @author http://www.shane.ga 
-*/
-public class BJTextField extends JTextField implements IBJTextField {
+*/public class BJPasswordField extends JPasswordField implements IBJTextField {
 	private String placeholder;
 	private Color placeholderColor = Color.gray;
 	
-	public BJTextField() {
+	public BJPasswordField() {
 		super();
 	}
 	
-	public BJTextField(int columns) {
+	public BJPasswordField(int columns) {
 		super(columns);
 	}
 	
-	public BJTextField(String text) {
+	public BJPasswordField(String text) {
 		super(text);
 	}
 	
-	public BJTextField(String text, int columns) {
+	public BJPasswordField(String text, int columns) {
 		super(text, columns);
 	}
 	
-	public BJTextField(Document doc, String text, int columns) {
+	public BJPasswordField(Document doc, String text, int columns) {
 		super(doc, text, columns);
 	}
 	
@@ -67,6 +66,7 @@ public class BJTextField extends JTextField implements IBJTextField {
 		placeholderColor = color;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void paintPlaceholder(Graphics g) {
 		if(getPlaceholder() == null || getPlaceholder().length() == 0 || getText().length() > 0)
