@@ -203,7 +203,7 @@ public class FileUtils {
 	/**
 	 * Downloads a file and saves it to a location on the computer
 	 */
-	public void download(URL url, String save) throws IOException {
+	public static void download(URL url, String save) throws IOException {
 		ReadableByteChannel channel = Channels.newChannel(url.openStream());
 		new FileOutputStream(save).getChannel().transferFrom(channel, 0, Long.MAX_VALUE);
 	}
