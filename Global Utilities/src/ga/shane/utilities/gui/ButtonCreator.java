@@ -75,6 +75,19 @@ public class ButtonCreator extends ArrayList<JButton> {
 	}
 
 	/**
+	 * Attempt to get the {@link JButton} by its text<br>
+	 * NOTE: any changes to the button's text ({@link JButton#setText(String)}) will NOT BE DETECTED.<br>
+	 * This means that you MUST use the same text as when the button was added to this creator
+	 * 
+	 * @see {@link #remove(JButton)}
+	 * @return this
+	 */
+	public ButtonCreator remove(String button) {
+		remove(map.get(button));
+		return this;
+	}
+	
+	/**
 	 * Remove a {@link JButton}
 	 * @return this
 	 */
