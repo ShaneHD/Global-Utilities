@@ -23,7 +23,7 @@ public class Settings extends HashMap<String, Object> {
 	public Settings(File file) {
 		setFile(file);
 	}
-	
+		
 	/**
 	 * Load settings from a file
 	 * @see {@link #save()}
@@ -89,6 +89,42 @@ public class Settings extends HashMap<String, Object> {
 			return Long.parseLong(s);
 		
 		return null;
+	}
+	
+	public String getString(String key) {
+		return (String) get(key);
+	}
+	
+	public int getInt(String key) {
+		return (Integer) get(key);
+	}
+	
+	public float getFloat(String key) {
+		return (Float) get(key);
+	}
+	
+	public boolean getBoolean(String key) {
+		return (Boolean) get(key);
+	}
+	
+	public double getDouble(String key) {
+		return (Double) get(key);
+	}
+	
+	public char getCharacter(String key) {
+		return (Character) get(key);
+	}
+	
+	public byte getByte(String key) {
+		return (Byte) get(key);
+	}
+	
+	public short getShort(String key) {
+		return (Short) get(key);
+	}
+	
+	public long getLong(String key) {
+		return (Long) get(key);
 	}
 	
 	/**
