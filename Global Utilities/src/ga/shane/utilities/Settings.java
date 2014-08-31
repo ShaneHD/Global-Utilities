@@ -95,7 +95,7 @@ public class Settings extends HashMap<String, Object> {
 		return (String) get(key);
 	}
 	
-	public int getInt(String key) {
+	public int getInteger(String key) {
 		return (Integer) get(key);
 	}
 	
