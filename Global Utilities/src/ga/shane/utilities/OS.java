@@ -5,7 +5,7 @@ public enum OS {
 	WINDOWS_7, WINDOWS_8, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN, LINUX, MAC, ANDROID, UNKNOWN;
 	
 	/** All Windows versions */ 
-	public final static OS[] ALL_WINDOWS = {WINDOWS_XP, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN};
+	public final static OS[] ALL_WINDOWS = {WINDOWS_7, WINDOWS_8, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN};
 	/** All Linux versions */
 	public final static OS[] ALL_LINUX =  {LINUX};
 	/** All Macintosh versions */
