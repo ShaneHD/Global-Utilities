@@ -5,28 +5,36 @@ import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 
 /**
- *  A {@link JTextPane} with HTML formatting set up<br>
- *  Contains a method for appending: {@link #append(String)}
+ *  A {@link BJTextPane} with HTML formatting set up<br>
+ *  @see {@link BJTextPane}
  *  
  *  @author http://www.shane.ga 
 */
-public class HtmlPane extends JTextPane {
-	private final HTMLDocument doc;
+public class HtmlPane extends BJTextPane {
+	private HTMLDocument doc;
 	private HTMLEditorKit kit;
 	
 	public HtmlPane() {
-		setContentType("text/html");
-		
-		setEditorKit(kit = new HTMLEditorKit());
-		setDocument(doc = new HTMLDocument());
+		super();
+		init();
 	}
 	
 	/**
 	 * Set the text for this text pane
 	 */
 	public HtmlPane(String content) {
-		this();
-		append(content);
+		super(content);
+		init();
+	}
+	
+	/**
+	 * Called in all constructors
+	 */
+	protected void init() {
+		setContentType("text/html");
+		
+		setEditorKit(kit = new HTMLEditorKit());
+		setDocument(doc = new HTMLDocument());
 	}
 	
 	/** 
