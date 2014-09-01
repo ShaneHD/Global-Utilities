@@ -36,7 +36,7 @@ public class BJButton extends JButton {
 		init();
 	}
 
-	private final void init() {
+	protected final void init() {
 		setFocusable(false);
 	}
 }
