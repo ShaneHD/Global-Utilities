@@ -1370,6 +1370,312 @@ public class ArrayUtils {
 	
 		return true;
 	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Integer[] join(Integer[] array1, Integer[] array2) {
+		Integer[] joined = new Integer[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Float[] join(Float[] array1, Float[] array2) {
+		Float[] joined = new Float[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Boolean[] join(Boolean[] array1, Boolean[] array2) {
+		Boolean[] joined = new Boolean[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Double[] join(Double[] array1, Double[] array2) {
+		Double[] joined = new Double[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Character[] join(Character[] array1, Character[] array2) {
+		Character[] joined = new Character[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Byte[] join(Byte[] array1, Byte[] array2) {
+		Byte[] joined = new Byte[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Short[] join(Short[] array1, Short[] array2) {
+		Short[] joined = new Short[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Long[] join(Long[] array1, Long[] array2) {
+		Long[] joined = new Long[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static Object[] join(Object[] array1, Object[] array2) {
+		Object[] joined = new Object[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static int[] join(int[] array1, int[] array2) {
+		int[] joined = new int[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static float[] join(float[] array1, float[] array2) {
+		float[] joined = new float[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static boolean[] join(boolean[] array1, boolean[] array2) {
+		boolean[] joined = new boolean[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static double[] join(double[] array1, double[] array2) {
+		double[] joined = new double[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static char[] join(char[] array1, char[] array2) {
+		char[] joined = new char[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static byte[] join(byte[] array1, byte[] array2) {
+		byte[] joined = new byte[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static short[] join(short[] array1, short[] array2) {
+		short[] joined = new short[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
+	/**
+	 * Join two arrays into one array
+	 */
+	public static long[] join(long[] array1, long[] array2) {
+		long[] joined = new long[array1.length + array2.length];
+	
+		int last = 0;
+	
+		for(int i = 0; i < array1.length; i++) {
+			joined[i] = array1[i];
+			last = i;
+		}
+	
+		for(int i = 0; i < array2.length; i++)
+			joined[++last] = array2[i];
+	
+		return joined;
+	}
 
 }
 	/*
