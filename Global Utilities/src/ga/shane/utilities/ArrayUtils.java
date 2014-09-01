@@ -8,6 +8,7 @@
 package ga.shane.utilities;
 
 import java.util.ArrayList;
+import java.lang.reflect.Array;
 
 /** @author http://www.shane.ga */
 public class ArrayUtils {
@@ -1517,8 +1518,8 @@ public class ArrayUtils {
 	/**
 	 * Join two arrays into one array
 	 */
-	public static Object[] join(Object[] array1, Object[] array2) {
-		Object[] joined = new Object[array1.length + array2.length];
+	public static <T> T[] join(T[] array1, T[] array2) {
+		T[] joined = (T[]) Array.newInstance(array1.getClass().getComponentType(), array1.length + array2.length);
 	
 		int last = 0;
 	
