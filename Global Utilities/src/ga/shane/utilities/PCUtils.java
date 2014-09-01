@@ -10,6 +10,27 @@ import javax.swing.JOptionPane;
 /** @author http://www.shane.ga */
 public class PCUtils {
 	/**
+	 * Get the screen's width and height in {@link Dimension} form
+	 */
+	public static Dimension getScreenDimension() {
+		return Toolkit.getDefaultToolkit().getScreenSize();
+	}
+	
+	/**
+	 * Get the screen's width
+	 */
+	public static int getScreenWidth() {
+		return (int) getScreenDimension().getWidth();
+	}
+	
+	/**
+	 * Get the screen's height
+	 */
+	public static int getScreenHeight() {
+		return (int) getScreenDimension().getHeight();
+	}
+	
+	/**
 	 * Show a MessageBox normally
 	 */
 	public static void messagebox(String body, String title, int icon, Component... parent) {
