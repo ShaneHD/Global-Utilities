@@ -36,10 +36,8 @@ public class HtmlPane extends BJTextPane {
 		setEditorKit(kit = new HTMLEditorKit());
 		setDocument(doc = new HTMLDocument());
 	}
-	
-	/** 
-	 * Append to this text pane
-	 */
+
+	@Override
 	public void append(String s) {
 		try {
 			kit.insertHTML(doc, doc.getLength(), s, 0, 0, null);
