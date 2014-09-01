@@ -1,17 +1,11 @@
 package ga.shane.utilities;
 
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-
 /** @author http://www.shane.ga */
-public class WindowsUtils {
+public class WindowsUtils extends PCUtils {
 	
 	/**
 	 * Run Visual Basic Script
