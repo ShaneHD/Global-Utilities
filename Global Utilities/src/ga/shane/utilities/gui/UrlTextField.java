@@ -1,6 +1,8 @@
 package ga.shane.utilities.gui;
 
 import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.text.Document;
 
@@ -29,6 +31,23 @@ public class UrlTextField extends BJTextField {
 	
 	public UrlTextField(Document doc, String text, int columns) {
 		super(doc, text, columns);
+	}
+	
+	/**
+	 * Checks if valid or not<br>
+	 * Also calls <code>KeyListener#keyPressed</code> to update
+	 * 
+	 * @return {@link #valid()}
+	 */
+	public boolean update() {
+		if(!valid()) {
+			for(KeyListener listener : getKeyListeners())
+				listener.keyPressed(new KeyEvent(this, 0, 0, 0, 0));
+			
+			return false;
+		}
+		
+		return true;
 	}
 	
 	/**
