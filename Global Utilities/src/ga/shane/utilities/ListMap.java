@@ -51,6 +51,7 @@ public class ListMap<K, V> extends HashMap<K, ArrayList<V>> {
 		return this;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public ArrayList<V> list(K... key) {
 		if(key.length == 0) {
 			ArrayList<V> values = new ArrayList<V>();
