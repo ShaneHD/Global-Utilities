@@ -15,7 +15,7 @@ import java.util.Map;
  * 
  * @author http://www.shane.ga
  */
-public class Settings extends HashMap<String, Object> {
+public class Settings<V> extends HashMap<String, V> {
 	private File file;
 	
 	public Settings() {}
@@ -138,7 +138,7 @@ public class Settings extends HashMap<String, Object> {
 		
 		String settings = "";
 		
-		for(Map.Entry<String, Object> e : entrySet())
+		for(Map.Entry<String, V> e : entrySet())
 			settings+= e.getKey() + FileUtils.separator + e.getValue() + FileUtils.separator + e.getValue().getClass().getName() + "\n";
 		
 		FileUtils.write(settings, file, false);
@@ -164,21 +164,23 @@ public class Settings extends HashMap<String, Object> {
 	 * Add keys and values<br>
 	 * EX: <code>add("key", "value", "anotherKey", 42);</code>
 	 */
+	@SuppressWarnings("unchecked")
 	public void add(Object... things) {
 		if(things.length % 2 != 0)
 			throw new RuntimeException("Can't add an odd number of things. (needs [key, value])");
 		
 		String key = null;
-		Object value = null;
+		V value = null;
 		
 		for(int i = 0; i < things.length; i++) {
 			if(i % 2 == 0) {
 				key = (String) things[i];
 			} else {
-				value = things[i];
+				value = (V) things[i];
 				super.put(key, value);
 				
-				value = key = null;
+				key = null;
+				value = null;
 			}
 		}
 	}
@@ -187,7 +189,7 @@ public class Settings extends HashMap<String, Object> {
 	 * @see {@link #add(Object...)}
 	 * @deprecated
 	 */
-	public Object put(String arg0, Object arg1) {
+	public V put(String arg0, Object arg1) {
 		throw new RuntimeException("Don't use this.");
 	}
 }
