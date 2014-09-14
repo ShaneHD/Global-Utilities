@@ -50,4 +50,16 @@ public class ListMap<K, V> extends HashMap<K, ArrayList<V>> {
 		
 		return this;
 	}
+	
+	public ArrayList<V> list(K... key) {
+		if(key.length == 0) {
+			ArrayList<V> values = new ArrayList<V>();
+			
+			for(ArrayList<V> value : values())
+				values.addAll(value);
+			
+			return values;
+		} else
+			return get(key[0]);
+	}
 }
