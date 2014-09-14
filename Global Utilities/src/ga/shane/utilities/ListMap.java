@@ -29,6 +29,7 @@ public class ListMap<K, V> extends HashMap<K, ArrayList<V>> {
 	}
 	
 	/**
+	 * @deprecated
 	 * @see {@link #put(K, V)}
 	 */
 	public ArrayList<V> put(K key, ArrayList<V> value) {
