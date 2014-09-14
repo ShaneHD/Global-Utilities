@@ -28,12 +28,9 @@ public class ListMap<K, V> extends HashMap<K, ArrayList<V>> {
 		super(m);
 	}
 	
-	/**
-	 * @deprecated
-	 * @see {@link #put(K, V)}
-	 */
+	@Override
 	public ArrayList<V> put(K key, ArrayList<V> value) {
-		throw new RuntimeException("Don't use this");
+		return super.put(key, value);
 	}
 	
 	/**
