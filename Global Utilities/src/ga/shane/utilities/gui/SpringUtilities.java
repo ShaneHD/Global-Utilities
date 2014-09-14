@@ -33,6 +33,7 @@ package ga.shane.utilities.gui;
 
 import java.awt.Component;
 import java.awt.Container;
+
 import javax.swing.Spring;
 import javax.swing.SpringLayout;
 

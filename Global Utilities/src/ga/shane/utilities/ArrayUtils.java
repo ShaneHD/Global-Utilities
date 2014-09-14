@@ -1518,6 +1518,7 @@ public class ArrayUtils {
 	/**
 	 * Join two arrays into one array
 	 */
+	@SuppressWarnings("unchecked")
 	public static <T> T[] join(T[] array1, T[] array2) {
 		T[] joined = (T[]) Array.newInstance(array1.getClass().getComponentType(), array1.length + array2.length);
 	

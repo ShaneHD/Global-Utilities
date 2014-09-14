@@ -1,6 +1,5 @@
 package ga.shane.utilities.gui;
 
-import javax.swing.JTextPane;
 import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 
