@@ -90,7 +90,7 @@ public class Settings<V> extends HashMap<String, V> {
 		
 		return null;
 	}
-	
+		
 	public String getString(String key) {
 		return (String) get(key);
 	}
