@@ -1,6 +1,7 @@
 package ga.shane.utilities;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
@@ -11,7 +12,7 @@ import java.util.Map;
  * @see {@link HashMap}
  * @author http://www.shane.ga
  */
-public class ListMap<K, V> extends HashMap<K, ArrayList<V>> {
+public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
 	public ListMap() {
 		super();
 	}
