@@ -19,7 +19,7 @@ public enum Day {
 	
 	/**
 	 * The day of the week in full form<br>
-	 * E.G. MON becomes Monday
+	 * E.G. {@link MON} becomes Monday
 	 */
 	public final String full_name;
 	
