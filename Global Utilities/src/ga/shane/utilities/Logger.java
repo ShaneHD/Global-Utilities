@@ -24,7 +24,7 @@ public class Logger {
 	
 	/**
 	 * Adds {@link enabled} logic
-	 * @see {@link logger}
+	 * @see {@link java.util.logging.Logger#info(String)}
 	 * @see {@link #warning(String)}
 	 */
 	public void info(String msg) {
@@ -34,7 +34,7 @@ public class Logger {
 	
 	/**
 	 * Adds {@link enabled} logic
-	 * @see {@link logger}
+	 * @see {@link java.util.logging.Logger#warning(String)}
 	 * @see {@link #info(String)}
 	 */
 	public void warning(String msg) {
