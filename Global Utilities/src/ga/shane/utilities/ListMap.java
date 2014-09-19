@@ -9,7 +9,7 @@ import java.util.Map;
  * A {@link HashMap} containing<br>
  * <i>{@literal <K, ArrayList<V>>}</i>
  * 
- * @see {@link HashMap}
+ * @see {@link LinkedHashMap}
  * @author http://www.shane.ga
  */
 public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
