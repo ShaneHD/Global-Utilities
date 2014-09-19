@@ -9,6 +9,7 @@ import java.net.URI;
  * Adds support for checking whether the file has been newly created<br>
  * (whether {@link #createNewFile()} has been called)
  * 
+ * @see {@link #isNewFile()}
  * @see {@link File}
  * @author http://www.shane.ga 
 */
