@@ -74,4 +74,15 @@ public class ImageUtils {
 	    g2.dispose();
 	    return resizedImg;
 	}
+	
+	/**
+	 * Load a {@link BufferedImage} from a {@link File}
+	 */
+	public static BufferedImage load(File path) {
+		try {
+			return ImageIO.read(path);
+		} catch(IOException e) {
+			return null;
+		}
+	}
 }
