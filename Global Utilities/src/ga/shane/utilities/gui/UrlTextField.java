@@ -39,6 +39,7 @@ public class UrlTextField extends BJTextField {
 	 * 
 	 * @return {@link #valid()}
 	 */
+	@SuppressWarnings("deprecation")
 	public boolean update() {
 		if(!valid()) {
 			for(KeyListener listener : getKeyListeners())
