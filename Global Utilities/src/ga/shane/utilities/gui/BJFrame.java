@@ -14,6 +14,6 @@ public abstract class BJFrame extends JFrame {
 		constructFrame();		
 	}
 	
-	protected abstract void constructFrame();
 	protected abstract void init();
+	protected abstract void constructFrame();
 }
