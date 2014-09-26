@@ -16,7 +16,11 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 
-/** @author http://www.shane.ga */
+/**
+ * {@link File} utilities
+ * 
+ * @author http://www.shane.ga
+ */
 public class FileUtils {
 	/** Used with files to seperate keys and values */
 	public static String separator = ":";

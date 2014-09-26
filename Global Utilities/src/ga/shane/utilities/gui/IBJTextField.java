@@ -3,7 +3,12 @@ package ga.shane.utilities.gui;
 import java.awt.Color;
 import java.awt.Graphics;
 
-/** @author http://www.shane.ga */
+/**
+ * Interface for placeholder textfields to inherit<br>
+ * (Used in {@link BJTextField} & {@link BJPasswordField})
+ * 
+ * @author http://www.shane.ga
+ */
 interface IBJTextField {
 	/**
 	 * Get the placeholder

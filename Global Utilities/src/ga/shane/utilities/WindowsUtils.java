@@ -4,7 +4,13 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
-/** @author http://www.shane.ga */
+/**
+ * Windows utilities. Inherits from {@link PCUtils}<br>
+ * Methods that can only be used on Windows PC's
+ * 
+ * @see {@link PCUtils}
+ * @author http://www.shane.ga
+ */
 public class WindowsUtils extends PCUtils {
 	
 	/**

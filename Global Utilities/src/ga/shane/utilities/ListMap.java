@@ -6,7 +6,7 @@ import java.util.Map;
 
 
 /**
- * A {@link HashMap} containing<br>
+ * A {@link LinkedHashMap} containing<br>
  * <i>{@literal <K, ArrayList<V>>}</i>
  * 
  * @see {@link LinkedHashMap}

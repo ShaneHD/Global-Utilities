@@ -6,7 +6,13 @@ import java.io.File;
 
 import javax.swing.filechooser.FileFilter;
 
-/** @author http://www.shane.ga */
+/**
+ * Simply a {@link FileFilter} for images<br>
+ * (Uses {@link ImageUtils#isImage(File)})
+ * 
+ * @see {@link FileFilter}
+ * @author http://www.shane.ga
+ */
 public class FileFilterImage extends FileFilter {
 
 	@Override

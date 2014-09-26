@@ -4,7 +4,13 @@ import java.awt.MenuItem;
 import java.awt.MenuShortcut;
 import java.awt.event.ActionListener;
 
-/** @author http://www.shane.ga */
+/**
+ * Stands for BetterMenuItem<br>
+ * Adds an {@link ActionListener} in the constructors
+ * 
+ * @see {@link MenuItem}
+ * @author http://www.shane.ga
+ */
 public abstract class BMenuItem extends MenuItem implements ActionListener {
 	public BMenuItem() {
 		super();

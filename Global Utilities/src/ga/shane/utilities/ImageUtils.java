@@ -12,7 +12,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-/** @author http://www.shane.ga */
+/**
+ * Image utilities
+ * 
+ * @author http://www.shane.ga
+ */
 public class ImageUtils {
 	/** An array of common image formats */
 	public static final String[] FORMATS = {

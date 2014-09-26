@@ -7,7 +7,12 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/** @author http://www.shane.ga */
+/**
+ * All computer utilities<br>
+ * Independent of Operating System
+ * 
+ * @author http://www.shane.ga
+ */
 public class PCUtils {
 	/**
 	 * Get the screen's width and height in {@link Dimension} form
