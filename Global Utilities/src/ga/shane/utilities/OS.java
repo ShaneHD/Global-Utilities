@@ -2,7 +2,7 @@ package ga.shane.utilities;
 
 /**
  * An operating system identifier utility<br>
- * Contains consts for pretty much all known OS's (excluding iOS TODO)
+ * Contains consts for pretty much all known OS's
  * 
  * @author http://www.shane.ga
  */
