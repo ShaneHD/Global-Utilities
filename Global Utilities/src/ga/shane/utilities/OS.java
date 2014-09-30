@@ -71,7 +71,7 @@ public enum OS {
 		}
 		
 		if(isWindows())
-			return "C:/Users/" + System.getProperty("user.name") + "/";
+			return "C:/Users/" + System.getProperty("user.name") + "/Documents/";
 		
 		throw new RuntimeException("Can't find home directory in OS");
 	}
