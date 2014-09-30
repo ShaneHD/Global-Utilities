@@ -1,5 +1,8 @@
 package ga.shane.utilities.gui;
 
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
 import javax.swing.JFrame;
 
 /**
@@ -10,20 +13,23 @@ import javax.swing.JFrame;
 	 * =========================================================<br>
 	 * Both methods are called AUTOMATICALLY in the constructors<br>
 	 * =========================================================
- * </b>
+ * </b><br>
+ * Also implements {@link WindowListener}
  * 
  * @see {@link JFrame}
+ * @see {@link WindowListener}
  * @author http://www.shane.ga
  */
-public abstract class BJFrame extends JFrame {
+public abstract class BJFrame extends JFrame implements WindowListener {
 	public BJFrame(String title) {
 		this();
 		setTitle(title);
 	}
 	
 	public BJFrame() {
+		addWindowListener(this);
 		init();
-		constructFrame();		
+		constructFrame();	
 	}
 	
 	/**
@@ -42,4 +48,32 @@ public abstract class BJFrame extends JFrame {
 	 * etc go here.
 	 */
 	protected abstract void constructFrame();
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+	}
 }
