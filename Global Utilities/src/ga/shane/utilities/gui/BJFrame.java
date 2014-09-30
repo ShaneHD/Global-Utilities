@@ -1,6 +1,7 @@
 package ga.shane.utilities.gui;
 
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -28,6 +29,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	}
 	
 	public BJFrame() {
+		setMinimumSize(new Dimension(50, 50));
 		addWindowListener(this);
 		init();
 		constructFrame();	
@@ -58,6 +60,15 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 		removeAll();
 		revalidate();
 		repaint();
+	}
+	
+	/**
+	 * Refreshes the window<br>
+	 * Sets the size -2,-2 then +2,+2
+	 */
+	public void refresh() {
+		setSize(getWidth() - 2, getHeight() + 2);
+		setSize(getWidth() + 2, getHeight() + 2);
 	}
 	
 	@Override
