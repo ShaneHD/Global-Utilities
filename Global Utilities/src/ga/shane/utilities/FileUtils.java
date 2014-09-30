@@ -23,7 +23,7 @@ import java.util.Scanner;
  * @author http://www.shane.ga
  */
 public class FileUtils {
-	/** Used with files to seperate keys and values */
+	/** Used with files to separate keys and values */
 	public static String separator = ":";
 	public static File workingDirectory = null;
 	
@@ -43,7 +43,7 @@ public class FileUtils {
 	
 	/**
 	 * Create a new {@link BFile}
-	 * @param name Name of the file (including extention)
+	 * @param name Name of the file (including extension)
 	 * @param createNewIfNotExistsFlag If this optional argument is set, {@link File#createNewFile()} will be called
 	 */
 	public static BFile newFile(String name, Object... createNewIfNotExistsFlag) {
@@ -225,10 +225,10 @@ public class FileUtils {
 		return true;
 	}
 	
-	@SuppressWarnings("resource")
 	/**
 	 * Downloads a file and saves it to a location on the computer
 	 */
+	@SuppressWarnings("resource")
 	public static void download(URL url, String save) throws IOException {
 		ReadableByteChannel channel = Channels.newChannel(url.openStream());
 		new FileOutputStream(save).getChannel().transferFrom(channel, 0, Long.MAX_VALUE);
