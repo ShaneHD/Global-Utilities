@@ -4,7 +4,9 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.net.URL;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -69,6 +71,12 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	public void refresh() {
 		setSize(getWidth() - 2, getHeight() + 2);
 		setSize(getWidth() + 2, getHeight() + 2);
+	}
+	
+	public void setIcon(String insideDir) {
+		URL url = getClass().getResource(insideDir);
+		ImageIcon icon = new ImageIcon(url);
+		setIconImage(icon.getImage());
 	}
 	
 	@Override
