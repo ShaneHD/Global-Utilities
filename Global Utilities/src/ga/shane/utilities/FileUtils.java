@@ -13,6 +13,7 @@ import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 
@@ -106,7 +107,29 @@ public class FileUtils {
 	}
 	
 	/**
-	 * Bundle all of a file's lines into a {@link ArrayList}
+	 * Bundle all of a file's lines into a {@link HashSet}
+	 */
+	public static HashSet<String> getFileLines(File file) {
+		HashSet<String> lines = new HashSet<String>();
+		
+		try {
+			Scanner scanner = new Scanner(file);
+			
+			while(scanner.hasNextLine())
+				lines.add(scanner.nextLine());
+			
+			scanner.close();
+			return lines;
+		} catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		throw new RuntimeException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
+	}
+	
+	/**
+	 * <s>Bundle all of a file's lines into a {@link ArrayList}</s>
+	 * @deprecated {@link #getFileLines(File)}
 	 */
 	public static ArrayList<String> getLinesFromFile(File file) {
 		ArrayList<String> lines = new ArrayList<String>();
