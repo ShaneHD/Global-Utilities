@@ -1,5 +1,6 @@
 package ga.shane.utilities.gui;
 
+import java.awt.Component;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -49,6 +50,16 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	 */
 	protected abstract void constructFrame();
 
+	/**
+	 * Clear this {@link JFrame}<br>
+	 * Remove all components & refresh
+	 */
+	public void clear() {
+		removeAll();
+		revalidate();
+		repaint();
+	}
+	
 	@Override
 	public void windowActivated(WindowEvent e) {
 	}
