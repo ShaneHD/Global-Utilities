@@ -74,11 +74,11 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	}
 	
 	/**
-	 * Set the icon for this frame<br>
+	 * Set the icon with an image inside the program<br>
 	 * <b color='red'>DON'T start with a /</b>
 	 * 
-	 *  @see {@link #setIconImage(java.awt.Image)}
-	 *  @see {@link Class#getResource(String)}
+	 * @see {@link #setIconImage(java.awt.Image)}
+	 * @see {@link Class#getResource(String)}
 	 */
 	public void setIcon(String name) {
 		URL url = getClass().getResource("/" + name);
