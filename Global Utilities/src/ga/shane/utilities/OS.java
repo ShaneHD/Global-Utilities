@@ -64,6 +64,18 @@ public enum OS {
 		return UNKNOWN;
 	}
 	
+	public String getHomeDirectory() {
+		switch(this) {
+		case MAC:
+			return "~/";
+		}
+		
+		if(isWindows())
+			return "C:/Users/" + System.getProperty("user.name") + "/";
+		
+		throw new RuntimeException("Can't find home directory in OS");
+	}
+	
 	/**
 	 * Check whether the current OS is compatible with another OS
 	 */
