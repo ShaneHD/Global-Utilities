@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -15,6 +16,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
+
+import javax.swing.ImageIcon;
 
 
 /**
@@ -60,6 +63,17 @@ public class FileUtils {
 		}
 		
 		return file;
+	}
+	
+	public static BFile newFileInsideClasspath(String name) {
+		try {
+			URL url = FileUtils.class.getResource("/" + name);
+			BFile file = new BFile(url.toURI());
+			return file;
+		} catch(Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException("Error loading internal file: " + StringUtils.quote(name));
+		}
 	}
 	
 	/**
