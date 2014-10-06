@@ -38,7 +38,7 @@ public class HtmlPane extends BJTextPane {
 
 	@Override
 	public void append(String s) {
-		try {
+		try {			
 			kit.insertHTML(doc, doc.getLength(), s, 0, 0, null);
 		} catch(Exception e) {
 			e.printStackTrace();

@@ -69,7 +69,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	 * Sets the size -2,-2 then +2,+2
 	 */
 	public void refresh() {
-		setSize(getWidth() - 2, getHeight() + 2);
+		setSize(getWidth() - 2, getHeight() - 2);
 		setSize(getWidth() + 2, getHeight() + 2);
 	}
 	
