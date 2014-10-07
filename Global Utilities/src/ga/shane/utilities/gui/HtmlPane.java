@@ -22,8 +22,8 @@ public class HtmlPane extends BJTextPane {
 	 * Set the text for this text pane
 	 */
 	public HtmlPane(String content) {
-		super(content);
-		init();
+		this();
+		append(content);
 	}
 	
 	/**
