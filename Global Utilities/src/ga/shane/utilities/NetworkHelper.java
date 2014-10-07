@@ -20,10 +20,6 @@ public abstract class NetworkHelper<IN extends InputStream, OUT extends OutputSt
 		this.output = output;
 	}
 	
-	public void write(Object o) {
-		throw new RuntimeException("Not set up.");
-	}
-	
 	public void write(String packet, String... args) {
 		throw new RuntimeException("Not set up.");
 	}
