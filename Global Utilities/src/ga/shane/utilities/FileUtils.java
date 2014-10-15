@@ -71,7 +71,7 @@ public class FileUtils {
 			BFile file = new BFile(url.toURI());
 			return file;
 		} catch(Exception e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			throw new RuntimeException("Error loading internal file: " + StringUtils.quote(name));
 		}
 	}
