@@ -11,5 +11,6 @@ public class UrlTextFieldButton extends BJButton {
 	public UrlTextFieldButton(UrlTextField url, String text) {
 		super(text);
 		url.addKeyListener(new UrlTextFieldKeyListener(this));
+		setEnabled(false);
 	}
 }
