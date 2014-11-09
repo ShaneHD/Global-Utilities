@@ -13,7 +13,18 @@ public class GuiUtils {
 	 */
 	public static void setDefaultLookandfeel() {
 		try {
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Set the swing look and feel
+	 */
+	public static void setLookAndFeel(String laf) {
+		try {
+			UIManager.setLookAndFeel(laf);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
