@@ -70,6 +70,15 @@ public class StringUtils {
 	}
 	
 	/**
+	 * Clean HTML tags from a {@link String}<br>
+	 * Only replaces < and > for now<br>
+	 * TODO improve
+	 */
+	public static String cleanHTML(String s) {
+		return s.replaceAll("<", "[").replaceAll(">", "]");
+	}
+	
+	/**
 	 * For {@link HashMap}s<br>
 	 * Uses {@link FileUtils#separator} to seperate keys and values
 	 * @see {@link #group(Object...)}
