@@ -77,4 +77,12 @@ public class BJTextField extends JTextField implements IBJTextField {
 		g2d.setColor(getPlaceholderColor());
 		g.drawString(getPlaceholder(), getInsets().left, g2d.getFontMetrics().getMaxAscent() + getInsets().top);
 	}
+	
+	/**
+	 * Clear all text<br>
+	 * Calls <code>{@link #setText(String)}</code> with <code>""</code>
+	 */
+	public void clear() {
+		setText("");
+	}
 }
