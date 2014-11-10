@@ -29,6 +29,14 @@ public class BRandom extends Random {
 		return new Color(nextFloat(), nextFloat(), nextFloat(), nextFloat());
 	}
 	
+	public float nextFloat(float min, float max) {
+		return nextFloat() * (max - min) + min;
+	}
+	
+	public int nextInt(int min, int max) {
+		return nextInt() * (max - min) + min;
+	}
+	
 	/**
 	 * TODO remove
 	 */
