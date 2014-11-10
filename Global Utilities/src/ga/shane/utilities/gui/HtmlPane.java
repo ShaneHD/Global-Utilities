@@ -40,6 +40,7 @@ public class HtmlPane extends BJTextPane {
 	public void append(String s) {
 		try {			
 			kit.insertHTML(doc, doc.getLength(), s, 0, 0, null);
+			setCaretPosition(doc.getLength());
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

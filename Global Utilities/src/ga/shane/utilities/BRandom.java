@@ -34,7 +34,7 @@ public class BRandom extends Random {
 	}
 	
 	public int nextInt(int min, int max) {
-		return nextInt() * (max - min) + min;
+		return nextInt(max - min) + min;
 	}
 	
 	/**
