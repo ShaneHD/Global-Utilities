@@ -34,4 +34,8 @@ public class BRandom extends Random {
 	public int nextInt(int min, int max) {
 		return nextInt(max - min) + min;
 	}
+	
+	public boolean chance(int max) {
+		return nextInt(max + 1) == max;
+	}
 }
