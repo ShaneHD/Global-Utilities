@@ -34,6 +34,25 @@ public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
 		return super.put(key, value);
 	}
 	
+	
+	@Override
+	public ArrayList<V> remove(Object key) {
+		throw new RuntimeException("Don't use this.");
+	}
+	
+	/**
+	 * TODO get(array list)
+	 */
+	public void remove(K key, V value) {
+		throw new RuntimeException("TODO fix this");
+		/*
+		
+		get(key).remove(value);
+		
+		if(get(key).isEmpty())
+			super.remove(key);*/
+	}
+	
 	/**
 	 * <b><font color='green'>USE THIS</font></b>
 	 */
