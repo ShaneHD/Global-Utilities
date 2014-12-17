@@ -44,13 +44,11 @@ public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
 	 * TODO get(array list)
 	 */
 	public void remove(K key, V value) {
-		throw new RuntimeException("TODO fix this");
-		/*
+		ArrayList a = get(key);
+		a.remove(value);
 		
-		get(key).remove(value);
-		
-		if(get(key).isEmpty())
-			super.remove(key);*/
+		if(a.size() == 0)
+			super.remove(key);
 	}
 	
 	/**
