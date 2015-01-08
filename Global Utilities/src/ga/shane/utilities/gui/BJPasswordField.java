@@ -430,7 +430,7 @@ public class BJPasswordField extends JPasswordField implements IBJTextField {
 	public void setPlaceholderColor(Color color) {
 		placeholderColor = color;
 	}
-
+	
 	@SuppressWarnings("deprecation")
 	@Override
 	public void paintPlaceholder(Graphics g) {

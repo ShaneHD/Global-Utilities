@@ -374,6 +374,8 @@ import java.util.Map;
  * <i>{@literal <K, ArrayList<V>>}</i>
  * 
  * @see {@link LinkedHashMap}
+ * @deprecated
+ * ^^ TODO re-do this 
  * @author http://www.shane.ga
  */
 public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
