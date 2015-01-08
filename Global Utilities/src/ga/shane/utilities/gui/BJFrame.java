@@ -384,6 +384,7 @@ import javax.swing.JFrame;
  * </b><br>
  * Also implements {@link WindowListener}
  * 
+ * @deprecated
  * @see {@link JFrame}
  * @see {@link WindowListener}
  * @author http://www.shane.ga
