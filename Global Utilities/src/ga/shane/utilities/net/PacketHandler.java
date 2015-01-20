@@ -384,7 +384,7 @@ public class PacketHandler {
 	}
 	
 	/** 
-	 * Handle input sent from the server
+	 * Handle input
 	 */
 	public void handle(String s) {
 		try {
