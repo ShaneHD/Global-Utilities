@@ -385,4 +385,19 @@ public class Rect {
 	public boolean intersects(Rect rect) {
 		return intersects(rect.x, rect.y, rect.width, rect.height);		
 	}
+	
+	@Override
+	public String toString() {
+		return "[Rect: " + x + ", " + y + ", " + width + ", " + height + "]";
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Rect) {
+			Rect rekt = (Rect) obj;	
+			return rekt == this || (rekt.x == x && rekt.y == y && rekt.width == width && rekt.height == height);
+		}
+		
+		return super.equals(obj);
+	}
 }

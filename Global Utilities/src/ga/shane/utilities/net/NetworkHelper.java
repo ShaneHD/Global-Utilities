@@ -362,7 +362,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
       With Secondary Licenses", as defined by
       the Mozilla Public License, v. 2.0.
  */
-package ga.shane.utilities;
+package ga.shane.utilities.net;
 
 import java.io.InputStream;
 import java.io.OutputStream;
