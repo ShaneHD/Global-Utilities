@@ -364,6 +364,8 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities;
 
+import java.util.Calendar;
+
 /**
  * Enum containing all days of the week<br>
  * in short form(E.G. MON), and their<br>
@@ -373,21 +375,30 @@ package ga.shane.utilities;
  * @author http://www.shane.ga
  */
 public enum Day {
-	MON("Monday"),
-	TUE("Tuesday"),
-	WED("Wednesday"),
-	THU("Thursday"), 
-	FRI("Friday"),
-	SAT("Saturday"),
-	SUN("Sunday");
+	MON("Monday", Calendar.MONDAY),
+	TUE("Tuesday", Calendar.TUESDAY),
+	WED("Wednesday", Calendar.WEDNESDAY),
+	THU("Thursday", Calendar.THURSDAY), 
+	FRI("Friday", Calendar.FRIDAY),
+	SAT("Saturday", Calendar.SATURDAY),
+	SUN("Sunday", Calendar.SUNDAY);
 	
 	/**
 	 * The day of the week in full form<br>
 	 * E.G. {@link MON} becomes Monday
 	 */
 	public final String full_name;
+	public final int calendar_id;
 	
-	Day(String full) {
+	Day(String full, int cid) {
 		full_name = full;
+		calendar_id = cid;
+	}
+
+	/**
+	 * @return Is this the current day of the week
+	 */
+	public boolean is() {
+		return Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == calendar_id;
 	}
 }

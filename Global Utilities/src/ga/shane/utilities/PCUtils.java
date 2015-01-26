@@ -446,6 +446,10 @@ public class PCUtils {
 		fullscreen = null;
 	}
 	
+	public static void exceptionbox(Exception e) {
+		messagebox(e.getMessage(), "Exception thrown", JOptionPane.ERROR_MESSAGE);
+	}
+	
 	/**
 	 * @see {@link #messagebox(String, String, int, Component...)}
 	 */

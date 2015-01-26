@@ -364,6 +364,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities.net;
 
+import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 
@@ -382,7 +383,25 @@ public abstract class NetworkHelper<IN extends InputStream, OUT extends OutputSt
 		this.output = output;
 	}
 	
-	public void write(String packet, String... args) {
+	protected void _write_default_dataoutputstream(String packet, String... args) throws Exception {
+		try {
+			if(args.length == 0)
+				((DataOutputStream)output).writeUTF(packet);
+			else {
+				String argsSendFormat = packet + Command.SEPARATOR;
+				
+				for(int i = 0; i < args.length; i++)
+					argsSendFormat+= args[i] + (i == args.length - 1 ? "" : Command.SEPARATOR);
+				
+				write(argsSendFormat);
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
+	
+	public void write(String packet, String... args) {		
 		throw new RuntimeException("Not set up.");
 	}
 }
