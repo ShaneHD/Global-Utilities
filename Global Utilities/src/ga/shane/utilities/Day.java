@@ -375,13 +375,13 @@ import java.util.Calendar;
  * @author http://www.shane.ga
  */
 public enum Day {
-	MON("Monday", Calendar.MONDAY),
-	TUE("Tuesday", Calendar.TUESDAY),
-	WED("Wednesday", Calendar.WEDNESDAY),
-	THU("Thursday", Calendar.THURSDAY), 
-	FRI("Friday", Calendar.FRIDAY),
-	SAT("Saturday", Calendar.SATURDAY),
-	SUN("Sunday", Calendar.SUNDAY);
+	MON("Monday"),
+	TUE("Tuesday"),
+	WED("Wednesday"),
+	THU("Thursday"),
+	FRI("Friday"),
+	SAT("Saturday"),
+	SUN("Sunday");
 	
 	/**
 	 * The day of the week in full form<br>
@@ -390,11 +390,19 @@ public enum Day {
 	public final String full_name;
 	public final int calendar_id;
 	
-	Day(String full, int cid) {
+	Day(String full) {
 		full_name = full;
-		calendar_id = cid;
+		int _ = 0;
+		
+		try {
+			_ = Calendar.class.getField(full.toUpperCase()).getInt(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		calendar_id = _;
 	}
-
+		
 	/**
 	 * @return Is this the current day of the week
 	 */
