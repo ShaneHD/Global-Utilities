@@ -364,6 +364,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities.net;
 
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -383,25 +384,32 @@ public abstract class NetworkHelper<IN extends InputStream, OUT extends OutputSt
 		this.output = output;
 	}
 	
-	protected void _write_default_dataoutputstream(String packet, String... args) throws Exception {
-		try {
-			if(args.length == 0)
-				((DataOutputStream)output).writeUTF(packet);
-			else {
-				String argsSendFormat = packet + Command.SEPARATOR;
-				
-				for(int i = 0; i < args.length; i++)
-					argsSendFormat+= args[i] + (i == args.length - 1 ? "" : Command.SEPARATOR);
-				
-				write(argsSendFormat);
-			}
-		} catch(Exception e) {
-			e.printStackTrace();
-			throw e;
-		}
+	public void write(String packet, String... args) throws Exception {		
+		throw new RuntimeException("Not set up.");
 	}
 	
-	public void write(String packet, String... args) {		
-		throw new RuntimeException("Not set up.");
+	public static class DataStreamNetworkHelper extends NetworkHelper<DataInputStream, DataOutputStream> {
+		public DataStreamNetworkHelper(DataInputStream input, DataOutputStream output) {
+			super(input, output);
+		}
+		
+		@Override
+		public void write(String packet, String... args) throws Exception {
+			try {
+				if(args.length == 0)
+					((DataOutputStream)output).writeUTF(packet);
+				else {
+					String argsSendFormat = packet + Command.SEPARATOR;
+					
+					for(int i = 0; i < args.length; i++)
+						argsSendFormat+= args[i] + (i == args.length - 1 ? "" : Command.SEPARATOR);
+					
+					write(argsSendFormat);
+				}
+			} catch(Exception e) {
+				e.printStackTrace();
+				throw e;
+			}
+		}
 	}
 }
