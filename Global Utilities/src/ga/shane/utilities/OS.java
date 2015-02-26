@@ -371,10 +371,10 @@ package ga.shane.utilities;
  * @author http://www.shane.ga
  */
 public enum OS {
-	WINDOWS_7, WINDOWS_8, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN, LINUX, MAC, ANDROID, UNKNOWN;
+	WINDOWS_7, WINDOWS_8, WINDOWS_10, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN, LINUX, MAC, ANDROID, UNKNOWN;
 	
 	/** All Windows versions */ 
-	public final static OS[] ALL_WINDOWS = {WINDOWS_7, WINDOWS_8, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN};
+	public final static OS[] ALL_WINDOWS = {WINDOWS_10, WINDOWS_7, WINDOWS_8, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN};
 	/** All Linux versions */
 	public final static OS[] ALL_LINUX =  {LINUX};
 	/** All Macintosh versions */
@@ -406,6 +406,9 @@ public enum OS {
 			
 			if(name.contains("8"))
 				return WINDOWS_8;
+			
+			if(name.contains("10"))
+				return WINDOWS_10;
 			
 			if(name.contains("xp"))
 				return WINDOWS_XP;
