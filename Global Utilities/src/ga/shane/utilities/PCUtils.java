@@ -367,6 +367,9 @@ package ga.shane.utilities;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.net.Inet4Address;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -462,5 +465,41 @@ public class PCUtils {
 	 */
 	public static void globalMessageBox(String body, String title, int icon) {
 		globalMessagebox(body, title, icon);
+	}
+	
+	/**
+	 * Returns the current user's computer name (E.G. Person-PC)
+	 */
+	public static String getHostname() {
+		try {
+			return Inet4Address.getLocalHost().getHostName();
+		} catch(Exception e) {
+			return "error finding comp name";
+		}
+	}
+
+	
+	/**
+	 * Returns all system properties in HTML format
+	 */
+	public static String systemPropertiesToHtml() {
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		PrintStream ps = new PrintStream(out);
+		System.getProperties().list(ps);
+		String[] psplit = out.toString().split("\n");
+		String _final = "";
+		
+		for(final String s : psplit) {			
+			try {
+				String[] split = s.split("=");
+				_final+= "<html><font color='red'>" + split[0] + " <font color='blue'>" + split[1];
+			} catch(Exception e) {
+				_final+= "<html><font color='red'>" + s;
+			}
+			
+			_final+= "<br>";
+		}
+		
+		return _final;
 	}
 }
