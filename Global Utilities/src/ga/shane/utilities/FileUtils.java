@@ -408,6 +408,30 @@ public class FileUtils {
 		return false;
 	}
 	
+	public static File getParentDirectory(File file) {	
+		String s = file.getAbsolutePath();
+		
+		try {
+			int index = s.lastIndexOf("\\");
+			String parent = s.substring(0, index);
+			
+			if(!parent.endsWith("\\"))
+				parent+= "\\";
+			
+			System.out.println("DONE FIRST!! : " + parent);
+			return new File(parent);
+		} catch(Exception e) {
+			int index = s.lastIndexOf("/");
+			String parent = s.substring(0, index);
+			
+			if(!parent.endsWith("\\"))
+				parent+= "\\";
+			
+			System.out.println("DONE SECOND : " + index);
+			return new File(parent);
+		}
+	}
+	
 	/**
 	 * Create a new {@link BFile}
 	 * @param name Name of the file (including extension)

@@ -407,6 +407,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	 * the constructor (excluding {@link JFrame} stuff)<br><br>
 	 * This is called BEFORE {@link #constructFrame()}
 	 * 
+	 * @deprecated
 	 * @see {@link #constructFrame()}
 	 */
 	protected abstract void init();
@@ -416,6 +417,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	 * This is called AFTER {@link #init()}<br><br>
 	 * E.G. stuff like {@link #setDefaultCloseOperation(int)}, {@link #setResizable(boolean)}<br>
 	 * etc go here.
+	 * @deprecated
 	 */
 	protected abstract void constructFrame();
 

@@ -364,7 +364,12 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities.gui;
 
+import java.awt.Component;
+import java.awt.FontMetrics;
+
 import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 /** 
@@ -376,8 +381,70 @@ import javax.swing.table.DefaultTableModel;
  * @author http://www.shane.ga 
 */
 public class BJTable extends JTable {
+	private int[] max;
+	
 	public BJTable(DefaultTableModel model) {
 		super(model);
+		
+		setDefaultRenderer(Object.class, new Renderer(this));
+		getTableHeader().setReorderingAllowed(false);
+		setAutoResizeMode(AUTO_RESIZE_OFF);
+	}
+	
+	/**
+	 * Remove all rows
+	 */
+	public void clear() {
+		getDefaultTableModel().setRowCount(0);
+	}
+	
+	/**
+	 * Has auto resize logic
+	 */
+	public void add(Object[] data) {
+		FontMetrics fm = getFontMetrics(getFont());
+		final int offs = 10;
+		
+		if(max == null) {
+			max = new int[getDefaultTableModel().getColumnCount()];
+			
+			for(int i = 0; i < max.length; i++) {
+				String _data = data[i].toString();
+				
+				if(_data.contains("<html"))
+					continue;
+				
+				max[i] = fm.stringWidth(_data);
+				getColumn(getDefaultTableModel().getColumnName(i)).setPreferredWidth(max[i] + offs);
+			}
+		} else {
+			int[] curMax = new int[max.length];
+			
+			for(int i = 0; i < curMax.length; i++) {
+				String _data = data[i].toString();
+				
+				if(_data.contains("<html"))
+					continue;
+				
+				curMax[i] = fm.stringWidth(_data);
+			}
+			
+			for(int i = 0; i < curMax.length; i++) {
+				if(max[i] < curMax[i]) {
+					max[i] = curMax[i];
+					getColumn(getDefaultTableModel().getColumnName(i)).setPreferredWidth(max[i] + offs);
+				}
+			}
+		}
+		
+		getDefaultTableModel().addRow(data);
+	}
+	
+	public void remove(Object o) {
+		for(int i = 0; i < getDefaultTableModel().getRowCount(); i++) {
+			if(getDefaultTableModel().getValueAt(i, 0).equals(o))
+				getDefaultTableModel().removeRow(i);
+		}
 	}
 	
 	/**
@@ -407,5 +474,22 @@ public class BJTable extends JTable {
 	 */
 	public final DefaultTableModel getDefaultTableModel() {
 		return (DefaultTableModel) getModel();
+	}
+	
+	protected int textAlignment() {
+		return SwingConstants.CENTER;
+	}
+	
+	private final static class Renderer extends DefaultTableCellRenderer {
+		public Renderer(BJTable table) {
+			setHorizontalAlignment(table.textAlignment());	
+		}
+		
+		@Override
+		public Component getTableCellRendererComponent(final JTable table, final Object value, final boolean isSelected, final boolean hasFocus, final int row, final int column) {
+			super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+			setBorder(noFocusBorder);
+			return this;
+		}
 	}
 }
