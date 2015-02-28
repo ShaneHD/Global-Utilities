@@ -9,7 +9,9 @@ import java.io.File;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
+import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
@@ -27,7 +29,6 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 		
 		addMouseListener(this);
 		setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		
 	}
 	
 	private void add(String directory, String path) {
@@ -70,6 +71,8 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 	
 
 	protected abstract void dispatchOpenDirectoryCommand(String selected);
+	protected abstract void dispatchDeleteCommand(String selected);
+	
 	
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Test");
@@ -79,6 +82,11 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 			@Override
 			protected void dispatchOpenDirectoryCommand(String selected) {
 				System.out.println("Request: " + selected);
+			}
+
+			@Override
+			protected void dispatchDeleteCommand(String selected) {
+				System.out.println("Delete: " + selected);
 			}
 		};
 		ArrayList<String> a = new ArrayList<String>();
@@ -99,11 +107,16 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 	protected int textAlignment() {
 		return SwingConstants.LEFT;
 	}
-
+	
+	public String getPath() {
+		return (String) getValueAt(getSelectedRow(), 1);
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		if(e.getClickCount() != 2)
 			return;
+		
 		
 		String path = (String) getValueAt(rowAtPoint(e.getPoint()), 1);
 		
@@ -127,5 +140,29 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
+		if(e.getButton() != 3)
+			return;
+		
+		int row = rowAtPoint(e.getPoint());
+		
+		if(row >= 0 && row < getRowCount())
+			setRowSelectionInterval(row, row);
+		else
+			clearSelection();
+		
+		int index = getSelectedRow();
+		
+		if(index < 0)
+			return;
+		
+		if(e.isPopupTrigger()) {
+			JPopupMenu menu = new PopupMenu(this);
+			menu.show(e.getComponent(), e.getX(), e.getY());
+		}
 	}
 }
+
+
+
+
+

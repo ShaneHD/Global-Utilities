@@ -418,7 +418,6 @@ public class FileUtils {
 			if(!parent.endsWith("\\"))
 				parent+= "\\";
 			
-			System.out.println("DONE FIRST!! : " + parent);
 			return new File(parent);
 		} catch(Exception e) {
 			int index = s.lastIndexOf("/");
@@ -427,7 +426,6 @@ public class FileUtils {
 			if(!parent.endsWith("\\"))
 				parent+= "\\";
 			
-			System.out.println("DONE SECOND : " + index);
 			return new File(parent);
 		}
 	}
