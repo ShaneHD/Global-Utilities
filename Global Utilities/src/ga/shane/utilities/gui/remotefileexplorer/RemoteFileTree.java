@@ -46,8 +46,6 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 			done = true;
 			System.out.println("The file is : " + directory);
 			add("Parent", FileUtils.getParentDirectory(new File(directory)).getAbsolutePath());
-
-			//add("Parent", FileUtils.getParentDirectory(FileUtils.getParentDirectory(new File(file))).getAbsolutePath());
 		}
 		
 		for(String file : files) {			
