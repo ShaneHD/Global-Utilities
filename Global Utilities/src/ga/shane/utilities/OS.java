@@ -432,13 +432,17 @@ public enum OS {
 	}
 	
 	public String getHomeDirectory() {
+		return getHomeDirectory(System.getProperty("user.name"));
+	}
+	
+	public String getHomeDirectory(String username) {
 		switch(this) {
 		case MAC:
 			return "~/";
 		}
 		
 		if(isWindows())
-			return "C:/Users/" + System.getProperty("user.name") + "/Documents/";
+			return "C:/Users/" + username + "/Documents/";
 		
 		throw new RuntimeException("Can't find home directory in OS");
 	}
