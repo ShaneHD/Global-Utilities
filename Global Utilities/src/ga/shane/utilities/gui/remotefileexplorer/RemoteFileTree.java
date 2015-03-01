@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
-import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
@@ -21,6 +20,8 @@ import javax.swing.table.DefaultTableModel;
  * 
  * @author http://www.shane.ga
  */
+//TODO make cache work (don't re request shit that's already cached), and make downloading work.
+
 public abstract class RemoteFileTree extends BJTable implements MouseListener {
 	private String directory = "";
 	
@@ -68,10 +69,9 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 		return directory;
 	}
 	
-	
-
 	protected abstract void dispatchOpenDirectoryCommand(String selected);
 	protected abstract void dispatchDeleteCommand(String selected);
+	protected abstract void dispatchDownloadCommand(String selected);
 	
 	
 	public static void main(String[] args) {
@@ -87,6 +87,11 @@ public abstract class RemoteFileTree extends BJTable implements MouseListener {
 			@Override
 			protected void dispatchDeleteCommand(String selected) {
 				System.out.println("Delete: " + selected);
+			}
+
+			@Override
+			protected void dispatchDownloadCommand(String selected) {
+				System.out.println("Download: " + selected);
 			}
 		};
 		ArrayList<String> a = new ArrayList<String>();

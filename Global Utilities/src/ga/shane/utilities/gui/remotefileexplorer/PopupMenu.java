@@ -7,7 +7,15 @@ import javax.swing.JPopupMenu;
  */
 class PopupMenu extends JPopupMenu {
 	PopupMenu(RemoteFileTree tree) {
-		add(new M_Delete(tree));
+		M[] _m = {
+			new M_Delete(tree),
+			new M_Download(tree)
+		};
+		
+		for(M m : _m) 
+			add(m);
+		
+		
 		setSize(120, 120);
 		setVisible(true);
 	}

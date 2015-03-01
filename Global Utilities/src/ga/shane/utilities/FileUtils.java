@@ -372,7 +372,6 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -380,8 +379,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
-
-import javax.swing.ImageIcon;
 
 
 /**
@@ -408,6 +405,23 @@ public class FileUtils {
 		return false;
 	}
 	
+	public static byte[] fileToByteArray(File file) throws Exception {
+		byte[] result = new byte[(int) file.length()];
+		FileInputStream fin = new FileInputStream(file);
+		fin.read(result);
+		fin.close();
+		return result;
+	}
+	
+	public static void saveByteArrayFileToDisk(String path, byte[] bytes) throws Exception {
+		FileOutputStream fout = new FileOutputStream(path);
+		fout.write(bytes);
+		fout.close();
+	}
+	
+	/**
+	 * Gets the file's parent directory
+	 */
 	public static File getParentDirectory(File file) {	
 		String s = file.getAbsolutePath();
 		
