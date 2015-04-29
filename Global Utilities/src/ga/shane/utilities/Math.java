@@ -365,11 +365,11 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 package ga.shane.utilities;
 
 public class Math {
-	public static int center(int width, int maxwidth) {
-		return maxwidth / 2 - (width / 2);
+	public static int center(int size, int maxsize) {
+		return maxsize / 2 - (size/ 2);
 	}
 	
-	public static float center(float width, float maxwidth) {
-		return maxwidth / 2 - (width / 2);
+	public static float center(float size, float maxsize) {
+		return maxsize / 2 - (size/ 2);
 	}
 }

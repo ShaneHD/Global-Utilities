@@ -375,7 +375,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -512,7 +511,7 @@ public class FileUtils {
 	public static HashMap<String, String> loadFileIntoHashMap(File file) {
 		HashMap<String, String> map = new HashMap<String, String>();
 		
-		for(String line : getLinesFromFile(file)) {
+		for(String line : getFileLines(file)) {
 			String[] split = line.split(separator);
 			map.put(split[0], split[1]);
 		}
@@ -545,7 +544,7 @@ public class FileUtils {
 	 * <s>Bundle all of a file's lines into a {@link ArrayList}</s>
 	 * @deprecated {@link #getFileLines(File)}
 	 */
-	public static ArrayList<String> getLinesFromFile(File file) {
+	/*public static ArrayList<String> getLinesFromFile(File file) {
 		ArrayList<String> lines = new ArrayList<String>();
 		
 		try {
@@ -561,7 +560,7 @@ public class FileUtils {
 		}
 		
 		throw new RuntimeException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
-	}
+	}*/
 	
 	/**
 	 * Get the contents of a file into a single {@link String}<br>

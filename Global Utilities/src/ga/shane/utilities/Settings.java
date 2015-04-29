@@ -366,8 +366,8 @@ package ga.shane.utilities;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 /**
@@ -399,7 +399,8 @@ public class Settings<V> extends HashMap<String, V> {
 		if(!file.exists())
 			return false;
 		
-		ArrayList<String> lines = FileUtils.getLinesFromFile(file);
+		
+		HashSet<String> lines = FileUtils.getFileLines(file);
 		
 		for(String line : lines) {
 			try {

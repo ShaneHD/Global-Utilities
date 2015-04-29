@@ -53,7 +53,7 @@ public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
 		return this;
 	}
 	
-	public ArrayList<V> list(K... keys) {
+	public ArrayList<V> list(@SuppressWarnings("unchecked") K... keys) {
 		ArrayList<V> values = new ArrayList<V>();
 		
 		if(keys.length == 0) {

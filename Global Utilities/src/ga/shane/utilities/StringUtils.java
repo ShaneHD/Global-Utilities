@@ -456,4 +456,26 @@ public class StringUtils {
 		grouped = replaceLast(grouped, "\n", "");
 		return grouped;
 	}
+	
+	/**
+	 * Simple formatter, one instance per string
+	 * @author http://www.shane.ga
+	 *
+	 */
+	public static class StringFormatter {
+		private final String string;
+		
+		public StringFormatter(String string) {
+			this.string = string;
+		}
+		
+		/**
+		 * Makes the first letter upper case
+		 * @return
+		 */
+		public String firstLetterUpper() {
+			char first = string.charAt(0);
+			return Character.toUpperCase(first) + string.substring(1);
+		}
+	}
 }

@@ -364,7 +364,6 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities.gui;
 
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -375,16 +374,15 @@ import javax.swing.JFrame;
 
 /**
  * Stands for BetterJFrame<br>
- * Adds two methods: {@link #init()} & {@link #constructFrame()}<br><br>
+ * <!--<s>Adds two methods: {@link #init()} & {@link #constructFrame()}<br><br>
  *
  * <b style='color:red;'>
 	 * =========================================================<br>
 	 * Both methods are called AUTOMATICALLY in the constructors<br>
 	 * =========================================================
- * </b><br>
+ * </b></s>--><br>
  * Also implements {@link WindowListener}
  * 
- * @deprecated
  * @see {@link JFrame}
  * @see {@link WindowListener}
  * @author http://www.shane.ga
@@ -398,8 +396,8 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	public BJFrame() {
 		setMinimumSize(new Dimension(50, 50));
 		addWindowListener(this);
-		init();
-		constructFrame();	
+//		init();
+//		constructFrame();	
 	}
 	
 	/**
@@ -410,7 +408,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	 * @deprecated
 	 * @see {@link #constructFrame()}
 	 */
-	protected abstract void init();
+//	protected abstract void init();
 	
 	/**
 	 * Place anything {@link JFrame} related in here<br>
@@ -419,7 +417,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	 * etc go here.
 	 * @deprecated
 	 */
-	protected abstract void constructFrame();
+//	protected abstract void constructFrame();
 
 	/**
 	 * Clear this {@link JFrame}<br>
@@ -434,6 +432,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	/**
 	 * Refreshes the window<br>
 	 * Sets the size -2,-2 then +2,+2
+	 * <!-- TODO look for cleaner way of doing this -->
 	 */
 	public void refresh() {
 		setSize(getWidth() - 2, getHeight() - 2);

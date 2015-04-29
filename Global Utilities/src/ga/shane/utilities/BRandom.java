@@ -371,7 +371,8 @@ import java.util.Random;
  * Stands for BetterRandom<br>
  * Adds more functionality to {@link Random}
  * 
- *@see {@link #nextColor()}
+ * @see {@link #nextColor()}
+ * @see {@link #chance(int)}
  * @author http://www.shane.ga
  */
 public class BRandom extends Random {
@@ -399,6 +400,10 @@ public class BRandom extends Random {
 		return nextInt(max - min) + min;
 	}
 	
+	/**
+	 * Uses {@link #nextInt(int)} to generate a random number, and returns whether it's equal to max or not<br>
+	 * Useful for random events with a set chance of happening
+	 */
 	public boolean chance(int max) {
 		return nextInt(max + 1) == max;
 	}
