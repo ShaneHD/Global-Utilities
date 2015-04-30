@@ -367,6 +367,13 @@ package ga.shane.utilities.experimental;
 import ga.shane.utilities.FileUtils;
 
 import java.io.File;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 /** 
  * {@link BasePlugin} loader
@@ -381,5 +388,56 @@ public class ExternalPluginLoader {
 	 */
 	public ExternalPluginLoader() {
 		dir = new File(FileUtils.workingDirectory, "plugins/");
+	}
+	
+	// TODO error handling 
+	@SuppressWarnings("unchecked")
+	public HashSet<BasePlugin> loadPlugins(Object arg) {
+		HashSet<BasePlugin> plugins = new HashSet<BasePlugin>();
+		
+		for(File file : dir.listFiles()) {
+			String name = file.getName();
+			
+			if(!name.endsWith(".jar"))
+				continue;
+			
+			System.out.println("= Found plugin jar: " + name + " =");
+			String main = null;
+			
+			try {				
+				JarFile jar = new JarFile(file);
+				JarEntry entry = jar.getJarEntry("plugin.info");
+				
+				InputStream in = jar.getInputStream(entry);
+				Scanner scanner = new Scanner(in);
+				main = scanner.nextLine().split("main=")[1];
+				
+				scanner.close();
+				jar.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			if(main == null) {
+				System.out.println("Main is null.");
+				continue;
+			}
+			
+			try {
+				@SuppressWarnings("deprecation")
+				URLClassLoader  loader = new URLClassLoader(new URL[]{file.toURL()}, getClass().getClassLoader());
+				Class pluginClass = loader.loadClass(main);
+				
+				BasePlugin current = (BasePlugin) pluginClass.newInstance();
+				current.load(arg);
+				plugins.add(current);
+				
+				loader.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return plugins;
 	}
 }
