@@ -365,7 +365,6 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 package ga.shane.utilities.experimental;
 
 import ga.shane.utilities.FileUtils;
-import ga.shane.utilities.OptionalLogger;
 import ga.shane.utilities.StringUtils;
 
 import java.io.File;
@@ -386,21 +385,14 @@ import java.util.logging.Logger;
 public class ExternalPluginLoader {
 	public final File dir;
 	private final LinkedHashSet<BasePlugin> plugins = new LinkedHashSet<BasePlugin>();
-	private final OptionalLogger log = new OptionalLogger();
+	private final Logger log;
 	
 	/**
 	 * <b style='color:red;'>Warning: uses {@link FileUtils#workingDirectory}/plugins</b>
 	 */
 	public ExternalPluginLoader(Logger log) {
-		this();
-		this.log.setLogger(log);
-	}
-	
-	/**
-	 * <b style='color:red;'>Warning: uses {@link FileUtils#workingDirectory}/plugins</b>
-	 */
-	public ExternalPluginLoader() {
 		dir = new File(FileUtils.workingDirectory, "plugins/");
+		this.log = log;
 	}
 	
 	@SuppressWarnings("unchecked")

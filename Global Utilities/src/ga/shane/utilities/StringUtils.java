@@ -463,7 +463,7 @@ public class StringUtils {
 	 *
 	 */
 	public static class StringFormatter {
-		private final String string;
+		private String string;
 		
 		public StringFormatter(String string) {
 			this.string = string;
@@ -473,9 +473,14 @@ public class StringUtils {
 		 * Makes the first letter upper case
 		 * @return
 		 */
-		public String firstLetterUpper() {
+		public StringFormatter firstLetterUpper() {
 			char first = string.charAt(0);
-			return Character.toUpperCase(first) + string.substring(1);
+			string = Character.toUpperCase(first) + string.substring(1);
+			return this;
+		}
+		
+		public String get() {
+			return string;
 		}
 	}
 }
