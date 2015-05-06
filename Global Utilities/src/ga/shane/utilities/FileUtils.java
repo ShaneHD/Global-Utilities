@@ -375,6 +375,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -522,8 +523,8 @@ public class FileUtils {
 	/**
 	 * Bundle all of a file's lines into a {@link HashSet}
 	 */
-	public static HashSet<String> getFileLines(File file) {
-		HashSet<String> lines = new HashSet<String>();
+	public static ArrayList<String> getFileLines(File file) {
+		ArrayList<String> lines = new ArrayList<String>();
 		
 		try {
 			Scanner scanner = new Scanner(file);
