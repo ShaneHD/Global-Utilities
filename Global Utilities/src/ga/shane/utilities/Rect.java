@@ -364,6 +364,9 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities;
 
+/** 
+ * @author http://www.shane.ga
+ */
 public class Rect {
 	public float x, y, width, height;
 	
