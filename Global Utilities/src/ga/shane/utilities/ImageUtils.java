@@ -366,7 +366,10 @@ package ga.shane.utilities;
 
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.MouseInfo;
+import java.awt.Rectangle;
 import java.awt.RenderingHints;
+import java.awt.Robot;
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
 import java.io.ByteArrayInputStream;
@@ -381,7 +384,7 @@ import javax.imageio.ImageIO;
  * 
  * @author http://www.shane.ga
  */
-public class ImageUtils {
+public class ImageUtils {	
 	/** An array of common image formats */
 	public static final String[] FORMATS = {
 		"png", "jpg", "jpeg", "gif", "bmp"
@@ -392,6 +395,29 @@ public class ImageUtils {
 	 */
 	public static boolean isImage(File file) {
 		return FileUtils.isImage(file);
+	}
+	
+	/**
+	 * Uses {@link Robot#createScreenCapture(Rectangle)} to make a {@link BufferedImage} of the screen
+	 */
+	public static BufferedImage createScreenCapture(Robot robot) {
+		BufferedImage img = robot.createScreenCapture(new Rectangle(PCUtils.getScreenWidth(), PCUtils.getScreenHeight()));
+		return img;
+	}
+	
+	/**
+	 * Draws a circle where the mouse cursor is
+	 * @see {@link #createScreenCapture(Robot)}
+	 */
+	public static BufferedImage createScreenCaptureWithMouseCursor(Robot robot) {
+		BufferedImage img = createScreenCapture(robot);
+
+		int x = MouseInfo.getPointerInfo().getLocation().x;
+		int y = MouseInfo.getPointerInfo().getLocation().y;
+		Graphics2D g = img.createGraphics();
+
+		g.drawRoundRect(x, y, 16, 16, 16, 16);
+		return img;
 	}
 	
 	/**
