@@ -369,7 +369,7 @@ import java.awt.event.ActionEvent;
 /** 
  * @author http://www.shane.ga
  */
-public class M_Download extends M {
+class M_Download extends M {
 	public M_Download(RemoteFileTree tree) {
 		super("Download", tree);
 	}
