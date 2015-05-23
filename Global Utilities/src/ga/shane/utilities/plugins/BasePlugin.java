@@ -362,7 +362,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
       With Secondary Licenses", as defined by
       the Mozilla Public License, v. 2.0.
  */
-package ga.shane.utilities.experimental;
+package ga.shane.utilities.plugins;
 
 /** 
  * Base class for an external plugin<br>
