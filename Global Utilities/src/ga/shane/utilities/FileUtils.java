@@ -378,6 +378,7 @@ import java.nio.channels.ReadableByteChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 
@@ -403,6 +404,15 @@ public class FileUtils {
 		}
 		
 		return false;
+	}
+	
+	public static void iterateLines(File file, NewLineIterator iterator) {
+		iterateLines(getFileContents(file), iterator);
+	}
+	
+	public static void iterateLines(String contents, NewLineIterator iterator) {
+		for(String line : contents.split("\n"))
+			iterator.onLine(line);
 	}
 	
 	public static byte[] fileToByteArray(File file) throws Exception {
@@ -509,8 +519,8 @@ public class FileUtils {
 	/**
 	 * Load a configuration file into a {@link HashMap}
 	 */
-	public static HashMap<String, String> loadFileIntoHashMap(File file) {
-		HashMap<String, String> map = new HashMap<String, String>();
+	public static LinkedHashMap<String, String> loadFileIntoHashMap(File file) {
+		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
 		
 		for(String line : getFileLines(file)) {
 			String[] split = line.split(separator);
