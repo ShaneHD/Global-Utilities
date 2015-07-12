@@ -367,10 +367,10 @@ package ga.shane.utilities;
 /** 
  * @author http://www.shane.ga
  */
-public class Rect {
+public class Rectf {
 	public float x, y, width, height;
 	
-	public Rect(float x, float y, float width, float height) {
+	public Rectf(float x, float y, float width, float height) {
 		this.x = x;
 		this.y = y;
 		this.width = width;
@@ -385,7 +385,7 @@ public class Rect {
 		return determine(x, rx, width, rwidth) && determine(y, ry, height, rheight);
 	}
 	
-	public boolean intersects(Rect rect) {
+	public boolean intersects(Rectf rect) {
 		return intersects(rect.x, rect.y, rect.width, rect.height);		
 	}
 	
@@ -396,8 +396,8 @@ public class Rect {
 	
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Rect) {
-			Rect rekt = (Rect) obj;	
+		if(obj instanceof Rectf) {
+			Rectf rekt = (Rectf) obj;	
 			return rekt == this || (rekt.x == x && rekt.y == y && rekt.width == width && rekt.height == height);
 		}
 		
