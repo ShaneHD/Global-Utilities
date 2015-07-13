@@ -406,7 +406,7 @@ public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
 		return contains;
 	}
 	
-	public ListMap put(K key, V value) {
+	public ListMap<K, V> put(K key, V value) {
 		if(containsKey(key))
 			get(key).add(value);
 		else {
