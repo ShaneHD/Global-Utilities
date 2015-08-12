@@ -389,6 +389,10 @@ public class Recti {
 		return intersects(rect.x, rect.y, rect.width, rect.height);		
 	}
 	
+	public boolean intersects(Rectf rect) {
+		return intersects((int)rect.x, (int)rect.y, (int)rect.width, (int)rect.height);
+	}
+	
 	@Override
 	public String toString() {
 		return "[Rect: " + x + ", " + y + ", " + width + ", " + height + "]";
