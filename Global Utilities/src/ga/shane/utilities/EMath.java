@@ -384,12 +384,6 @@ public class EMath {
 		return i % 2 == 0 ? --i : i;
 	}
 	
-	public static void main(String[] args) {
-		int i = 1;
-		
-		System.out.println(toNextEven(i));
-	}
-	
 	/**
 	 * Finds center location (int)
 	 */
