@@ -367,7 +367,29 @@ package ga.shane.utilities;
 /** 
  * @author http://www.shane.ga
  */
-public class Math {
+public class EMath {
+	public static int toNextEven(int i) {
+		return i % 2 == 0 ? i : ++i;
+	}
+	
+	public static int toLastEven(int i) {
+		return i % 2 == 0 ? i : --i;
+	}
+	
+	public static int toNextOdd(int i) {
+		return i % 2 == 0 ? ++i : i;
+	}
+	
+	public static int toLastOdd(int i) {
+		return i % 2 == 0 ? --i : i;
+	}
+	
+	public static void main(String[] args) {
+		int i = 1;
+		
+		System.out.println(toNextEven(i));
+	}
+	
 	/**
 	 * Finds center location (int)
 	 */
