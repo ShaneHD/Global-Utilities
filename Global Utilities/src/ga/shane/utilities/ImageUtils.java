@@ -479,4 +479,22 @@ public class ImageUtils {
 			return null;
 		}
 	}
+	
+	public static enum View {
+		HORIZONTAL, VERTICAL, SQUARE;
+		
+		public static View what(BufferedImage img) {
+			if(img.getWidth() > img.getHeight())
+				return HORIZONTAL;
+			
+			if(img.getHeight() > img.getWidth())
+				return VERTICAL;
+			
+			return SQUARE;
+		}
+		
+		public boolean is(BufferedImage img) {
+			return what(img) == this;
+		}
+	}
 }
