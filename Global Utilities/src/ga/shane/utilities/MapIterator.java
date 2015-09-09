@@ -369,4 +369,7 @@ package ga.shane.utilities;
  */
 public interface MapIterator<K, V> {
 	void on(K k, V v);
+	
+	public static interface Reverse<K, V> extends MapIterator<K, V> {
+	}
 }
