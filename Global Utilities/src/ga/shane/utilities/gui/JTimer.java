@@ -62,14 +62,4 @@ public class JTimer extends JLabel {
 			}
 		}.start();
 	}
-	
-	public static void main(String[] args) {
-		JTimer timer = new JTimer(0);
-		JFrame frame = new JFrame();
-		frame.setVisible(true);
-		frame.setSize(650, 400);
-		frame.setAlwaysOnTop(true);
-		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-		frame.add(timer);
-	}
 }
