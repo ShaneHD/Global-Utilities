@@ -408,7 +408,7 @@ public class JTimer extends JLabel implements Runnable {
 		thread.start();
 	}
 
-	public JTimer(long delay) {	
+	public JTimer() {	
 		thread = new Thread(this);
 	}
 
