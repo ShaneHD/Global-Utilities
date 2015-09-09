@@ -378,7 +378,7 @@ import ga.shane.utilities.StringUtils;
  *@author http://www.shane.ga
  */
 public class JTimer extends JLabel implements Runnable {
-	private boolean showEmptyValues = true;
+	private boolean paused, showEmptyValues = true;
 	private Thread thread;
 	
 	/**
@@ -386,6 +386,18 @@ public class JTimer extends JLabel implements Runnable {
 	 */
 	public void setShowEmptyValues(boolean showEmptyValues) {
 		this.showEmptyValues = showEmptyValues;
+	}
+	
+	public boolean setPaused(boolean paused) {
+		return this.paused = paused;
+	}
+	
+	public boolean togglePause() {
+		return setPaused(!paused);
+	}
+	
+	public synchronized boolean isPaused() {
+		return paused;
 	}
 	
 	private final LinkedHashMap<String, Integer> times = new LinkedHashMap<String, Integer>() {
@@ -408,13 +420,18 @@ public class JTimer extends JLabel implements Runnable {
 		thread.start();
 	}
 
-	public JTimer() {	
+	public JTimer() {
 		thread = new Thread(this);
 	}
 
 	@Override
 	public void run() {
-		while(true) {
+		while(true) {			
+			if(isPaused()) {
+				
+				continue;
+			}
+			
 			times.put("s", times.get("s") + 1);
 			
 			if(times.get("s") >= 60) {
