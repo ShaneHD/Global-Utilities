@@ -381,6 +381,43 @@ public class JTimer extends JLabel implements Runnable {
 	private boolean paused, showEmptyValues = true;
 	private Thread thread;
 	
+	private final LinkedHashMap<String, Integer> times = new LinkedHashMap<String, Integer>() {
+		{
+			String[] times = {
+				"s",
+				"m",
+				"h"
+			};
+			
+			for(String time : times)
+				put(time, 0);
+		}
+	};
+	
+	public void fromString(String s) {
+		String[] split = s.split(":");
+		
+		for(String string : split) {
+			String[] cur = string.split(",");
+			String k = cur[0];
+			int v = Integer.parseInt(cur[1]);
+			
+			times.put(k, v);
+		}
+	}
+	
+	public String toString() {		
+		final StringBuilder s = new StringBuilder();
+		
+		MapUtils.iterate(times, new MapIterator() {			
+			public void on(Object k, Object v) {
+				s.append(k + "," + v + ":");
+			}
+		});		
+		
+		return s.toString();
+	}
+	
 	/**
 	 * Should the value '0' be drawn?
 	 */
@@ -399,19 +436,6 @@ public class JTimer extends JLabel implements Runnable {
 	public synchronized boolean isPaused() {
 		return paused;
 	}
-	
-	private final LinkedHashMap<String, Integer> times = new LinkedHashMap<String, Integer>() {
-		{
-			String[] times = {
-				"s",
-				"m",
-				"h"
-			};
-			
-			for(String time : times)
-				put(time, 0);
-		}
-	};
 
 	/**
 	 * Started the timer thread
