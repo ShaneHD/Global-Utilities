@@ -376,12 +376,17 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface PluginInfo {	
 	/**
+	 * The name of this plugin
+	 */
+	public String name() default "null";
+	
+	/**
 	 * The author of this plugin
 	 */
 	public String author() default "null";
 	
 	/**
-	 * The version of this plugin (will be used for updating, and possibly on a plugin repo)
+	 * The version of this plugin
 	 */
 	public double version() default 1.0;
 }
