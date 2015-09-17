@@ -364,6 +364,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -371,6 +372,22 @@ import java.util.Map;
 public class StringUtils {
 	/** The alphabet in {@link String} form */
 	public final static String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	
+	/**
+	 * Split a {@link String} by its {@link String#length()}
+	 */
+	public static ArrayList<String> splitByLength(String string, int maxLength) {
+		ArrayList<String> split = new ArrayList<String>();
+		
+		if(string.length() <= maxLength)
+			split.add(string);
+		else {
+			for(int i = 0; i <= string.length(); i+= maxLength) 
+				split.add(string.substring(i, Math.min(i + maxLength, string.length())));
+		}
+		
+		return split;
+	}
 	
 	/**
 	 * Surround a {@link String} with quotation marks
@@ -382,7 +399,7 @@ public class StringUtils {
 	}
 	
 	/**
-	 * Replace the last occurance of something in a {@link String}<br>
+	 * Replace the last occurrence of something in a {@link String}<br>
 	 * (java y u no have this already)
 	 * 
 	 * @return
