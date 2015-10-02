@@ -385,6 +385,8 @@ import javax.imageio.ImageIO;
  * @author http://www.shane.ga
  */
 public class ImageUtils {	
+	private static BufferedImage mouseCursor;
+	
 	/** An array of common image formats */
 	public static final String[] FORMATS = {
 		"png", "jpg", "jpeg", "gif", "bmp"
@@ -416,7 +418,11 @@ public class ImageUtils {
 		int y = MouseInfo.getPointerInfo().getLocation().y;
 		Graphics2D g = img.createGraphics();
 
-		g.drawRoundRect(x, y, 16, 16, 16, 16);
+		if(mouseCursor == null)
+			mouseCursor = load(FileUtils.newFileInsideClasspath("ga/shane/utilities/mouse_cursor.png"));
+		
+		g.drawImage(mouseCursor, x, y, null);
+		//g.drawRoundRect(x, y, 16, 16, 16, 16);
 		return img;
 	}
 	
