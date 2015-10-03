@@ -364,6 +364,7 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
  */
 package ga.shane.utilities;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -371,7 +372,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -380,6 +383,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
+
+import javax.annotation.Resource;
 
 
 /**
@@ -475,8 +480,9 @@ public class FileUtils {
 		return file;
 	}
 	
+	//FIXME Doesn't work in jars, getResourceAsStream
 	public static BFile newFileInsideClasspath(String name) {
-		try {
+		try {			
 			URL url = FileUtils.class.getResource("/" + name);
 			BFile file = new BFile(url.toURI());
 			return file;
