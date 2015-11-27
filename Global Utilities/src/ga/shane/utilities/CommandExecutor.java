@@ -368,5 +368,5 @@ package ga.shane.utilities;
  * @author http://www.shane.ga
  */
 public interface CommandExecutor {
-	void execute(final String command, final String sub, final String[] args) throws Exception;
+	void execute(String command, String sub, String[] args) throws Exception;
 }

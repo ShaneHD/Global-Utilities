@@ -482,6 +482,7 @@ public class ImageUtils {
 		try {
 			return ImageIO.read(path);
 		} catch(IOException e) {
+			e.printStackTrace();
 			return null;
 		}
 	}
