@@ -78,4 +78,8 @@ public class BScanner {
 	public long linput(String... message) throws NumberFormatException {
 		return Long.parseLong(input(message));
 	}
+	
+	public Scanner getScanner() {
+		return scanner;
+	}
 }
