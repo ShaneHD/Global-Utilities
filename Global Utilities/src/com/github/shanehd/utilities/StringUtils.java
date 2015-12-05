@@ -27,18 +27,13 @@ public class StringUtils {
 	
 	/**
 	 * Surround a {@link String} with quotation marks
-	 * @param obj The thing to be surrounded
-	 * @return "{@link obj}"
 	 */
 	public static String quote(Object obj) {
 		return "\"" + obj + "\"";
 	}
 	
 	/**
-	 * Replace the last occurrence of something in a {@link String}<br>
-	 * (java y u no have this already)
-	 * 
-	 * @return
+	 * Replace the last occurrence of something in a {@link String}
 	 */
 	public static String replaceLast(String string, String from, String to) {
 		StringBuilder builder = new StringBuilder(string);
@@ -108,6 +103,13 @@ public class StringUtils {
 		
 		grouped = replaceLast(grouped, "\n", "");
 		return grouped;
+	}
+	
+	/**
+	 * Iterate over all lines (\n)
+	 */
+	public static void iterateLines(String string, NewLineIterator iterator) {
+		FileUtils.iterateLines(string, iterator);
 	}
 	
 	public static String format_FirstLetterUpper(String string) {

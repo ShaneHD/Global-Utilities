@@ -22,7 +22,6 @@ public class BRandom extends Random {
 	
 	/**
 	 * Calls {@link Color}({@link #nextFloat()}, {@link #nextFloat()}, {@link #nextFloat()}, {@link #nextFloat()})
-	 * @return
 	 */
 	public Color nextColor() {
 		return new Color(nextFloat(), nextFloat(), nextFloat(), nextFloat());
