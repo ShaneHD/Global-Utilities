@@ -1,8 +1,7 @@
 package ga.shane.utilities.kotlin
 
-import ga.shane.utilities.kotlin.*
 import java.util.ArrayList
-import ga.shane.utilities.StringUtils
+import com.github.shanehd.utilities.StringUtils
 
 /** 
  * @author https://www.github.com/ShaneHD

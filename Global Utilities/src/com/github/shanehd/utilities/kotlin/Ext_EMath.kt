@@ -1,7 +1,6 @@
 package ga.shane.utilities.kotlin
 
-import ga.shane.utilities.kotlin.*
-import ga.shane.utilities.EMath
+import com.github.shanehd.utilities.EMath
 
 /** 
  * @author https://www.github.com/ShaneHD
