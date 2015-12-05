@@ -15,7 +15,7 @@ import javax.swing.text.Document;
  * See {@link #setPlaceholderColor(Color)} and {@link #getPlaceholderColor()} for the placeholder's draw color
  * 
  * @see {@link JPasswordField}
- * @author http://www.shane.ga 
+ * @author https://www.github.com/ShaneHD 
 */
 public class BJPasswordField extends JPasswordField implements IBJTextField {
 	private String placeholder;

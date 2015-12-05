@@ -3,7 +3,7 @@ package ga.shane.utilities.gui.remotefileexplorer;
 import ga.shane.utilities.gui.BJMenuItem;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 abstract class M extends BJMenuItem {
 	protected final RemoteFileTree tree;

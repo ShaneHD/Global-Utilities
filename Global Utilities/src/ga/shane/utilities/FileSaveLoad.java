@@ -7,7 +7,7 @@ import java.io.File;
  * 
  * @see {@link #load()}
  * @see {@link #save()}
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public interface FileSaveLoad {
 	boolean load();

@@ -5,7 +5,7 @@ package ga.shane.utilities.gui;
  * A {@link BJButton} designed to be used with a {@link UrlTextField}<br>
  * Automatically enables/disables based on whether the URL input is valid
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class UrlTextFieldButton extends BJButton {	
 	public UrlTextFieldButton(UrlTextField url, String text) {

@@ -8,7 +8,7 @@ import java.nio.channels.ReadableByteChannel;
 import java.nio.file.Path;
 import java.util.Scanner;
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 public class BScanner {
 	private final Scanner scanner;
 	

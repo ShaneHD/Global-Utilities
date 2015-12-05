@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 public class StringUtils {
 	/** The alphabet in {@link String} form */
 	public final static String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

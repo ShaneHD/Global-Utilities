@@ -8,7 +8,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
  * This is simply something for you to use in whatever way you wish.<br><br>
  * I made this so that when adding nodes to a {@link javax.swing.JTree}, I could give them an icon image
  * 
- * @author http://www.shane.ga 
+ * @author https://www.github.com/ShaneHD 
  */
 public class IconTreeNode extends DefaultMutableTreeNode {
 	private String icon;

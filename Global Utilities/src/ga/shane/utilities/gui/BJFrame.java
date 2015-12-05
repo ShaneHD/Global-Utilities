@@ -21,7 +21,7 @@ import javax.swing.JFrame;
  * 
  * @see {@link JFrame}
  * @see {@link WindowListener}
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public abstract class BJFrame extends JFrame implements WindowListener {
 	public BJFrame(String title) {

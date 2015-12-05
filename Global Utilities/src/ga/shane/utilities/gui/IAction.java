@@ -9,7 +9,7 @@ import java.awt.Component;
  * EX: In {@link ButtonCreator}, when a button is added, any {@link IAction}s
  * will run the {@link #on(Component)} method
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public interface IAction {
 	void on(Component c);

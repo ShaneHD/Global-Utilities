@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  * All computer utilities<br>
  * Independent of Operating System
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class PCUtils {
 	/**

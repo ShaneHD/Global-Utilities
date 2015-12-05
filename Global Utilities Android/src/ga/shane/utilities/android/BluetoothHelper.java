@@ -11,7 +11,7 @@ import android.content.Intent;
 //Note that most code below is made by viewing examples from google
 //It is NOT made by me off of the top of my head 
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 public class BluetoothHelper {
 	private final BluetoothAdapter btAdapter;
 	private final Set<BluetoothDeviceWrapper> devices;

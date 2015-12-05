@@ -8,7 +8,7 @@ import java.util.Calendar;
  * long form(E.G. Monday)
  * @see {@link #full_name}
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public enum Day {
 	MON("Monday"),

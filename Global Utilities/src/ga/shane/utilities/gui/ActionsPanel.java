@@ -13,7 +13,7 @@ import ga.shane.utilities.gui.TitledJPanel;
 /**
  * TODO maybe implement {@link ButtonCreator}?
  *
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class ActionsPanel extends TitledJPanel {
 	public ActionsPanel(JPanel parent, ActionListener listener, Object... actions) {

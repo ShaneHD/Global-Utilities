@@ -3,7 +3,7 @@ package ga.shane.utilities.gui.media;
 import java.awt.Graphics;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class Text extends Media<String> {
 	public Text(String value, int x, int y) {

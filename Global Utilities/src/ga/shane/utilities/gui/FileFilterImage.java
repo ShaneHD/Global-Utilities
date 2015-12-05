@@ -11,7 +11,7 @@ import javax.swing.filechooser.FileFilter;
  * (Uses {@link ImageUtils#isImage(File)})
  * 
  * @see {@link FileFilter}
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class FileFilterImage extends FileFilter {
 

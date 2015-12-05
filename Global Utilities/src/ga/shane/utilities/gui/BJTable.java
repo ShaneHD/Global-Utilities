@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  * Also adds a method ({@link #getDefaultTableModel()}) to get the model and cast it to {@link DefaultTableModel} easily
  * 
  * @see {@link JTable}
- * @author http://www.shane.ga 
+ * @author https://www.github.com/ShaneHD 
 */
 public class BJTable extends JTable {
 	private int[] max;

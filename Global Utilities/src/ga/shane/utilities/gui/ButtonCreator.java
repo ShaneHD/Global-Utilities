@@ -12,7 +12,7 @@ import javax.swing.JPanel;
  * A {@link JButton} creator<br>
  * Creates and adds {@link JButton}s to a {@link JPanel}<br>
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class ButtonCreator extends ArrayList<JButton> {
 	/** The panel that the buttons have been added to */

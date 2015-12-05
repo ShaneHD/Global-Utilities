@@ -3,7 +3,7 @@ package ga.shane.utilities.gui.remotefileexplorer;
 import javax.swing.JPopupMenu;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 class PopupMenu extends JPopupMenu {
 	PopupMenu(RemoteFileTree tree) {

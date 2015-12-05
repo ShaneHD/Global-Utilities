@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.util.Log;
 import android.widget.Toast;
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 public class AndroidUtils {
 	private static Activity main;
 	

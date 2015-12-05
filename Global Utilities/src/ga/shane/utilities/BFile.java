@@ -11,7 +11,7 @@ import java.net.URI;
  * 
  * @see {@link #isNewFile()}
  * @see {@link File}
- * @author http://www.shane.ga 
+ * @author https://www.github.com/ShaneHD 
 */
 public class BFile extends File {
 	private boolean newlyCreated;

@@ -18,7 +18,7 @@ import javax.imageio.ImageIO;
 /**
  * Image utilities
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class ImageUtils {	
 	private static BufferedImage mouseCursor;

@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
 	public ListMap() {

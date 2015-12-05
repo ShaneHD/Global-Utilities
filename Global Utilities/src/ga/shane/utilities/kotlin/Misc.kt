@@ -3,7 +3,7 @@ package ga.shane.utilities.kotlin
 import java.util.ArrayList
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 
 val CACHE = ArrayList<Any>()

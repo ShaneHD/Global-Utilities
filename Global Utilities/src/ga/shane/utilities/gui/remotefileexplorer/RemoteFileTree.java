@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 /** 
  * A file tree explorer for remote systems
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 //TODO make cache work (don't re request shit that's already cached), and make downloading work.
 

@@ -11,7 +11,7 @@ import javax.swing.JButton;
  * Automatically enables/disables a {@link JButton} based on whether the URL input is valid
  * @see {@link KeyListener}
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class UrlTextFieldKeyListener implements KeyListener {
 	private final JButton button;

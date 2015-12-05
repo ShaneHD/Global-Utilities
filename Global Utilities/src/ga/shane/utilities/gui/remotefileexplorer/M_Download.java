@@ -3,7 +3,7 @@ package ga.shane.utilities.gui.remotefileexplorer;
 import java.awt.event.ActionEvent;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 class M_Download extends M {
 	public M_Download(RemoteFileTree tree) {

@@ -11,7 +11,7 @@ import javax.swing.border.Border;
 /**
  * 
  *
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class TitledJPanel extends JPanel {
 	private Color color;

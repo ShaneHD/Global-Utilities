@@ -8,7 +8,7 @@ import javax.swing.text.StyledDocument;
  * Contains a method for appending: {@link #append(String)}
  * @see {@link JTextPane}
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class BJTextPane extends JTextPane {
 	/**

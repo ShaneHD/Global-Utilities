@@ -10,7 +10,7 @@ import javax.swing.text.Document;
  * A {@link BJTextField} designed for URL input
  * @see {@link #valid()}
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class UrlTextField extends BJTextField {
 	public UrlTextField() {

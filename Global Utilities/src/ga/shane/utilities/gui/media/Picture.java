@@ -8,7 +8,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class Picture extends Media<BufferedImage> {
 	public Picture(BufferedImage value, int x, int y) {

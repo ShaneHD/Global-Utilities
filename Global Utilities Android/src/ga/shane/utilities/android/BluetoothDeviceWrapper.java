@@ -12,7 +12,7 @@ import android.bluetooth.BluetoothSocket;
  * Adds methods to send data to this device (TODO)
  * 
  * @see {@link #getBluetoothDevice()}
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class BluetoothDeviceWrapper implements IBluetoothDevice {
 	private final BluetoothDevice device;

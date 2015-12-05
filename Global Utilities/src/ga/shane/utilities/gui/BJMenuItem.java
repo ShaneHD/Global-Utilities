@@ -7,7 +7,7 @@ import javax.swing.JMenuItem;
 /**
  * 
  *
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public abstract class BJMenuItem extends JMenuItem implements ActionListener {
 	public BJMenuItem() {

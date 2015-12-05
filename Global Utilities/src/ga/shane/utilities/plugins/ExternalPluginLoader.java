@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 /** 
  * {@link BasePlugin} loader
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class ExternalPluginLoader {
 	public final File dir;

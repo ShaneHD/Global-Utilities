@@ -4,7 +4,7 @@ import java.io.File
 import ga.shane.utilities.kotlin.*
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 
 val File.newlyCreated: Boolean 

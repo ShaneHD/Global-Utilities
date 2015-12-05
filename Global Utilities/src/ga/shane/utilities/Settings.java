@@ -13,7 +13,7 @@ import java.util.Map;
  * @see {@link #load()}
  * @see {@link #setFile(File)}
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class Settings<V> extends HashMap<String, V> {
 	private File file;

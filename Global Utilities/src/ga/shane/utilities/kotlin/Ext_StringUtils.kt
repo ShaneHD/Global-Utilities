@@ -5,7 +5,7 @@ import java.util.ArrayList
 import ga.shane.utilities.StringUtils
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 
 val Any.quote: String

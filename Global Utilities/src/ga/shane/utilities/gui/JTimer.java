@@ -11,7 +11,7 @@ import ga.shane.utilities.StringUtils;
 /**
  * A {@link JLabel} that displays the amount of time that has passed (H:M:S)
  *
- *@author http://www.shane.ga
+ *@author https://www.github.com/ShaneHD
  */
 public class JTimer extends JLabel implements Runnable {
 	private boolean paused, showEmptyValues = true;

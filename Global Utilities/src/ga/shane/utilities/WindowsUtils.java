@@ -9,7 +9,7 @@ import java.util.Random;
  * Methods that can only be used on Windows PC's
  * 
  * @see {@link PCUtils}
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class WindowsUtils extends PCUtils {
 	

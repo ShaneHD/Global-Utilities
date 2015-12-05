@@ -1,7 +1,7 @@
 package ga.shane.utilities.net;
 
 /**
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public interface Command {
 	public static String SEPARATOR = "`SEP`";

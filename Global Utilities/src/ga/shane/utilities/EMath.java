@@ -1,7 +1,7 @@
 package ga.shane.utilities;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class EMath {
 	public static int toNextEven(int i) {

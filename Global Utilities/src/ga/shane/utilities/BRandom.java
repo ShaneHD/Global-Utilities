@@ -9,7 +9,7 @@ import java.util.Random;
  * 
  * @see {@link #nextColor()}
  * @see {@link #chance(int)}
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class BRandom extends Random {
 	public BRandom() {

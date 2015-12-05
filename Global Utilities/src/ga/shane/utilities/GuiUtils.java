@@ -5,7 +5,7 @@ import javax.swing.UIManager;
 /**
  * Miscellaneous GUI utilities
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class GuiUtils {
 	/**

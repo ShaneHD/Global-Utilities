@@ -1,7 +1,7 @@
 package ga.shane.utilities;
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public interface NewLineIterator {
 	void onLine(String line);

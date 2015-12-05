@@ -4,7 +4,7 @@ import ga.shane.utilities.kotlin.*
 import ga.shane.utilities.EMath
 
 /** 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 
 val Int.toNextEven: Int

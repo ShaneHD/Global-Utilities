@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 
  *
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class BMenuBar extends MenuBar {
 	public BMenuBar(Object[][] contents) {

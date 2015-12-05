@@ -15,7 +15,7 @@ import javax.swing.text.Document;
  * See {@link #setPlaceholderColor(Color)} and {@link #getPlaceholderColor()} for the placeholder's draw color
  * 
  * @see {@link JTextField}
- * @author http://www.shane.ga 
+ * @author https://www.github.com/ShaneHD 
 */
 public class BJTextField extends JTextField implements IBJTextField {
 	private String placeholder;

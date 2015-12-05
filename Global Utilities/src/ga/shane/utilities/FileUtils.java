@@ -26,7 +26,7 @@ import javax.annotation.Resource;
 /**
  * {@link File} utilities
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class FileUtils {
 	/** Used with files to separate keys and values */

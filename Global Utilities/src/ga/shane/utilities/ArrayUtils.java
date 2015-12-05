@@ -10,7 +10,7 @@ package ga.shane.utilities;
 import java.util.ArrayList;
 import java.lang.reflect.Array;
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 public class ArrayUtils {
 	/**
 	 * Converts a int array to its object equivalent ({@link Integer})[]

@@ -5,7 +5,7 @@ import java.awt.Graphics;
 /** 
  * TODO optional additional values (map?)
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public abstract class Media<T> {
 	private T value;

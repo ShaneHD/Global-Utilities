@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.logging.Logger;
 
 /**
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class PacketHandler {
 	private final NetworkHelper out;

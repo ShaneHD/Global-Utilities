@@ -2,7 +2,7 @@ package ga.shane.utilities;
 
 import java.awt.image.BufferedImage;
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 class Spritesheet {
 	private final BufferedImage image;
 	public final int width, height;

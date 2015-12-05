@@ -6,7 +6,7 @@ import javax.swing.JPanel;
  * Stands for BetterJPanel.<br>
  * Adds {@link #clear()}
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public class BJPanel extends JPanel {
 

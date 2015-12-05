@@ -4,7 +4,7 @@ package ga.shane.utilities;
  * An operating system identifier utility<br>
  * Contains consts for pretty much all known OS's
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public enum OS {
 	WINDOWS_7, WINDOWS_8, WINDOWS_10, WINDOWS_VISTA, WINDOWS_XP, WINDOWS_UNKNOWN, LINUX, MAC, ANDROID, UNKNOWN;

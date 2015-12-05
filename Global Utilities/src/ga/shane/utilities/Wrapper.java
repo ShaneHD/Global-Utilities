@@ -1,6 +1,6 @@
 package ga.shane.utilities;
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 public class Wrapper<T> {
 	public T value;
 	

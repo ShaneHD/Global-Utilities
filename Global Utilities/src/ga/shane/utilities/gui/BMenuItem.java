@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
  * Adds an {@link ActionListener} in the constructors
  * 
  * @see {@link MenuItem}
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 public abstract class BMenuItem extends MenuItem implements ActionListener {
 	public BMenuItem() {

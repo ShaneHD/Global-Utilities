@@ -7,7 +7,7 @@ import java.awt.Graphics;
  * Interface for placeholder textfields to inherit<br>
  * (Used in {@link BJTextField} & {@link BJPasswordField})
  * 
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  */
 interface IBJTextField {
 	/**

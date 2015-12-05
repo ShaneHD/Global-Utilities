@@ -5,7 +5,7 @@ import java.awt.event.ItemListener;
 
 import javax.swing.JToggleButton;
 
-/** @author http://www.shane.ga */
+/** @author https://www.github.com/ShaneHD */
 public abstract class BJToggleButton extends JToggleButton implements ItemListener {	
 	private final String enabledText, disabledText;
 	

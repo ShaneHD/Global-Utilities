@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * @author http://www.shane.ga
+ * @author https://www.github.com/ShaneHD
  *
  * @param <IN> The {@link InputStream} type
  * @param <OUT> The {@link OutputStream} type
