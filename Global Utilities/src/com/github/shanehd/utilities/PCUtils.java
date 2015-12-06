@@ -45,6 +45,10 @@ public class PCUtils {
 		JOptionPane.showMessageDialog(parent.length > 0 ? parent[0] : null, body, title, icon);
 	}
 	
+	public static void errorbox(String body, Component... parent) {
+		messagebox(body, "Error!", JOptionPane.ERROR_MESSAGE, parent);
+	}
+	
 	/**
 	 * Make a yes/no option box for the user
 	 * @return Was ok pressed?

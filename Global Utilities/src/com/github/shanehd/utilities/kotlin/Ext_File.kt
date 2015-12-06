@@ -1,4 +1,4 @@
-package ga.shane.utilities.kotlin
+package com.github.shanehd.utilities.kotlin
 
 import java.io.File
 import com.github.shanehd.utilities.kotlin.addIfNotContains

@@ -1,4 +1,4 @@
-package ga.shane.utilities.kotlin
+package com.github.shanehd.utilities.kotlin
 
 import com.github.shanehd.utilities.EMath
 

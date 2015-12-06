@@ -1,4 +1,4 @@
-package ga.shane.utilities.kotlin
+package com.github.shanehd.utilities.kotlin
 
 import java.util.ArrayList
 import com.github.shanehd.utilities.StringUtils
