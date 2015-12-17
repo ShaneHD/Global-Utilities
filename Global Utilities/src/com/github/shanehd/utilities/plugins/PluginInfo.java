@@ -25,4 +25,6 @@ public @interface PluginInfo {
 	 * The version of this plugin
 	 */
 	public double version() default 1.0;
+	
+	public Priority priority() default Priority.NORMAL;
 }

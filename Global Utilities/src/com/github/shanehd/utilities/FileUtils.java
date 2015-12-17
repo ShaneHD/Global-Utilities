@@ -222,7 +222,7 @@ public class FileUtils {
 				contents+= scanner.nextLine() + "\n";
 			
 			scanner.close();
-			return contents;
+			return contents.trim();
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -272,6 +272,8 @@ public class FileUtils {
 			write = StringUtils.group((HashMap<?, ?>) toWrite);
 		else
 			throw new IllegalArgumentException("toWrite is of an invalid type!");
+		
+		write = write.trim();
 		
 		try {
 			FileWriter writer = new FileWriter(file, append.length > 0 ? append[0] : false);
