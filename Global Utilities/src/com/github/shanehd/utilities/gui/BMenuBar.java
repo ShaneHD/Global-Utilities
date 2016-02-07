@@ -36,7 +36,7 @@ public class BMenuBar extends MenuBar {
 					continue;
 				
 				lastParent = parent;
-				list.put(parent, item);
+				list.add(parent, item);
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
