@@ -1,5 +1,6 @@
-import com.sun.javaws.exceptions.InvalidArgumentException;
+package com.github.shanehd.utilities;
 
+import com.sun.javaws.exceptions.InvalidArgumentException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
