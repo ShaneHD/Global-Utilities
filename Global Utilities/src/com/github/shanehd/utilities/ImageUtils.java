@@ -114,6 +114,7 @@ public class ImageUtils {
 	/**
 	 * Load a {@link BufferedImage} from a {@link File}
 	 */
+	//TODO throw excs on all methods instead of handling locally
 	public static BufferedImage load(File path) {
 		try {
 			return ImageIO.read(path);
