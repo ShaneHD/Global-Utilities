@@ -15,10 +15,3 @@ fun URL.download(saveDirectory: String) {
 	FileUtils.download(this, saveDirectory)
 	//FileUtils.download(this, saveDirectory)
 }
-
-fun URL.getSourcecode() : String {
-	val con = openConnection() as HttpURLConnection
-	con.addRequestProperty("User-Agent", "Mozilla/4.76")
-
-	return con.content.toString()
-}
