@@ -55,7 +55,7 @@ public class ImageUtils {
 		Graphics2D g = img.createGraphics();
 
 		if(mouseCursor == null)
-			mouseCursor = load(FileUtils.newFileInsideClasspath("ga/shane/utilities/mouse_cursor.png"));
+			mouseCursor = load(FileUtils.newFileInsideClasspath("com/github/shanehd/utilities/mouse_cursor.png"));
 		
 		g.drawImage(mouseCursor, x, y, null);
 		//g.drawRoundRect(x, y, 16, 16, 16, 16);

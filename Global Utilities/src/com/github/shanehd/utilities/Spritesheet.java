@@ -3,7 +3,7 @@ package com.github.shanehd.utilities;
 import java.awt.image.BufferedImage;
 
 /** @author https://www.github.com/ShaneHD */
-class Spritesheet {
+public class Spritesheet {
 	private final BufferedImage image;
 	public final int width, height;
 	
