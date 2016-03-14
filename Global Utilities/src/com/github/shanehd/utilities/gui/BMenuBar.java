@@ -4,8 +4,7 @@ import java.awt.Menu;
 import java.awt.MenuBar;
 import java.util.ArrayList;
 import java.util.Map;
-
-import com.github.shanehd.utilities.ListMap;
+import com.github.shanehd.utilities.MapIterator;
 
 /**
  * 
@@ -22,21 +21,26 @@ public class BMenuBar extends MenuBar {
 				Menu parent;
 				
 				try {
-					parent = (Menu) row[0];
+					if(row[0] instanceof String)
+						parent = new Menu((String) row[0]);
+					else
+						parent = (Menu) row[0];
 				} catch(Exception e) {
 					parent = lastParent;
 				}
 				
 				if(parent == null)
 					continue;
-				
-				BMenuItem item = (BMenuItem) row[1];
-				
-				if(item == null) 
-					continue;
-				
-				lastParent = parent;
-				list.add(parent, item);
+
+				for(int i = 1; i < row.length; i++) {
+					BMenuItem item = (BMenuItem) row[i];
+
+					if(item == null)
+						continue;
+
+					lastParent = parent;
+					list.add(parent, item);
+				}
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
