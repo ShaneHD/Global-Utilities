@@ -28,15 +28,15 @@ public enum Day {
 	
 	Day(String full) {
 		full_name = full;
-		int _ = 0;
+		int id = 0;
 		
 		try {
-			_ = Calendar.class.getField(full.toUpperCase()).getInt(1);
+			id = Calendar.class.getField(full.toUpperCase()).getInt(1);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		calendar_id = _;
+		calendar_id = id;
 	}
 		
 	/**

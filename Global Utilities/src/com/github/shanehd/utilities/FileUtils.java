@@ -26,19 +26,30 @@ public class FileUtils {
 	/** Used with files to separate keys and values */
 	public static String separator = ":";
 	public static File workingDirectory = null;
-	
+
+	/** An array of common video formats */
+	public static final String[] VIDEO_FORMATS = {
+			"avi", "mp4", "mkv", "flv", "mov", "mpg"
+	};
+
 	/**
 	 * Check if a {@link File} is an image or not
 	 */
 	public static boolean isImage(File file) {
-		String name = file.getName();
-		
-		for(String format : ImageUtils.FORMATS) {
-			if(name.endsWith(format))
-				return true;
-		}
-		
-		return false;
+		return is(file, ImageUtils.FORMATS);
+	}
+
+	public static boolean isVideo(File file) {
+		return is(file, VIDEO_FORMATS);
+	}
+
+	private static boolean is(File file, String[] formats) {
+		return ArrayUtils.contains(formats, ext(file));
+	}
+
+	public static String ext(File file) {
+		String[] split = file.getName().split("\\.");
+		return split[split.length - 1];
 	}
 	
 	public static void iterateLines(File file, NewLineIterator iterator) {
