@@ -45,4 +45,8 @@ public enum Day {
 	public boolean is() {
 		return Calendar.getInstance().get(Calendar.DAY_OF_WEEK) == calendar_id;
 	}
+
+	public static Day get(String id) {
+		return valueOf(id.toUpperCase());
+	}
 }

@@ -47,4 +47,8 @@ public enum Month {
     public boolean is() {
         return Calendar.getInstance().get(Calendar.MONTH) == calendar_id;
     }
+
+    public static Month get(String id) {
+        return Month.valueOf(id.toUpperCase());
+    }
 }
