@@ -29,8 +29,32 @@ public class FileUtils {
 
 	/** An array of common video formats */
 	public static final String[] VIDEO_FORMATS = {
-			"avi", "mp4", "mkv", "flv", "mov", "mpg"
+			"avi", "mp4", "mkv", "flv", "mov", "mpg", "m4v", "m2ts"
 	};
+
+	public static ArrayList<String>	listExtsInDirs(File dir) {
+		ArrayList<String> list = new ArrayList<>();
+
+		for(File file : dir.listFiles()) {
+			if(file.isDirectory()) {
+				ArrayList<String> found = listExtsInDirs(file);
+
+				for(String ext : found) {
+					if(!list.contains(ext))
+						list.add(ext);
+				}
+
+				continue;
+			}
+
+			String ext = ext(file);
+			
+			if(!list.contains(ext))
+				list.add(ext);
+		}
+
+		return list;
+	}
 
 	/**
 	 * Check if a {@link File} is an image or not
