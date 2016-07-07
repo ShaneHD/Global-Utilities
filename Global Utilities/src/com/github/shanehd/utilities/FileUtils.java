@@ -48,12 +48,16 @@ public class FileUtils {
 			}
 
 			String ext = ext(file);
-			
+
 			if(!list.contains(ext))
 				list.add(ext);
 		}
 
 		return list;
+	}
+
+	public static String getNameWithoutExtension(File file) {
+		return file.getName().split("." + ext(file))[0];
 	}
 
 	/**

@@ -52,15 +52,19 @@ public class StringUtils {
 	 * String complete = group(s, otherString, x);</pre>
 	 */
 	public static String group(Object... objs) {
+		return group(" ", objs);
+	}
+
+	public static String group(String separator, Object[] objs) {
 		String grouped = "";
-		
+
 		for(int i = 0; i < objs.length; i++) {
 			grouped+= objs[i];
-			
+
 			if(i != objs.length - 1)
-				grouped+= " ";
+				grouped+= separator;
 		}
-		
+
 		return grouped;
 	}
 	
