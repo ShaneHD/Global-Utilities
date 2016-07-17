@@ -20,7 +20,8 @@ import javax.imageio.ImageIO;
  * 
  * @author https://www.github.com/ShaneHD
  */
-public class ImageUtils {	
+public class ImageUtils {
+    private static final BRandom random = new BRandom();
 	private static BufferedImage mouseCursor;
 	
 	/** An array of common image formats */
@@ -52,14 +53,22 @@ public class ImageUtils {
 
 		int x = MouseInfo.getPointerInfo().getLocation().x;
 		int y = MouseInfo.getPointerInfo().getLocation().y;
-		Graphics2D g = img.createGraphics();
 
-		if(mouseCursor == null)
-			mouseCursor = load(FileUtils.newFileInsideClasspath("com/github/shanehd/utilities/mouse_cursor.png"));
-		
-		g.drawImage(mouseCursor, x, y, null);
-		//g.drawRoundRect(x, y, 16, 16, 16, 16);
-		return img;
+        //Fixme temp code
+        Graphics2D g = img.createGraphics();
+        g.setColor(random.nextColor());
+        g.fillRect(x, y, 8, 8);
+
+        //Todo make this work in JAR
+//		if(mouseCursor == null)
+//			mouseCursor = load(FileUtils.newFileInsideClasspath("com/github/shanehd/utilities/mouse_cursor.png"));
+
+//        if(mouseCursor == null)
+//            g.drawRoundRect(x, y, 16, 16, 16, 16);
+//        else
+//		    g.drawImage(mouseCursor, x, y, null);
+
+        return img;
 	}
 	
 	/**
