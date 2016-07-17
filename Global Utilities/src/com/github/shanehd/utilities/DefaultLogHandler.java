@@ -7,12 +7,12 @@ package com.github.shanehd.utilities;
 public class DefaultLogHandler extends LogHandler {
 
     @Override
-    void print(String line) {
+    public void print(String line) {
         System.out.println(line);
     }
 
     @Override
-    String format(String type, String line) {
+    public String format(String type, String line) {
         return type + " - " + line;
     }
 }
