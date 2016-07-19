@@ -95,8 +95,8 @@ public enum OS {
 		
 		if(isMac())
 			return os.isMac();
-		
-		System.err.println("[OS] I don't know if this is compatible or not.");
+
+		Log.warning("[" + getClass().getName() + "] I don't know if this is compatible or not: " + StringUtils.quote(os));
 		return false;
 	}
 	
