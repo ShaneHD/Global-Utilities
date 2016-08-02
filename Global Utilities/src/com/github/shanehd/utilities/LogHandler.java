@@ -28,6 +28,11 @@ public abstract class LogHandler implements ILog {
     }
 
     @Override
+    public void debug(String s) {
+        print(format("DEBUG", s));
+    }
+
+    @Override
     public void caught(Throwable t) {
         error("Exception caught: " + t);
         t.printStackTrace();

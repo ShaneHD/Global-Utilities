@@ -23,6 +23,10 @@ public final class Log {
         handler.error(s);
     }
 
+    public static void debug(String s) {
+        handler.debug(s);
+    }
+
     public static void caught(Throwable t) {
         handler.caught(t);
     }
