@@ -4,14 +4,14 @@ import java.util.LinkedHashMap;
 
 import javax.swing.JLabel;
 
-import com.github.shanehd.utilities.MapIterator;
+import com.github.shanehd.utilities.i.MapIterator;
 import com.github.shanehd.utilities.MapUtils;
 import com.github.shanehd.utilities.StringUtils;
 
 /**
  * A {@link JLabel} that displays the amount of time that has passed (H:M:S)
  *
- *@author https://www.github.com/ShaneHD
+ * @author https://www.github.com/ShaneHD
  */
 public class JTimer extends JLabel implements Runnable {
 	private boolean paused, showEmptyValues = true;

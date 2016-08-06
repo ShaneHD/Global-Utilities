@@ -1,12 +1,6 @@
 package com.github.shanehd.utilities.kotlin
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.channels.ReadableByteChannel;
-import java.nio.file.Path;
-import java.util.Scanner;
+import java.util.*
 
 /** 
  * @author https://www.github.com/ShaneHD

@@ -1,8 +1,10 @@
 package com.github.shanehd.utilities;
 
+import com.github.shanehd.utilities.logging.Log;
+
+//TODO - Add detection for different linux systems / bit version
 /**
- * An operating system identifier utility<br>
- * Contains consts for pretty much all known OS's
+ * Operating system identifierf
  * 
  * @author https://www.github.com/ShaneHD
  */

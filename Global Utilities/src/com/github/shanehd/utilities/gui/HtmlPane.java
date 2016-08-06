@@ -4,9 +4,8 @@ import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 
 /**
- *  A {@link BJTextPane} with HTML formatting set up<br>
- *  @see {@link BJTextPane}
- *  
+ *  A {@link BJTextPane} with HTML formatting set up
+ *
  *  @author https://www.github.com/ShaneHD 
 */
 public class HtmlPane extends BJTextPane {

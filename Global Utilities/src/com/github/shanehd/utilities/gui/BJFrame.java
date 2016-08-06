@@ -10,17 +10,10 @@ import javax.swing.JFrame;
 
 /**
  * Stands for BetterJFrame<br>
- * <!--<s>Adds two methods: {@link #init()} & {@link #constructFrame()}<br><br>
- *
- * <b style='color:red;'>
-	 * =========================================================<br>
-	 * Both methods are called AUTOMATICALLY in the constructors<br>
-	 * =========================================================
- * </b></s>--><br>
- * Also implements {@link WindowListener}
+ * {@link WindowListener} is added, just override methods to use
  * 
- * @see {@link JFrame}
- * @see {@link WindowListener}
+ * @see JFrame
+ * @see WindowListener
  * @author https://www.github.com/ShaneHD
  */
 public abstract class BJFrame extends JFrame implements WindowListener {
@@ -32,28 +25,7 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	public BJFrame() {
 		setMinimumSize(new Dimension(50, 50));
 		addWindowListener(this);
-//		init();
-//		constructFrame();	
 	}
-	
-	/**
-	 * Anything that you'd normally have in<br>
-	 * the constructor (excluding {@link JFrame} stuff)<br><br>
-	 * This is called BEFORE {@link #constructFrame()}
-	 * 
-	 * @deprecated
-	 * @see {@link #constructFrame()}
-	 */
-//	protected abstract void init();
-	
-	/**
-	 * Place anything {@link JFrame} related in here<br>
-	 * This is called AFTER {@link #init()}<br><br>
-	 * E.G. stuff like {@link #setDefaultCloseOperation(int)}, {@link #setResizable(boolean)}<br>
-	 * etc go here.
-	 * @deprecated
-	 */
-//	protected abstract void constructFrame();
 
 	/**
 	 * Clear this {@link JFrame}<br>
@@ -77,13 +49,12 @@ public abstract class BJFrame extends JFrame implements WindowListener {
 	
 	/**
 	 * Set the icon with an image inside the program<br>
-	 * <b style='color:red;'>DON'T start with a /</b>
 	 * 
 	 * @see {@link #setIconImage(java.awt.Image)}
 	 * @see {@link Class#getResource(String)}
 	 */
 	public void setIcon(String name) {
-		URL url = getClass().getResource("/" + name);
+		URL url = getClass().getResource(name.startsWith("/") ? name : "/" + name);
 		ImageIcon icon = new ImageIcon(url);
 		setIconImage(icon.getImage());
 	}

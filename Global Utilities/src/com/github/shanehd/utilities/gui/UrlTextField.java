@@ -8,7 +8,7 @@ import javax.swing.text.Document;
 
 /**
  * A {@link BJTextField} designed for URL input
- * @see {@link #valid()}
+ * @see #valid()
  * 
  * @author https://www.github.com/ShaneHD
  */
@@ -52,6 +52,7 @@ public class UrlTextField extends BJTextField {
 	}
 	
 	/**
+	 * TODO
 	 * Is the text a valid URL?<br>
 	 * (only checks for http[s]:// for now)
 	 */

@@ -1,17 +1,10 @@
 package com.github.shanehd.utilities.gui;
 
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
-
-import com.github.shanehd.utilities.gui.BJButton;
-import com.github.shanehd.utilities.gui.TitledJPanel;
-
 /**
- * TODO maybe implement {@link ButtonCreator}?
  *
  * @author https://www.github.com/ShaneHD
  */

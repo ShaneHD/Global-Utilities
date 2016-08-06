@@ -21,7 +21,6 @@ import javax.imageio.ImageIO;
  * @author https://www.github.com/ShaneHD
  */
 public class ImageUtils {
-    private static final BRandom random = new BRandom();
 	private static BufferedImage mouseCursor;
 	
 	/** An array of common image formats */
@@ -30,7 +29,7 @@ public class ImageUtils {
 	};
 	
 	/**
-	 * @see {@link FileUtils#isImage(File)}
+	 * @see FileUtils#isImage(File)
 	 */
 	public static boolean isImage(File file) {
 		return FileUtils.isImage(file);
@@ -56,7 +55,6 @@ public class ImageUtils {
 
         //Fixme temp code
         Graphics2D g = img.createGraphics();
-        g.setColor(random.nextColor());
         g.fillRect(x, y, 8, 8);
 
         //Todo make this work in JAR
@@ -88,7 +86,7 @@ public class ImageUtils {
 	}
 	
 	/**
-	 * Convert byte[] to {@link BufferedImage}
+	 * Convert byte array to {@link BufferedImage}
 	 */
 	public static BufferedImage fromByteArray(byte[] bytes) {
 		ByteArrayInputStream in = new ByteArrayInputStream(bytes);
@@ -105,10 +103,10 @@ public class ImageUtils {
 	
 	/**
 	 * Resizes an image using a Graphics2D object backed by a BufferedImage.
-	 * @param srcImg - source image to scale
-	 * @param w - desired width
-	 * @param h - desired height
-	 * @return - the new resized image
+	 * @param srcImg source image to scale
+	 * @param w desired width
+	 * @param h desired height
+	 * @return the new resized image
 	 * @author alain.janinm
 	 */
 	public static BufferedImage resize(final Image srcImg, final int w, final int h){
@@ -133,7 +131,7 @@ public class ImageUtils {
 		}
 	}
 	
-	public static enum View {
+	public enum View {
 		HORIZONTAL, VERTICAL, SQUARE;
 		
 		public static View what(BufferedImage img) {

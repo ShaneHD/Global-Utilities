@@ -11,10 +11,11 @@ import javax.swing.text.Document;
 /** 
  * Stands for BetterJPasswordField<br>
  * Adds support for a placeholder (text that draws when nothing is entered)<br><br>
- * See {@link #setPlaceholder(String)} and {@link #getPlaceholder()}<br>
- * See {@link #setPlaceholderColor(Color)} and {@link #getPlaceholderColor()} for the placeholder's draw color
- * 
- * @see {@link JPasswordField}
+ * @see #setPlaceholder(String)
+ * @see #getPlaceholder()
+ * @see #setPlaceholderColor(Color)
+ * @see #getPlaceholderColor()
+ *
  * @author https://www.github.com/ShaneHD 
 */
 public class BJPasswordField extends JPasswordField implements IBJTextField {

@@ -8,8 +8,7 @@ import javax.swing.JButton;
  * Stands for BetterJButton<br>
  * Simply makes the button non-focusable
  * 
- * @see {@link JButton}
- * @author https://www.github.com/ShaneHD 
+ * @author https://www.github.com/ShaneHD
 */
 public class BJButton extends JButton {
 	public BJButton() {

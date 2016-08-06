@@ -8,7 +8,7 @@ import java.util.Random;
  * Windows utilities. Inherits from {@link PCUtils}<br>
  * Methods that can only be used on Windows PC's
  * 
- * @see {@link PCUtils}
+ * @see PCUtils
  * @author https://www.github.com/ShaneHD
  */
 public class WindowsUtils extends PCUtils {
@@ -53,7 +53,7 @@ public class WindowsUtils extends PCUtils {
 	
 	/**
 	 * Current user
-	 * @see {@link #getCUserDrive(String)}
+	 * @see #getCUserDrive(String)
 	 */
 	public static String getCUserDrive() {
 		return getCUserDrive(System.getProperty("user.name"));

@@ -3,7 +3,7 @@ package com.github.shanehd.utilities.kotlin
 import java.util.ArrayList
 import com.github.shanehd.utilities.StringUtils
 import com.github.shanehd.utilities.FileUtils
-import com.github.shanehd.utilities.NewLineIterator
+import com.github.shanehd.utilities.i.NewLineIterator
 
 /** 
  * @author https://www.github.com/ShaneHD

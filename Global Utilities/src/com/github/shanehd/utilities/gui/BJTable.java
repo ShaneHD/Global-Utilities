@@ -13,8 +13,7 @@ import javax.swing.table.DefaultTableModel;
  * Adds support for easily making it not-editable ({@link #isEditable()})<br><br>
  * Also adds a method ({@link #getDefaultTableModel()}) to get the model and cast it to {@link DefaultTableModel} easily
  * 
- * @see {@link JTable}
- * @author https://www.github.com/ShaneHD 
+ * @author https://www.github.com/ShaneHD
 */
 public class BJTable extends JTable {
 	private int[] max;
@@ -87,14 +86,15 @@ public class BJTable extends JTable {
 	 * Set whether this table is editable or not<br><br>
 	 * -1 = user editing is not enabled<br>
 	 * 1 = user editing is enabled<br>
-	 * 0 = use {@link JTable#isCellEditable(int, int)}
+	 * 0 = use {@link JTable#isCellEditable(int, int)}<br/>
+	 * <i>0 by default</i>
 	 */
 	protected int isEditable() {
 		return 0;
 	}
 	
 	@Override
-	public boolean isCellEditable(int row, int column) {
+	public final boolean isCellEditable(int row, int column) {
 		switch(isEditable()) {
 		case -1:
 			return false;

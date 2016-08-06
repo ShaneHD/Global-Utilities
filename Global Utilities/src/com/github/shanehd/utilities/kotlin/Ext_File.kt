@@ -3,7 +3,7 @@ package com.github.shanehd.utilities.kotlin
 import java.io.File
 import com.github.shanehd.utilities.kotlin.addIfNotContains
 import com.github.shanehd.utilities.FileUtils
-import com.github.shanehd.utilities.NewLineIterator
+import com.github.shanehd.utilities.i.NewLineIterator
 import java.util.HashMap
 import java.util.ArrayList
 
@@ -77,7 +77,7 @@ fun File.getContents() : String {
 
 /**
  * Uses UTF-16 encoding
- * @see {@link #getFileContents(File)}
+ * @see #getFileContents(File)
  * @author Someone from stackoverflow. Don't have their name.
  */
 fun File.getContentsUTF16() : String {
@@ -89,8 +89,9 @@ fun File.getContentsUTF16() : String {
  * @return Whether the write was successful or not
  */
 fun File.write(thing: Any, vararg append: Boolean) : Boolean {
-	if(append.isEmpty())
-		return FileUtils.write(thing, this)
-	
-	return FileUtils.write(thing, this, true)	
+	throw RuntimeException("FIX THIS TODO")
+	//	if(append.isEmpty())
+//		return FileUtils.write(thing, this)
+//
+//	return FileUtils.write(thing, this, true)
 } 

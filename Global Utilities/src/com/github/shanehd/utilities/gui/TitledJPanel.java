@@ -32,8 +32,8 @@ public class TitledJPanel extends JPanel {
 	/**
 	 * Set the border color<br>
 	 * <b style="color='red'">MAKE SURE TO CALL {@link #setTitle(String)} AFTER</b>
-	 * @see {@link #getBorderColor()}
-	 * @return {@link this}
+	 * @see #getBorderColor()
+	 * @return <code>this</code>
 	 */
 	public TitledJPanel setBorderColor(Color color) {
 		this.color = color;
@@ -42,7 +42,7 @@ public class TitledJPanel extends JPanel {
 	
 	/**
 	 * @return The border color
-	 * @see{@link #setBorderColor(Color)}
+	 * @see #setBorderColor(Color)
 	 */
 	public Color getBorderColor() {
 		return color;
@@ -50,7 +50,7 @@ public class TitledJPanel extends JPanel {
 	
 	/** 
 	 * @return The title
-	 * @see {@link #setTitle(String)}
+	 * @see #setTitle(String)
 	 */
 	public String getTitle() {
 		return title;
@@ -58,7 +58,7 @@ public class TitledJPanel extends JPanel {
 	
 	/** 
 	 * Set the title for this panel
-	 * @see {@link #getTitle()}
+	 * @see #getTitle()
 	 */
 	public void setTitle(String title) {
 		Border border = BorderFactory.createLineBorder(Color.darkGray);

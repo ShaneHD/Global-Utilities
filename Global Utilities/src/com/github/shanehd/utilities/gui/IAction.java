@@ -2,6 +2,7 @@ package com.github.shanehd.utilities.gui;
 
 import java.awt.Component;
 
+//TODO wtf
 /**
  * An interface that some of my utilities use<br>
  * Has one method ({@link #on(Component)})<br><br>

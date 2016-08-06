@@ -21,7 +21,7 @@ interface IBJTextField {
 	 * Set the placeholder
 	 * @see {@link #getPlaceholder()}
 	 */
-	public void setPlaceholder(String placeholder);
+	void setPlaceholder(String placeholder);
 	
 	/**
 	 * Get the placeholder's draw color

@@ -9,6 +9,9 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
+ * TODO - Remove this garbage
+ * @deprecated
+ *
  * A {@link JButton} creator<br>
  * Creates and adds {@link JButton}s to a {@link JPanel}<br>
  * 

@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
  * Stands for BetterMenuItem<br>
  * Adds an {@link ActionListener} in the constructors
  * 
- * @see {@link MenuItem}
  * @author https://www.github.com/ShaneHD
  */
 public abstract class BMenuItem extends MenuItem implements ActionListener {

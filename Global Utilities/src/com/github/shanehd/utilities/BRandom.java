@@ -7,8 +7,8 @@ import java.util.Random;
  * Stands for BetterRandom<br>
  * Adds more functionality to {@link Random}
  * 
- * @see {@link #nextColor()}
- * @see {@link #chance(int)}
+ * @see #nextColor()
+ * @see #chance(int)
  * @author https://www.github.com/ShaneHD
  */
 public class BRandom extends Random {
@@ -19,10 +19,7 @@ public class BRandom extends Random {
 	public BRandom(long seed) {
 		super(seed);
 	}
-	
-	/**
-	 * Calls {@link Color}({@link #nextFloat()}, {@link #nextFloat()}, {@link #nextFloat()}, {@link #nextFloat()})
-	 */
+
 	public Color nextColor() {
 		return new Color(nextFloat(), nextFloat(), nextFloat(), nextFloat());
 	}

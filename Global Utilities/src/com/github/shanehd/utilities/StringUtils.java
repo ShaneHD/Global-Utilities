@@ -1,5 +1,7 @@
 package com.github.shanehd.utilities;
 
+import com.github.shanehd.utilities.i.NewLineIterator;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

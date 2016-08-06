@@ -1,4 +1,4 @@
-package com.github.shanehd.utilities;
+package com.github.shanehd.utilities.logging;
 
 import javax.swing.*;
 

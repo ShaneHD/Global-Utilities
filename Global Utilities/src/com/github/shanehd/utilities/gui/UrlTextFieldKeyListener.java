@@ -9,8 +9,7 @@ import javax.swing.JButton;
 /**
  * Designed to be added to a {@link UrlTextField}<br>
  * Automatically enables/disables a {@link JButton} based on whether the URL input is valid
- * @see {@link KeyListener}
- * 
+ *
  * @author https://www.github.com/ShaneHD
  */
 public class UrlTextFieldKeyListener implements KeyListener {

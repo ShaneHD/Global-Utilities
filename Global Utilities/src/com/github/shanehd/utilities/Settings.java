@@ -7,11 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * A {@link HashMap}<{@link String}, {@link Object}><br>
  * Contains methods for saving and loading settings<br>
- * @see {@link #save()} 
- * @see {@link #load()}
- * @see {@link #setFile(File)}
  * 
  * @author https://www.github.com/ShaneHD
  */
@@ -26,7 +22,7 @@ public class Settings<V> extends HashMap<String, V> {
 		
 	/**
 	 * Load settings from a file
-	 * @see {@link #save()}
+	 * @see #save()
 	 * @return Was the load successful?
 	 */
 	public boolean load() {
@@ -147,7 +143,7 @@ public class Settings<V> extends HashMap<String, V> {
 	
 	/**
 	 * Set the {@link File} that these settings are saved to
-	 * @see {@link #getFile()}
+	 * @see #getFile()
 	 */
 	public void setFile(File file) {
 		this.file = file;
@@ -155,7 +151,7 @@ public class Settings<V> extends HashMap<String, V> {
 	
 	/**
 	 * Get the {@link File} that these settings are saved to
-	 * @see {@link #setFile(File)}
+	 * @see #setFile(File)
 	 */
 	public File getFile() {
 		return file;
@@ -187,7 +183,7 @@ public class Settings<V> extends HashMap<String, V> {
 	}
 	
 	/**
-	 * @see {@link #add(Object...)}
+	 * @see #add(Object...)
 	 * @deprecated
 	 */
 	public V put(String arg0, Object arg1) {

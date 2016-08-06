@@ -14,17 +14,17 @@ public @interface PluginInfo {
 	/**
 	 * The name of this plugin
 	 */
-	public String name() default "null";
+	String name() default "null";
 	
 	/**
 	 * The author of this plugin
 	 */
-	public String author() default "null";
+	String author() default "null";
 	
 	/**
 	 * The version of this plugin
 	 */
-	public double version() default 1.0;
+	double version() default 1.0;
 	
-	public Priority priority() default Priority.NORMAL;
+	Priority priority() default Priority.NORMAL;
 }

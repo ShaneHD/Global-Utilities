@@ -1,5 +1,7 @@
 package com.github.shanehd.utilities;
 
+import com.github.shanehd.utilities.i.NewLineIterator;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -227,28 +229,6 @@ public class FileUtils {
 	}
 	
 	/**
-	 * <s>Bundle all of a file's lines into a {@link ArrayList}</s>
-	 * @deprecated {@link #getFileLines(File)}
-	 */
-	/*public static ArrayList<String> getLinesFromFile(File file) {
-		ArrayList<String> lines = new ArrayList<String>();
-		
-		try {
-			Scanner scanner = new Scanner(file);
-			
-			while(scanner.hasNextLine())
-				lines.add(scanner.nextLine());
-			
-			scanner.close();
-			return lines;
-		} catch(FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		throw new RuntimeException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
-	}*/
-	
-	/**
 	 * Get the contents of a file into a single {@link String}<br>
 	 * uses '\n' char for new lines
 	 */
@@ -271,7 +251,7 @@ public class FileUtils {
 	
 	/**
 	 * Uses UTF-16 encoding
-	 * @see {@link #getFileContents(File)}
+	 * @see #getFileContents(File)
 	 * @author Someone from stackoverflow. Don't have their name.
 	 */
 	public static String getFileContentsUTF16(File file) {

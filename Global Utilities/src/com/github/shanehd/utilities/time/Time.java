@@ -1,4 +1,4 @@
-package com.github.shanehd.utilities;
+package com.github.shanehd.utilities.time;
 
 import com.sun.javaws.exceptions.InvalidArgumentException;
 import java.text.DateFormat;

@@ -1,5 +1,6 @@
-package com.github.shanehd.utilities;
+package com.github.shanehd.utilities.i;
 
+//TODO wtf
 /**
  * An interface that some of my utilities use<br>
  * Has one method ({@link #run(Object...)})<br>

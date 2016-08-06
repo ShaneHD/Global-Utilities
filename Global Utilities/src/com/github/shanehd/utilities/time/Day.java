@@ -1,4 +1,4 @@
-package com.github.shanehd.utilities;
+package com.github.shanehd.utilities.time;
 
 import java.util.Calendar;
 
@@ -6,7 +6,7 @@ import java.util.Calendar;
  * Enum containing all days of the week<br>
  * in short form(E.G. MON), and their<br>
  * long form(E.G. Monday)
- * @see {@link #full_name}
+ * @see #full_name
  * 
  * @author https://www.github.com/ShaneHD
  */
@@ -21,7 +21,7 @@ public enum Day {
 	
 	/**
 	 * The day of the week in full form<br>
-	 * E.G. {@link MON} becomes Monday
+	 * E.G. {@link #MON} becomes Monday
 	 */
 	public final String full_name;
 	public final int calendar_id;

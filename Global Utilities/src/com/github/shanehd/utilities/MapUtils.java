@@ -1,5 +1,7 @@
 package com.github.shanehd.utilities;
 
+import com.github.shanehd.utilities.i.MapIterator;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;

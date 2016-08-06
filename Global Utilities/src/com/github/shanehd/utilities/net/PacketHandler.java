@@ -33,7 +33,7 @@ public class PacketHandler {
 	
 	/**
 	 * with arguments
-	 * @see {@link #handle(String)}
+	 * @see #handle(String)
 	 */
 	public void handle(String s, String[] args) {		
 		try {

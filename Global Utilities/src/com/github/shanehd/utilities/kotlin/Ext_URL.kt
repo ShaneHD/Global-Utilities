@@ -1,8 +1,7 @@
 package com.github.shanehd.utilities.kotlin
 
-import java.net.URL
 import com.github.shanehd.utilities.FileUtils
-import java.net.HttpURLConnection
+import java.net.URL
 
 /** 
  * @author https://www.github.com/ShaneHD
@@ -13,5 +12,4 @@ import java.net.HttpURLConnection
  */
 fun URL.download(saveDirectory: String) {
 	FileUtils.download(this, saveDirectory)
-	//FileUtils.download(this, saveDirectory)
 }

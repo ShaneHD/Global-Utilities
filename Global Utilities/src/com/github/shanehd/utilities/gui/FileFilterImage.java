@@ -7,10 +7,9 @@ import javax.swing.filechooser.FileFilter;
 import com.github.shanehd.utilities.ImageUtils;
 
 /**
- * Simply a {@link FileFilter} for images<br>
+ * A {@link FileFilter} for images<br>
  * (Uses {@link ImageUtils#isImage(File)})
  * 
- * @see {@link FileFilter}
  * @author https://www.github.com/ShaneHD
  */
 public class FileFilterImage extends FileFilter {

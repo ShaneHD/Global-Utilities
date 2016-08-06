@@ -72,7 +72,7 @@ public class PCUtils {
 	
 	/**
 	 * NoArg version
-	 * @see {@link #agreeBox(String)}
+	 * @see #agreeBox(String)
 	 */
 	public static boolean agreeBox() {
 		return agreeBox("Sure that you want to continue?");
@@ -80,7 +80,7 @@ public class PCUtils {
 	
 	/**
 	 * Makes sure that the message is visible no matter what (on any window)
-	 * @see {@link #messagebox(String, String, int, Component...)}
+	 * @see #messagebox(String, String, int, Component...)
 	 */
 	public static void globalMessagebox(String body, String title, int icon) {
 		JFrame fullscreen = new JFrame();
@@ -98,14 +98,14 @@ public class PCUtils {
 	}
 	
 	/**
-	 * @see {@link #messagebox(String, String, int, Component...)}
+	 * @see #messagebox(String, String, int, Component...)
 	 */
 	public static void messageBox(String body, String title, int icon, Component... parent) {
 		messagebox(body, title, icon, parent);
 	}
 	
 	/**
-	 * @see {@link #globalMessagebox(String, String, int)}
+	 * @see #globalMessagebox(String, String, int)
 	 */
 	public static void globalMessageBox(String body, String title, int icon) {
 		globalMessagebox(body, title, icon);

@@ -7,9 +7,6 @@ import java.util.Random
  * @author https://www.github.com/ShaneHD
  */
 
-/**
- * Calls {@link Color}({@link #nextFloat()}, {@link #nextFloat()}, {@link #nextFloat()}, {@link #nextFloat()})
- */
 fun Random.nextColor() : Color {
 	return Color(nextFloat(), nextFloat(), nextFloat(), nextFloat())
 } 
