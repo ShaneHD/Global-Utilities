@@ -104,7 +104,7 @@ public class Lang extends ArrayList<String> {
             return parse((String) map.get(id));
         } catch(ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
-            return this + " missing arguments...";
+            return this + " missing arguments for id " + StringUtils.quote(id) + "..";
         }  catch(NullPointerException e) {
             e.printStackTrace();
             return error(id);
