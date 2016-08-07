@@ -15,9 +15,13 @@ class AssetLoader {
     private final HashMap<String, Loader> LOADERS = new HashMap<>();
 
     public AssetLoader() {
-        LOADERS.put("FILE", new FileLoader());
-        LOADERS.put("BUFFERED_IMAGE", new ImageLoader());
-        LOADERS.put("SOUND", new SoundLoader());
+        addType(new FileLoader());
+        addType(new ImageLoader());
+        addType(new SoundLoader());
+    }
+
+    public void addType(Loader loader) {
+        LOADERS.put(loader.type, loader);
     }
 
     public Object load(String type, String info) throws Exception {
