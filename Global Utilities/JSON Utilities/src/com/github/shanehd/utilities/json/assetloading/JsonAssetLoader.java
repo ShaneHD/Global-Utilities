@@ -27,24 +27,27 @@ public class JsonAssetLoader {
 
         for(Object id : root.keySet()) {
             String type = (String) id;
+            Object value = root.get(type);
 
-            JSONObject assets = (JSONObject) root.get(type);
+            if(!(value instanceof JSONObject))
+                continue;
+
+            JSONObject assets = (JSONObject) value;
 
             MapUtils.iterate(assets, (o, o2) -> {
                 final String a_id = (String) o;
                 String a_info = (String) o2;
 
-                //TODO maybe idk
-                /*if(a_info.contains("%")) {
-                    String[] split = a_info.split("%");
-
-                    for(int i = 0; i < split.length - 1; i+= 2) {
-                        String key = split[i + 1];
-                        a_info = a_info.replace("%" + key + "%", ""+loaded.get(key));
-                    }
-                }*/
-
                 try {
+                    if(a_info.contains("%%")) {
+                        String[] split = a_info.split("%%");
+
+                        for(int i = 1; i < split.length; i+= 2) {
+                            String lid = split[i];
+                            a_info = a_info.replaceAll("%%" + lid + "%%", root.get(lid).toString());
+                        }
+                    }
+
                     loaded.put(a_id, loader.load(type, a_info));
                 } catch(Exception e) {
                     throw new RuntimeException(e);
