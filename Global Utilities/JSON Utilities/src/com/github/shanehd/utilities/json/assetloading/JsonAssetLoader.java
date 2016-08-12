@@ -12,24 +12,22 @@ import java.util.HashMap;
  * @author https://www.github.com/ShaneHD
  *         Created by Shane on 06/08/2016.
  */
-public class JsonAssetLoader {
+public class JsonAssetLoader extends AssetLoader {
     private final JSONParser json;
-    private final AssetLoader loader;
 
     public JsonAssetLoader() {
         json = new JSONParser();
-        loader = new AssetLoader();
     }
 
     public HashMap<String, Object> load(File file) throws Exception {
         HashMap<String, Object> loaded = new HashMap<>();
         JSONObject root = (JSONObject) json.parse(FileUtils.getFileContents(file));
 
-        for(Object id : root.keySet()) {
+        for (Object id : root.keySet()) {
             String type = (String) id;
             Object value = root.get(type);
 
-            if(!(value instanceof JSONObject))
+            if (!(value instanceof JSONObject))
                 continue;
 
             JSONObject assets = (JSONObject) value;
@@ -39,26 +37,22 @@ public class JsonAssetLoader {
                 String a_info = (String) o2;
 
                 try {
-                    if(a_info.contains("%%")) {
+                    if (a_info.contains("%%")) {
                         String[] split = a_info.split("%%");
 
-                        for(int i = 1; i < split.length; i+= 2) {
+                        for (int i = 1; i < split.length; i += 2) {
                             String lid = split[i];
                             a_info = a_info.replaceAll("%%" + lid + "%%", root.get(lid).toString());
                         }
                     }
 
-                    loaded.put(a_id, loader.load(type, a_info));
-                } catch(Exception e) {
+                    loaded.put(a_id, load(type, a_info));
+                } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
             });
         }
 
         return loaded;
-    }
-
-    public AssetLoader getAssetLoader() {
-        return loader;
     }
 }

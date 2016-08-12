@@ -12,7 +12,7 @@ import java.util.HashMap;
  *         Created by Shane on 06/08/2016.
  */
 class AssetLoader {
-    private final HashMap<String, Loader> LOADERS = new HashMap<>();
+    private final HashMap<String, Loader> loaders = new HashMap<>();
 
     public AssetLoader() {
         addType(new FileLoader());
@@ -21,13 +21,13 @@ class AssetLoader {
     }
 
     public void addType(Loader loader) {
-        LOADERS.put(loader.type, loader);
+        loaders.put(loader.type, loader);
     }
 
-    public Object load(String type, String info) throws Exception {
-        if(!LOADERS.containsKey(type))
+    protected Object load(String type, String info) throws Exception {
+        if(!loaders.containsKey(type))
             throw new IllegalArgumentException("There isn't an asset loader for type " + StringUtils.quote(type) + "...");
 
-        return LOADERS.get(type).load(info);
+        return loaders.get(type).load(info);
     }
 }
