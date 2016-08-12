@@ -57,4 +57,8 @@ public class JsonAssetLoader {
 
         return loaded;
     }
+
+    public AssetLoader getAssetLoader() {
+        return loader;
+    }
 }
