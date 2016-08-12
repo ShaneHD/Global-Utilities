@@ -24,6 +24,7 @@ public class Lang extends ArrayList<String> {
     private final File dir;
     private final JSONParser json;
     private String current;
+    private HashMap<String, Object> settings;
 
     public Lang(File dir) {
         this.dir = dir;
@@ -75,9 +76,10 @@ public class Lang extends ArrayList<String> {
         for(int i = 1; i < split.length; i+= 2) {
             String arg = split[i];
 
-            //TODO else, get from settings map
             if(arg.contains("arg"))
                 content = content.replace("%" + arg + "%", args[Integer.parseInt(arg.split("arg")[1]) - 1].toString());
+            else if(settings != null)
+                content = content.replace("%" + arg + "%", settings.get(arg).toString());
         }
 
         return content;
@@ -130,5 +132,9 @@ public class Lang extends ArrayList<String> {
 
     public String getCurrent() {
         return current;
+    }
+
+    public void setSettings(HashMap<String, Object> settings) {
+        this.settings = settings;
     }
 }
