@@ -2,6 +2,7 @@ package com.github.shanehd.utilities.json.assetloading;
 
 import com.github.shanehd.utilities.FileUtils;
 import com.github.shanehd.utilities.MapUtils;
+import com.github.shanehd.utilities.StringUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
@@ -38,15 +39,22 @@ public class JsonAssetLoader extends AssetLoader {
 
                 try {
                     if (a_info.contains("%%")) {
-                        String[] split = a_info.split("%%");
+                        try {
+                            String[] split = a_info.split("%%");
 
-                        for (int i = 1; i < split.length; i += 2) {
-                            String lid = split[i];
-                            a_info = a_info.replaceAll("%%" + lid + "%%", root.get(lid).toString());
+                            for (int i = 1; i < split.length; i += 2) {
+                                String lid = split[i];
+                                a_info = a_info.replaceAll("%%" + lid + "%%", root.get(lid).toString());
+                            }
+                        } catch(Exception e) {
+                            throw new IllegalArgumentException(this + " id " + StringUtils.quote(id) + " is using an argument that doesn't exist. Add it to the top of the json file");
                         }
                     }
 
-                    loaded.put(a_id, load(type, a_info));
+                    Object load = load(type, a_info);
+
+                    if(loaders.get(type).shouldAddToLoadedAssets())
+                        loaded.put(a_id, load(type, a_info));
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

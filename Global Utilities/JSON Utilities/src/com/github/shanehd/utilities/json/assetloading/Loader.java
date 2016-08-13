@@ -12,5 +12,10 @@ public abstract class Loader<T> {
         this.type = type.getName();
     }
 
+    /** When calling {@link #load(String)} should the loaded value be added to the map? */
+    public boolean shouldAddToLoadedAssets() {
+        return true;
+    }
+
     public abstract T load(String info) throws Exception;
 }

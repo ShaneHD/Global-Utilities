@@ -12,7 +12,7 @@ import java.util.HashMap;
  *         Created by Shane on 06/08/2016.
  */
 class AssetLoader {
-    private final HashMap<String, Loader> loaders = new HashMap<>();
+    protected final HashMap<String, Loader> loaders = new HashMap<>();
 
     public AssetLoader() {
         addType(new FileLoader());
