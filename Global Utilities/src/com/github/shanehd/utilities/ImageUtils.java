@@ -130,10 +130,16 @@ public class ImageUtils {
 			return null;
 		}
 	}
-	
+
+	/**
+	 * The 'view' of a {@link BufferedImage}
+	 */
 	public enum View {
 		HORIZONTAL, VERTICAL, SQUARE;
-		
+
+		/**
+		 * Find out what {@link View} the <code>img</code> is
+		 */
 		public static View what(BufferedImage img) {
 			if(img.getWidth() > img.getHeight())
 				return HORIZONTAL;
@@ -143,7 +149,10 @@ public class ImageUtils {
 			
 			return SQUARE;
 		}
-		
+
+		/**
+		 * Check whether the <code>img</code>'s {@link View} is <code>this</code>
+		 */
 		public boolean is(BufferedImage img) {
 			return what(img) == this;
 		}

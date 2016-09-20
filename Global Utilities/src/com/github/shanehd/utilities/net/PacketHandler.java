@@ -32,7 +32,7 @@ public class PacketHandler {
 	}
 	
 	/**
-	 * with arguments
+	 * Handle input with arguments
 	 * @see #handle(String)
 	 */
 	public void handle(String s, String[] args) {		

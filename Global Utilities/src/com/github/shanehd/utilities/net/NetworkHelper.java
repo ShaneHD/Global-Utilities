@@ -1,11 +1,11 @@
 package com.github.shanehd.utilities.net;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 /**
+ * A class to help handle networking<br/>
+ * Stores both an {@link #input} and an {@link #output}
+ *
  * @author https://www.github.com/ShaneHD
  *
  * @param <IN> The {@link InputStream} type
@@ -19,11 +19,27 @@ public abstract class NetworkHelper<IN extends InputStream, OUT extends OutputSt
 		this.input = input;
 		this.output = output;
 	}
-	
+
+	/**
+	 * Write information to the {@link #output} stream
+	 * @param packet Packet to send
+	 * @param args Any arguments
+	 */
 	public void write(String packet, String... args) throws Exception {		
-		throw new RuntimeException("Not set up.");
+		throw new RuntimeException("Write has not been set up...");
 	}
-	
+
+	/**
+	 * Closes the streams
+	 */
+	public void close() throws IOException {
+		input.close();
+		output.close();
+	}
+
+	/**
+	 * {@link NetworkHelper} using {@link DataInputStream} and {@link DataOutputStream}
+	 */
 	public static class DataStreamNetworkHelper extends NetworkHelper<DataInputStream, DataOutputStream> {
 		public DataStreamNetworkHelper(DataInputStream input, DataOutputStream output) {
 			super(input, output);

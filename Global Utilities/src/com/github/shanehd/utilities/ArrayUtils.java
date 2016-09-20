@@ -9,8 +9,9 @@ package com.github.shanehd.utilities;
 
 import java.util.ArrayList;
 import java.lang.reflect.Array;
+import java.util.List;
 
-/** @author https://www.github.com/ShaneHD */
+	/** @author https://www.github.com/ShaneHD */
 public class ArrayUtils {
 	/**
 	 * Converts a int array to its object equivalent ({@link Integer})[]

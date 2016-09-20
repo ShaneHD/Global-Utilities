@@ -20,14 +20,27 @@ public class BRandom extends Random {
 		super(seed);
 	}
 
+	/**
+	 * Generates a random color using {@link #nextFloat()}
+	 */
 	public Color nextColor() {
 		return new Color(nextFloat(), nextFloat(), nextFloat(), nextFloat());
 	}
-	
+
+	/**
+	 * Generates a random float between <code>min</code> and <code>max</code> using {@link #nextFloat()}
+	 * @param min The minimum value of the random float
+	 * @param max The maximum value of the random float
+	 */
 	public float nextFloat(float min, float max) {
 		return nextFloat() * (max - min) + min;
 	}
-	
+
+	/**
+	 * Generates a random int between <code>min</code> and <code>max</code> using {@link #nextFloat()}
+	 * @param min The minimum value of the random int
+	 * @param max The maximum value of the random int
+	 */
 	public int nextInt(int min, int max) {
 		return nextInt(max - min) + min;
 	}

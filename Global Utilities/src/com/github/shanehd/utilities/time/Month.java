@@ -22,7 +22,7 @@ public enum Month {
 
     /**
      * The month name in full form<br>
-     * E.G. {@link JAN} becomes January
+     * E.G. {@link #JAN} becomes January
      */
     public final String full_name;
     public final int calendar_id;

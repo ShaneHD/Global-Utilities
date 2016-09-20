@@ -4,6 +4,7 @@ package com.github.shanehd.utilities.net;
  * @author https://www.github.com/ShaneHD
  */
 public interface Command<T extends NetworkHelper> {
+	/** The {@link String} that separates arguments when sending {@link Command}s */
 	String SEPARATOR = "`SEP`";
 	
 	void handle(T out, String command, String sub, String[] args) throws Exception;
