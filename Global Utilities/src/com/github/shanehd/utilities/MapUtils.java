@@ -55,7 +55,7 @@ public class MapUtils {
 		final StringBuilder list = new StringBuilder();
 
 		iterate(map, (o, o2) -> {
-			list.append(o + "=" + o2);
+			list.append(o + "=" + o2 + "\n");
         });
 
 		return list.toString();
