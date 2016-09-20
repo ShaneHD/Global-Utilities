@@ -34,6 +34,11 @@ public class FileUtils {
 			"avi", "mp4", "mkv", "flv", "mov", "mpg", "m4v", "m2ts"
 	};
 
+	/**
+	 * @return A list of all the file extensions found inside a directory<br/>
+	 * For example, a folder containing <code>song.mp3, pic.png and text.txt</code>
+	 * 		will return an {@link ArrayList} containing <code>"mp3", "png", "txt"</code>
+	 */
 	public static ArrayList<String>	listExtsInDirs(File dir) {
 		ArrayList<String> list = new ArrayList<>();
 
@@ -58,55 +63,85 @@ public class FileUtils {
 		return list;
 	}
 
+	/**
+	 * @return The {@link File}'s name NOT containing its extension(.txt, .png, etc)
+	 */
 	public static String getNameWithoutExtension(File file) {
 		return file.getName().split("." + ext(file))[0];
 	}
 
 	/**
-	 * Check if a {@link File} is an image or not
+	 * Check if a {@link File} is an image or not<br/>
+	 * Uses {@link ImageUtils#FORMATS}
 	 */
 	public static boolean isImage(File file) {
 		return is(file, ImageUtils.FORMATS);
 	}
 
+	/**
+	 * Check if a {@link File} is a video or not<br/>
+	 * Uses {@link #VIDEO_FORMATS}
+	 */
 	public static boolean isVideo(File file) {
 		return is(file, VIDEO_FORMATS);
 	}
 
+	/**
+	 * Check if the {@link File} has one of the extensions inside the <code>formats</code> param
+	 * @param file The {@link File} to check
+	 * @param formats A {@link String} array of extensions to check for
+	 */
 	private static boolean is(File file, String[] formats) {
 		return ArrayUtils.contains(formats, ext(file));
 	}
 
+	/**
+	 * Get a {@link File}'s extension
+	 */
 	public static String ext(File file) {
 		String[] split = file.getName().split("\\.");
 		return split[split.length - 1];
 	}
-	
+
+	/**
+	 * Iterate over all new lines (<code>\n</code>) of a {@link File}'s contents with {@link NewLineIterator}
+	 */
 	public static void iterateLines(File file, NewLineIterator iterator) {
 		iterateLines(getFileContents(file), iterator);
 	}
-	
+
+	/**
+	 * Iterate over all new lines in a {@link String} (<code>\n</code>) with {@link NewLineIterator}
+	 */
 	public static void iterateLines(String contents, NewLineIterator iterator) {
 		for(String line : contents.split("\n"))
 			iterator.onLine(line);
 	}
-	
-	public static byte[] fileToByteArray(File file) throws Exception {
+
+	/**
+	 * Convert the {@link File} to a byte array
+	 * @see #saveByteArrayFileToDisk(String, byte[])
+	 */
+	public static byte[] fileToByteArray(File file) throws IOException {
 		byte[] result = new byte[(int) file.length()];
 		FileInputStream fin = new FileInputStream(file);
 		fin.read(result);
 		fin.close();
 		return result;
 	}
-	
-	public static void saveByteArrayFileToDisk(String path, byte[] bytes) throws Exception {
+
+	/**
+	 * Save a file in byte array form to the hard drive
+	 * @see #fileToByteArray(File)
+	 */
+	public static void saveByteArrayFileToDisk(String path, byte[] bytes) throws IOException {
 		FileOutputStream fout = new FileOutputStream(path);
 		fout.write(bytes);
 		fout.close();
 	}
 	
 	/**
-	 * Gets the file's parent directory
+	 * Gets the {@link File}'s parent directory
 	 */
 	public static File getParentDirectory(File file) {	
 		String s = file.getAbsolutePath();
@@ -164,7 +199,8 @@ public class FileUtils {
 	}
 	
 	/**
-	 * Get a value from a file using {@link #separator} to separate the key and value
+	 * Get a value from a {@link File} using {@link #separator} to separate the key and value
+	 * @deprecated
 	 */
 	public static String getValue(String key, File file) {
 		try {
@@ -195,6 +231,7 @@ public class FileUtils {
 	
 	/**
 	 * Load a configuration file into a {@link HashMap}
+	 * @deprecated
 	 */
 	public static LinkedHashMap<String, String> loadFileIntoHashMap(File file) {
 		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
@@ -252,9 +289,8 @@ public class FileUtils {
 	/**
 	 * Uses UTF-16 encoding
 	 * @see #getFileContents(File)
-	 * @author Someone from stackoverflow. Don't have their name.
 	 */
-	public static String getFileContentsUTF16(File file) {
+	public static String getFileContentsUTF16(File file) throws FileNotFoundException {
 		BufferedReader br;
 		try {
 			br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-16"));
@@ -269,11 +305,11 @@ public class FileUtils {
 			e.printStackTrace();
 		}
 		
-		throw new RuntimeException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
+		throw new FileNotFoundException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
 	}
 	
 	/**
-	 * Write something to a file
+	 * Write something to a {@link File}
 	 * @return Whether the write was successful or not
 	 */
 	public static boolean write(Object toWrite, File file, boolean... append) {
@@ -307,12 +343,12 @@ public class FileUtils {
 	}
 	
 	/**
-	 * Downloads a file and saves it to a location on the computer
+	 * Downloads a {@link File} and saves it to a location on the computer
 	 */
-	@SuppressWarnings("resource")
 	public static void download(URL url, String save) throws IOException {
 		ReadableByteChannel channel = Channels.newChannel(url.openStream());
 		new FileOutputStream(save).getChannel().transferFrom(channel, 0, Long.MAX_VALUE);
+		channel.close();
 	}
 }
 

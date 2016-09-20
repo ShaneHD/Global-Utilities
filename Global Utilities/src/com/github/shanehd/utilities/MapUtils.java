@@ -6,11 +6,16 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/** 
+/**
+ * {@link Map} utilities
+ *
  * @author https://www.github.com/ShaneHD
  */
 public class MapUtils {
-	public static <K, V> Map<K, V> reverse(Map<K, V> map) {
+	/**
+	 * Reverse a {@link Map}'s order
+	 */
+	public static <K, V> LinkedHashMap<K, V> reverse(Map<K, V> map) {
 		ArrayList<K> keys = new ArrayList<K>(map.keySet());
 		LinkedHashMap<K, V> reversed = new LinkedHashMap<K, V>();
 		
@@ -21,7 +26,10 @@ public class MapUtils {
 		
 		return reversed;
 	}
-	
+
+	/**
+	 * Iterate over a {@link Map} using {@link MapIterator}
+	 */
 	public static <K, V> void iterate(Map<K, V> map, MapIterator<K, V> iterator) {
 		if(iterator instanceof MapIterator.Reverse) {
 			doIterate(reverse(map), iterator);
@@ -30,10 +38,26 @@ public class MapUtils {
 		
 		doIterate(map, iterator);
 	}
-	
+
 	private static <K, V> void doIterate(Map<K, V> map, MapIterator<K, V> iterator) {
 		for(Map.Entry<K, V> e : map.entrySet()) {
 			iterator.on(e.getKey(), e.getValue());
 		}
+	}
+
+	/**
+	 * Get a {@link Map}s keys and values into a readable {@link String}<br/>
+	 * Uses format: <code>key=value\n</code>
+	 * @param map
+	 * @return
+	 */
+	public static String toString(Map<?,?> map) {
+		final StringBuilder list = new StringBuilder();
+
+		iterate(map, (o, o2) -> {
+			list.append(o + "=" + o2);
+        });
+
+		return list.toString();
 	}
 }
