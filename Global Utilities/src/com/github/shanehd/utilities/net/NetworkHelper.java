@@ -25,7 +25,7 @@ public abstract class NetworkHelper<IN extends InputStream, OUT extends OutputSt
 	 * @param packet Packet to send
 	 * @param args Any arguments
 	 */
-	public void write(String packet, String... args) throws Exception {		
+	public void write(String packet, String... args) throws IOException {
 		throw new RuntimeException("Write has not been set up...");
 	}
 
@@ -46,21 +46,16 @@ public abstract class NetworkHelper<IN extends InputStream, OUT extends OutputSt
 		}
 		
 		@Override
-		public void write(String packet, String... args) throws Exception {
-			try {
-				if(args.length == 0)
-					((DataOutputStream)output).writeUTF(packet);
-				else {
-					String argsSendFormat = packet + Command.SEPARATOR;
-					
-					for(int i = 0; i < args.length; i++)
-						argsSendFormat+= args[i] + (i == args.length - 1 ? "" : Command.SEPARATOR);
-					
-					write(argsSendFormat);
-				}
-			} catch(Exception e) {
-				e.printStackTrace();
-				throw e;
+		public void write(String packet, String... args) throws IOException {
+			if(args.length == 0)
+				((DataOutputStream)output).writeUTF(packet);
+			else {
+				String argsSendFormat = packet + Command.SEPARATOR;
+
+				for(int i = 0; i < args.length; i++)
+					argsSendFormat+= args[i] + (i == args.length - 1 ? "" : Command.SEPARATOR);
+
+				write(argsSendFormat);
 			}
 		}
 	}
