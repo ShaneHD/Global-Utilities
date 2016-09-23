@@ -26,7 +26,14 @@ public class StringUtils {
 		
 		return split;
 	}
-	
+
+	/**
+	 * Formats a {@link Throwable} like so; <code>class_name - message</code>
+     */
+	public static String format(Throwable t) {
+		return t.getClass().getName() + " - " + t.getMessage();
+	}
+
 	/**
 	 * Surround a {@link String} with quotation marks
 	 */
