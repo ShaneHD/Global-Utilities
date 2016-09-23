@@ -1,6 +1,7 @@
 package com.github.shanehd.utilities;
 
-import javax.swing.UIManager;
+import javax.swing.*;
+import java.net.URL;
 
 /**
  * Miscellaneous GUI utilities
@@ -28,5 +29,16 @@ public class GuiUtils {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * Set a {@link JFrame} icon image using
+	 * @param frame The frame
+	 * @param location Location of the icon (within the classpath)
+     */
+	public static void setJframeIcon(JFrame frame, String location) {
+		URL url = frame.getClass().getResource("/" + location);
+		ImageIcon icon = new ImageIcon(url);
+		frame.setIconImage(icon.getImage());
 	}
 }

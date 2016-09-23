@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
+ * @deprecated
  * Stands for BetterJFrame<br>
  * {@link WindowListener} is added, just override methods to use
  * 
