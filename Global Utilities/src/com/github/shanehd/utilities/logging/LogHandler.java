@@ -6,6 +6,7 @@ import javax.swing.*;
  * @author https://www.github.com/ShaneHD
  *         Created by Shane on 07/07/2016.
  */
+@Deprecated //TODO remove this
 public abstract class LogHandler implements ILog {
     public abstract void print(String line);
     public abstract String format(String type, String line);
