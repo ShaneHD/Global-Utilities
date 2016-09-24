@@ -18,6 +18,8 @@ public class LogWindow extends JFrame implements WindowListener {
     private boolean displayed = false;
 
     public LogWindow(Logger log) {
+        log.addHandler(handler);
+
         text.setEditable(false);
         add(new JScrollPane(text));
 
@@ -39,10 +41,6 @@ public class LogWindow extends JFrame implements WindowListener {
         setVisible(displayed);
     }
 
-    private void append(String line) {
-        text.append(line);
-    }
-
     private final Handler handler = new Handler() {
         {
             setLevel(Level.ALL);
@@ -54,7 +52,7 @@ public class LogWindow extends JFrame implements WindowListener {
             if(!isLoggable(record))
                 return;
 
-            append(getFormatter().format(record));
+            text.append(getFormatter().format(record));
         }
 
         @Override
