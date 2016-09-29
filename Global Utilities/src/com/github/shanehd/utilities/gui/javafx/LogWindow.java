@@ -1,11 +1,12 @@
 package com.github.shanehd.utilities.gui.javafx;
 
 import com.github.shanehd.utilities.PCUtils;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.StackPane;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.util.logging.*;
 
@@ -29,8 +30,15 @@ public class LogWindow extends Stage {
         Scene scene = new Scene(layout, (PCUtils.getScreenWidth() / 3) - 15, (PCUtils.getScreenHeight() / 3) - 15);
         setScene(scene);
 
-        setOnCloseRequest(event -> {
+        /*setOnCloseRequest(event -> {
             displayed = false;
+        });*/
+
+        setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                displayed = false;
+            }
         });
 
         log.addHandler(handler);

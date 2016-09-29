@@ -52,14 +52,23 @@ public abstract class LogHandler implements ILog {
     }
 
     public final int getJOptionPaneType(String type) {
-        switch(type) {
+        /*switch(type) {
             case "INFO":
                 return JOptionPane.INFORMATION_MESSAGE;
             case "WARNING":
                 return JOptionPane.WARNING_MESSAGE;
             case "ERROR":
                 return JOptionPane.ERROR_MESSAGE;
-        }
+        }*/
+
+        if(type.equals("INFO"))
+            return JOptionPane.INFORMATION_MESSAGE;
+
+        if(type.equals("WARNING"))
+            return JOptionPane.WARNING_MESSAGE;
+
+        if(type.equals("ERROR"))
+            return JOptionPane.ERROR_MESSAGE;
 
         return 0;
     }

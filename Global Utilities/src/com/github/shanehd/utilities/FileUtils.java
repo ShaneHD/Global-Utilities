@@ -40,7 +40,7 @@ public class FileUtils {
 	 * 		will return an {@link ArrayList} containing <code>"mp3", "png", "txt"</code>
 	 */
 	public static ArrayList<String>	listExtsInDirs(File dir) {
-		ArrayList<String> list = new ArrayList<>();
+		ArrayList<String> list = new ArrayList();
 
 		for(File file : dir.listFiles()) {
 			if(file.isDirectory()) {

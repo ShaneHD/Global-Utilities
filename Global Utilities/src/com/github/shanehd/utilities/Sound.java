@@ -83,7 +83,12 @@ public class Sound extends ArrayList<Clip> {
      * Stop the sound
      */
     public void stop() {
-        forEach(Clip::stop);
+        //forEach(Clip::stop);
+
+        for(Clip clip : this) {
+            clip.stop();
+        }
+
         clear();
     }
 

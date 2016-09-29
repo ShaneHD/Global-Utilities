@@ -54,9 +54,16 @@ public class MapUtils {
 	public static String toString(Map<?,?> map) {
 		final StringBuilder list = new StringBuilder();
 
-		iterate(map, (o, o2) -> {
+		/*iterate(map, (o, o2) -> {
 			list.append(o + "=" + o2 + "\n");
-        });
+        });*/
+
+		iterate(map, new MapIterator() {
+			@Override
+			public void on(Object o, Object o2) {
+				list.append(o + "=" + o2 + "\n");
+			}
+		});
 
 		return list.toString();
 	}
