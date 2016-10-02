@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="Global Utilities:jar2">
+  <artifact type="jar" build-on-make="true" name="Global Utilities:jar2">
     <output-path>$USER_HOME$/Documents/coding/java/libs</output-path>
     <root id="archive" name="Global Utilities.jar">
       <element id="module-output" name="Global Utilities" />
