@@ -1,4 +1,4 @@
-package com.github.shanehd.utilities.gui.javafx;
+package com.github.shanehd.utilities.gui.javafx.components;
 
 import javafx.scene.Node;
 import javafx.scene.control.ToggleButton;
