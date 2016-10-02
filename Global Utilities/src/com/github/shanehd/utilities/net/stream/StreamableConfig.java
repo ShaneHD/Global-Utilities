@@ -60,7 +60,7 @@ public abstract class StreamableConfig<T extends NetworkHelper> {
     }
 
     public StreamableConfig setHeight(int height) {
-        this.width = width;
+        this.height = height;
         return this;
     }
 
