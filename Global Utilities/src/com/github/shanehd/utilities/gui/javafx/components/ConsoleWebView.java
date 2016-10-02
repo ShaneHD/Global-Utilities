@@ -30,16 +30,19 @@ public class ConsoleWebView {
             text.append("   </script>");
             text.append("</head>");
             text.append("<body onload='toBottom()'>");
+            append("", 1);
         }
     }
 
     /**
-     * Append text to the {@link WebView}
+     * Append text to the {@link WebView}<br/>
+     *
+     * @param noNewLineFlag If anything is entered here, the HTML br will not be added
      * @see #getWebView()
      */
-    public void append(String text) {
-        this.text.append(text);
-        view.getEngine().loadContent(text.toString());
+    public void append(String text, Object... noNewLineFlag) {
+        this.text.append(text + (noNewLineFlag.length == 0 ? "<br>" : ""));
+        view.getEngine().loadContent(this.text.toString());
     }
 
     /**
