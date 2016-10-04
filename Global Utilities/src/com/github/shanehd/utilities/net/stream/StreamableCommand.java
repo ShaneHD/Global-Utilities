@@ -36,8 +36,17 @@ public class StreamableCommand<T extends Streamable, S  extends NetworkHelper> i
         boolean enabled = Boolean.parseBoolean(sub);
 
         if(setSize || enabled) {
-            int width = Integer.parseInt(args[2]);
-            int height = Integer.parseInt(args[3]);
+            int width, height;
+
+            try {
+                width = Integer.parseInt(args[2]);
+                height = Integer.parseInt(args[3]);
+            } catch(NumberFormatException e) {
+                width = (int) Double.parseDouble(args[2]);
+                height = (int) Double.parseDouble(args[3]);
+            }
+
+
             long delay = stream.configuration.getDelay();
 
             try {
