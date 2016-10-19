@@ -4,7 +4,7 @@ import javafx.scene.web.WebView;
 
 /**
  * {@link WebView} that you can append to<br/>
- * Use true with the constructor if you want auto scrolling enabled
+ * Use <code>true</code> with the constructor if you want auto scrolling enabled
  *
  * @see #getWebView()
  *

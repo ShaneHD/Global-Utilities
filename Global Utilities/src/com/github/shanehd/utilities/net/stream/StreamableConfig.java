@@ -51,6 +51,9 @@ public abstract class StreamableConfig<T extends NetworkHelper> {
     }
 
     public StreamableConfig setWidth(int width) {
+        if(width < 1)
+            return this;
+
         this.width = width;
         return this;
     }
@@ -60,6 +63,9 @@ public abstract class StreamableConfig<T extends NetworkHelper> {
     }
 
     public StreamableConfig setHeight(int height) {
+        if(height < 1)
+            return this;
+
         this.height = height;
         return this;
     }

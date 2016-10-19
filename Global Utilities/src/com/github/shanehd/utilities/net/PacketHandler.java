@@ -35,9 +35,9 @@ public class PacketHandler {
 	 * @return The requested command
 	 * @throws IllegalArgumentException If the command isn't added
      */
-	private Object safeget(String command, HashMap commands) throws IllegalArgumentException {
+	private Object safeget(String command, HashMap commands) throws NullPointerException {
 		if(!commands.containsKey(command))
-			throw new IllegalArgumentException("Command " + StringUtils.quote(command) + " doesn't exist!");
+			throw new NullPointerException("Command " + StringUtils.quote(command) + " doesn't exist!");
 
 		return commands.get(command);
 	}
