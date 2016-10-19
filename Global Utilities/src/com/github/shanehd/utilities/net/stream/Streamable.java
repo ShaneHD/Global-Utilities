@@ -1,5 +1,6 @@
 package com.github.shanehd.utilities.net.stream;
 
+import com.github.shanehd.utilities.ArrayUtils;
 import com.github.shanehd.utilities.ImageUtils;
 import com.github.shanehd.utilities.StringUtils;
 import com.github.shanehd.utilities.i.Stoppable;
@@ -77,16 +78,16 @@ public abstract class Streamable<T extends StreamableConfig> implements Stoppabl
      * @param raw The data to send in its entirety
      * @param command The command to send it under
      */
-    protected final void sendSplitStream(String raw, String command) throws IOException {
+    protected final void sendSplitStream(String raw, String command, String... args) throws IOException {
         //This needs to be split up in order to send the large amount of data
         ArrayList<String> split = StringUtils.splitByLength(raw, 65535 / 2);
 
         for(String part : split) {
-            configuration.getServer().write(command, part);
+            configuration.getServer().write(command, ArrayUtils.join(new String[]{part}, args));
         }
 
         //Done sending all parts
-        configuration.getServer().write(command, "fin");
+        configuration.getServer().write(command, ArrayUtils.join(new String[]{"fin"}, args));
     }
 
     /**
