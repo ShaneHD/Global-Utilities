@@ -355,7 +355,7 @@ public class FileUtils {
 	 * @return %appdata%
 	 */
 	public static File getAppdataDir() {
-		File appdata = new File(System.getProperty("user.dir"), "AppData/Roaming");
+		File appdata = new File(System.getProperty("user.home"), "AppData/Roaming");
 
 		if(!appdata.exists())
 			throw new NullPointerException("The current computer does not have an AppData directory (not windows?)");
