@@ -350,6 +350,33 @@ public class FileUtils {
 		new FileOutputStream(save).getChannel().transferFrom(channel, 0, Long.MAX_VALUE);
 		channel.close();
 	}
+
+	/**
+	 * @return %appdata%
+	 */
+	public static File getAppdataDir() {
+		File appdata = new File(System.getProperty("user.dir"), "AppData/Roaming");
+
+		if(!appdata.exists())
+			throw new NullPointerException("The current computer does not have an AppData directory (not windows?)");
+
+		return appdata;
+	}
+
+	/**
+	 * Get a folder inside AppData (creates if it doesn't exist)
+	 * @see #getAppdataDir()
+	 * @param name Name of the directory you want to get (which is inside AppData)
+	 */
+	public static File getAppdataDir(String name) {
+		File appdata = getAppdataDir();
+		File dir = new File(appdata, name);
+
+		if(!dir.exists())
+			dir.mkdir();
+
+		return dir;
+	}
 }
 
 
