@@ -130,12 +130,4 @@ public class StringUtils {
 		string = Character.toUpperCase(first) + string.substring(1);
 		return string;
 	}
-
-	public static String format_Throwable(Throwable t) {
-		return format_Throwable(t, "NO INFO PROVIDED");
-	}
-
-	public static String format_Throwable(Throwable t, String info) {
-		return "Throwable caught: " + t.getClass() + " - " + t.getMessage() + "; INFO=[" + info + "]";
-	}
 }
