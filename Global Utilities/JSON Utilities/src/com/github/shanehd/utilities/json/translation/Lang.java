@@ -103,7 +103,7 @@ public class Lang extends ArrayList<String> {
                 return parse((String) lroot.get(split[split.length - 1]), args);
             }
 
-            return parse((String) map.get(id));
+            return parse((String) map.get(id), args);
         } catch(ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
             return this + " missing arguments for id " + StringUtils.quote(id) + "..";
