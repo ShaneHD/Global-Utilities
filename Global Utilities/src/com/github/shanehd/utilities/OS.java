@@ -1,7 +1,5 @@
 package com.github.shanehd.utilities;
 
-import com.github.shanehd.utilities.logging.Log;
-
 //TODO - Add detection for different linux systems / bit version
 /**
  * Operating system identifierf
@@ -98,7 +96,7 @@ public enum OS {
 		if(isMac())
 			return os.isMac();
 
-		Log.warning("[" + getClass().getName() + "] I don't know if this is compatible or not: " + StringUtils.quote(os));
+		Log.get().warning("[" + getClass().getName() + "] I don't know if this is compatible or not: " + StringUtils.quote(os));
 		return false;
 	}
 	

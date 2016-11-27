@@ -1,9 +1,9 @@
 package com.github.shanehd.utilities.json.translation;
 
 import com.github.shanehd.utilities.FileUtils;
+import com.github.shanehd.utilities.Log;
 import com.github.shanehd.utilities.MapUtils;
 import com.github.shanehd.utilities.StringUtils;
-import com.github.shanehd.utilities.logging.Log;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -46,7 +46,7 @@ public class Lang extends ArrayList<String> {
 
     public void setLanguage(String language) {
         if(current != null && current == language) {
-            Log.warning("Trying to set language to " + StringUtils.quote(language) + ", but it is already the current language.");
+            Log.get().warning("Trying to set language to " + StringUtils.quote(language) + ", but it is already the current language.");
             return;
         }
 

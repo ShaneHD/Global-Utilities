@@ -1,7 +1,5 @@
 package com.github.shanehd.utilities;
 
-import com.github.shanehd.utilities.logging.Log;
-
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
@@ -42,7 +40,7 @@ public class Sound extends ArrayList<Clip> {
         times-= 1;
 
         if(times == -1)
-            Log.warning("Loop started for " + this + ", but it is infinite. Use loop() method with no arguments for this.");
+            Log.get().warning("Loop started for " + this + ", but it is infinite. Use loop() method with no arguments for this.");
 
         start(times);
     }
@@ -68,7 +66,7 @@ public class Sound extends ArrayList<Clip> {
 
             add(clip);
         } catch(Exception e) {
-            Log.caught(e, "When starting " + this);
+            e.printStackTrace();
         }
     }
 
