@@ -18,11 +18,11 @@ import java.util.ArrayList;
 public class Sound extends ArrayList<Clip> {
     private final File dir;
 
-    public Sound(String path) {
-        dir = new File(path);
+    public Sound(String path) throws FileNotFoundException {
+        dir = FileUtils.newFile(path);
 
         if(!dir.exists())
-            throw new RuntimeException(new FileNotFoundException(this + " doesn't exist."));
+            throw new FileNotFoundException(this + " doesn't exist.");
     }
 
     /**
