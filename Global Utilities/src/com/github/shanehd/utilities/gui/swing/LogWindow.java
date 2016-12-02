@@ -1,5 +1,6 @@
 package com.github.shanehd.utilities.gui.swing;
 
+import com.github.shanehd.utilities.Log;
 import com.github.shanehd.utilities.PCUtils;
 
 import javax.swing.*;
@@ -17,8 +18,8 @@ public class LogWindow extends JFrame implements WindowListener {
     private final JTextArea text = new JTextArea();
     private boolean displayed = false;
 
-    public LogWindow(Logger log) {
-        log.addHandler(handler);
+    public LogWindow() {
+        Log.get().addHandler(handler);
 
         text.setEditable(false);
         add(new JScrollPane(text));

@@ -11,6 +11,7 @@ import java.util.jar.JarFile;
 import java.util.logging.Logger;
 
 import com.github.shanehd.utilities.FileUtils;
+import com.github.shanehd.utilities.Log;
 import com.github.shanehd.utilities.StringUtils;
 
 /** 
@@ -21,14 +22,12 @@ import com.github.shanehd.utilities.StringUtils;
 public class ExternalPluginLoader {
 	public final File dir;
 	private final LinkedHashSet<BasePlugin> plugins = new LinkedHashSet<BasePlugin>();
-	private final Logger log;
-	
+
 	/**
 	 * <b style='color:red;'>Warning: uses {@link FileUtils#workingDirectory}/plugins</b>
 	 */
-	public ExternalPluginLoader(Logger log) {
+	public ExternalPluginLoader() {
 		dir = new File(FileUtils.workingDirectory, "plugins/");
-		this.log = log;
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -54,7 +53,7 @@ public class ExternalPluginLoader {
 			if(!name.endsWith(".jar"))
 				continue;
 			
-			log.info("= Found plugin jar: " + name + " =");
+			Log.get().info("= Found plugin jar: " + name + " =");
 			String main = null;
 			
 			try {				
@@ -72,7 +71,7 @@ public class ExternalPluginLoader {
 			}
 			
 			if(main == null) {
-				log.warning("main property in plugin.info is null, for " + StringUtils.quote(file.getAbsolutePath()));
+				Log.get().warning("main property in plugin.info is null, for " + StringUtils.quote(file.getAbsolutePath()));
 				continue;
 			}
 			

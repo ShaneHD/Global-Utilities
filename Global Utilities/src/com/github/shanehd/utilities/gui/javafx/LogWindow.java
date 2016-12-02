@@ -1,5 +1,6 @@
 package com.github.shanehd.utilities.gui.javafx;
 
+import com.github.shanehd.utilities.Log;
 import com.github.shanehd.utilities.PCUtils;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -21,7 +22,7 @@ public class LogWindow extends Stage {
     private volatile boolean displayed = false;
     private static LogWindow instance;
 
-    public LogWindow(Logger log) {
+    public LogWindow() {
         setTitle("Log View");
         text.setEditable(false);
 
@@ -41,7 +42,7 @@ public class LogWindow extends Stage {
             }
         });
 
-        log.addHandler(handler);
+        Log.get().addHandler(handler);
 
         instance = this;
     }

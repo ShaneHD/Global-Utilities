@@ -2,6 +2,7 @@ package com.github.shanehd.utilities.net.stream;
 
 import com.github.shanehd.utilities.ArrayUtils;
 import com.github.shanehd.utilities.ImageUtils;
+import com.github.shanehd.utilities.Log;
 import com.github.shanehd.utilities.StringUtils;
 import com.github.shanehd.utilities.i.Stoppable;
 
@@ -9,7 +10,6 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Base64;
-import java.util.logging.Logger;
 
 /**
  * @param <T> The {@link StreamableConfig} that you're using
@@ -20,11 +20,9 @@ import java.util.logging.Logger;
 public abstract class Streamable<T extends StreamableConfig> implements Stoppable, Runnable {
     public final T configuration;
     private Thread thread;
-    private final Logger log;
 
-    public Streamable(T configuration, Logger log) {
+    public Streamable(T configuration) {
         this.configuration = configuration;
-        this.log = log;
     }
 
     /**
@@ -33,7 +31,7 @@ public abstract class Streamable<T extends StreamableConfig> implements Stoppabl
      */
     public void start() {
         if(!isSystemValid()) {
-            log.warning("Cannot start " + this + ", because the system is invalid.");
+            Log.get().warning("Cannot start " + this + ", because the system is invalid.");
             return;
         }
 
@@ -54,11 +52,11 @@ public abstract class Streamable<T extends StreamableConfig> implements Stoppabl
     @Override
     public void run() {
         if(shouldCancel()) {
-            log.warning(this + " is about to be force closed, because shouldCancel returns true!");
+            Log.get().warning(this + " is about to be force closed, because shouldCancel returns true!");
             configuration.setEnabled(false);
         }
 
-        log.info(this + " started.");
+        Log.get().info(this + " started.");
 
         while(configuration.getEnabled()) {
             tick();
@@ -70,7 +68,7 @@ public abstract class Streamable<T extends StreamableConfig> implements Stoppabl
             }
         }
 
-        log.info(this + " stopped.");
+        Log.get().info(this + " stopped.");
     }
 
     /**
