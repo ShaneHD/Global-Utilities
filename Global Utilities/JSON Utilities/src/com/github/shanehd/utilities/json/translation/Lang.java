@@ -4,6 +4,7 @@ import com.github.shanehd.utilities.FileUtils;
 import com.github.shanehd.utilities.Log;
 import com.github.shanehd.utilities.MapUtils;
 import com.github.shanehd.utilities.StringUtils;
+import com.sun.javaws.Main;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -67,7 +68,7 @@ public class Lang extends ArrayList<String> {
         }
     }
 
-    private String parse(String content, Object... args) {
+    private String parse(String content, Object... args) throws NullPointerException {
         if(!content.contains("%"))
             return content;
 
@@ -76,10 +77,14 @@ public class Lang extends ArrayList<String> {
         for(int i = 1; i < split.length; i+= 2) {
             String arg = split[i];
 
-            if(arg.contains("arg"))
-                content = content.replace("%" + arg + "%", args[Integer.parseInt(arg.split("arg")[1]) - 1].toString());
-            else if(settings != null)
-                content = content.replace("%" + arg + "%", settings.get(arg).toString());
+            try {
+                if(arg.contains("arg"))
+                    content = content.replace("%" + arg + "%", args[Integer.parseInt(arg.split("arg")[1]) - 1].toString());
+                else if(settings != null)
+                    content = content.replace("%" + arg + "%", settings.get(arg).toString());
+            } catch(NullPointerException e) {
+                throw new NullPointerException("Argument " + i + " is null.");
+            }
         }
 
         return content;
@@ -107,7 +112,10 @@ public class Lang extends ArrayList<String> {
         } catch(ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
             return this + " missing arguments for id " + StringUtils.quote(id) + "..";
-        }  catch(NullPointerException e) {
+        } catch(NullPointerException e) {
+            new Exception("When translating id " + StringUtils.quote(id), e).printStackTrace();
+            return "Null argument provided: " + e.getMessage();
+        } catch(Exception e) {
             e.printStackTrace();
             return error(id);
         }
