@@ -51,6 +51,7 @@ public class MapUtils {
 	 * @param map
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public static String toString(Map<?,?> map) {
 		final StringBuilder list = new StringBuilder();
 

@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class ExpectedArgs {
     private final HashMap<String, Object> args = new HashMap<String, Object>();
 
-    public ExpectedArgs(String[] args, Object... expected) throws MissingArgumentException{
+    public ExpectedArgs(String[] args, Object... expected) throws MissingArgumentException {
         if(expected.length % 2 != 0)
             throw new RuntimeException("ExpectedArgs requires id,type");
 
@@ -28,6 +28,7 @@ public class ExpectedArgs {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public <T> T get(String id) {
         return (T) args.get(id);
     }
