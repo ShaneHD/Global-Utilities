@@ -76,7 +76,36 @@ public class StringUtils {
 
 		return grouped;
 	}
-	
+
+	/**
+	 * Cast a string to other formats<br>
+	 * @throws RuntimeException If using non implemented type
+     */
+	public static Object cast(String arg, Class type) {
+		String s = type.getSimpleName().toLowerCase();
+
+		if (s.equals("string"))
+			return arg;
+		else if (s.equals("integer") || s.equals("int"))
+			return Integer.parseInt(arg);
+		else if(s.equals("float"))
+			return Float.parseFloat(arg);
+		else if(s.equals("boolean"))
+			return Boolean.parseBoolean(arg);
+		else if(s.equals("double"))
+			return Double.parseDouble(arg);
+		else if(s.equals("character") || s.equals("char"))
+			return arg.charAt(0);
+		else if(s.equals("byte"))
+			return Byte.parseByte(arg);
+		else if(s.equals("short"))
+			return Short.parseShort(arg);
+		else if(s.equals("long"))
+			return Long.parseLong(arg);
+
+		throw new RuntimeException("Invalid type: " + type);
+	}
+
 	/**
 	 * Uses {@link #quote(Object)} on everything grouped
 	 * @see {@link #group(Object...)}
