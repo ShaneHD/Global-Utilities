@@ -54,7 +54,10 @@ public class JsonAssetLoader extends AssetLoader {
                     Object load = load(type, a_info);
 
                     if(loaders.get(type).shouldAddToLoadedAssets())
-                        loaded.put(a_id, load(type, a_info));
+                        loaded.put(a_id, load);
+
+//                    if(loaders.get(type).shouldAddToLoadedAssets())
+//                        loaded.put(a_id, load(type, a_info));
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
