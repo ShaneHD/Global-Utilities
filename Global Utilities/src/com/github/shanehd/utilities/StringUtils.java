@@ -2,6 +2,7 @@ package com.github.shanehd.utilities;
 
 import com.github.shanehd.utilities.i.NewLineIterator;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +33,34 @@ public class StringUtils {
      */
 	public static String format(Throwable t) {
 		return t.getClass().getName() + " - " + t.getMessage();
+	}
+
+	/**
+	 * List a classes fields and values
+	 * class_name[field=value,other=value]
+	 */
+	public static String format(Object instance, boolean includeSuperClass) {
+		String data = "";
+		Class c = instance.getClass();
+		Field[] fields = !includeSuperClass ? c.getDeclaredFields() : ArrayUtils.join(c.getSuperclass().getDeclaredFields(), c.getDeclaredFields());
+
+		for(Field field : fields) {
+			try {
+				boolean accessible = field.isAccessible();
+
+				if(!accessible)
+					field.setAccessible(true);
+
+				data+= field.getName() + "=" + field.get(instance) + ",";
+
+				if(!accessible)
+					field.setAccessible(false);
+			} catch(IllegalAccessException e) {
+				return format(e);
+			}
+		}
+
+		return c.getSimpleName() + "[" + data.substring(0, data.lastIndexOf(",")) + "]";
 	}
 
 	/**
