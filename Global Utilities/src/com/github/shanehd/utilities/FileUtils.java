@@ -264,10 +264,17 @@ public class FileUtils {
 		
 		throw new RuntimeException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
 	}
-	
+
+	/**
+	 * @see #getFileContents(File)
+	 */
+	public static String getFileContents(String fileDir) {
+		return getFileContents(new File(fileDir));
+	}
+
 	/**
 	 * Get the contents of a file into a single {@link String}<br>
-	 * uses '\n' char for new lines
+	 * uses '\n' for new lines
 	 */
 	public static String getFileContents(File file) {
 		try {
@@ -275,7 +282,7 @@ public class FileUtils {
 			String contents = "";
 			
 			while(scanner.hasNextLine())
-				contents+= scanner.nextLine() + "\n";
+				contents+= scanner.nextLine() + '\n';
 			
 			scanner.close();
 			return contents.trim();
