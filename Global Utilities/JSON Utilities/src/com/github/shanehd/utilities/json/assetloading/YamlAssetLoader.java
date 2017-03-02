@@ -14,6 +14,7 @@ import java.util.HashMap;
  *         Created by Shane on 17/02/2017.
  */
 public class YamlAssetLoader extends AssetLoader {
+    @Override
     public HashMap<String, Object> load(File file) throws Exception {
         HashMap<String, Object> loaded = new HashMap<>();
         YamlReader yml = new YamlReader(new FileReader(file));

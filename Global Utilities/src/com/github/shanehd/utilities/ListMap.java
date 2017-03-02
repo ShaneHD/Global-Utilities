@@ -1,8 +1,8 @@
 package com.github.shanehd.utilities;
 
-        import java.util.ArrayList;
-        import java.util.LinkedHashMap;
-        import java.util.Map;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * TODO doc
@@ -50,6 +50,17 @@ public class ListMap<K, V> extends LinkedHashMap<K, ArrayList<V>> {
         return this;
     }
 
+    public ListMap<K, V> addAll(K key, ArrayList<V> values) {
+        if(containsKey(key)) {
+            get(key).addAll(values);
+        } else {
+            put(key, values);
+        }
+
+        return this;
+    }
+
+    //TODO optimise this
     public ArrayList<V> list(@SuppressWarnings("unchecked") K... keys) {
         ArrayList<V> values = new ArrayList<V>();
 

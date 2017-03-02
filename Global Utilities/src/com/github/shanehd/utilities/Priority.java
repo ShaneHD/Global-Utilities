@@ -1,4 +1,4 @@
-package com.github.shanehd.utilities.plugins;
+package com.github.shanehd.utilities;
 
 /**
  * @author https://www.github.com/ShaneHD

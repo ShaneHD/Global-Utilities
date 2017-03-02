@@ -1,5 +1,7 @@
 package com.github.shanehd.utilities.plugins;
 
+import com.github.shanehd.utilities.Priority;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

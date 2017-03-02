@@ -20,6 +20,7 @@ public class JsonAssetLoader extends AssetLoader {
         json = new JSONParser();
     }
 
+    @Override
     public HashMap<String, Object> load(File file) throws Exception {
         HashMap<String, Object> loaded = new HashMap<>();
         JSONObject root = (JSONObject) json.parse(FileUtils.getFileContents(file));
