@@ -7,7 +7,7 @@ import java.util.*
  */
 
 fun Scanner.input(vararg message: String) : String {
-	if(message.size != 0)
+	if(message.isNotEmpty())
 		println(message[0])
 	
 	return nextLine()

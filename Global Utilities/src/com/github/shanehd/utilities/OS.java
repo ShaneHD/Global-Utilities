@@ -19,7 +19,7 @@ public enum OS {
 	public final static OS[] ALL;
 	/** All known operating systems */
 	public final static OS[] ALL_KNOWN;
-	
+
 	static {
 		OS[] all = OS.class.getEnumConstants();
 		ALL = all;

@@ -15,7 +15,7 @@ public class Log {
 
     public static Logger get() {
         if(logger == null)
-            throw new NullPointerException("Global logger isn't set; use com.github.shanehd.utilities.Log.set");
+            throw new NullPointerException("Global logger isn't set; Use " + Log.class.getName() + ".set");
 
         return logger;
     }

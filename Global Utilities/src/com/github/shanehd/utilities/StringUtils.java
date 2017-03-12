@@ -38,29 +38,44 @@ public class StringUtils {
 	/**
 	 * List a classes fields and values
 	 * class_name[field=value,other=value]
+	 * @param includeSuperClass Should super classes fields be used as well?
+	 * @param fieldWhitelist Optional list of fields to only use, others will be skipped if set
 	 */
-	public static String format(Object instance, boolean includeSuperClass) {
+	public static String format(Object instance, boolean includeSuperClass, String... fieldWhitelist) {
 		String data = "";
 		Class c = instance.getClass();
-		Field[] fields = !includeSuperClass ? c.getDeclaredFields() : ArrayUtils.join(c.getSuperclass().getDeclaredFields(), c.getDeclaredFields());
 
-		for(Field field : fields) {
-			try {
-				boolean accessible = field.isAccessible();
+		try {
+			Field[] fields = !includeSuperClass ? c.getDeclaredFields() : ArrayUtils.join(c.getSuperclass().getDeclaredFields(), c.getDeclaredFields());
+			boolean whitelist = fieldWhitelist.length > 0;
 
-				if(!accessible)
-					field.setAccessible(true);
+			for(Field field : fields) {
+				try {
+					if(whitelist && !ArrayUtils.contains(fieldWhitelist, field.getName()))
+						continue;
 
-				data+= field.getName() + "=" + field.get(instance) + ",";
+					boolean accessible = field.isAccessible();
 
-				if(!accessible)
-					field.setAccessible(false);
-			} catch(IllegalAccessException e) {
-				return format(e);
+					if(!accessible)
+						field.setAccessible(true);
+
+					data+= field.getName() + "=" + field.get(instance) + ",";
+
+					if(!accessible)
+						field.setAccessible(false);
+				} catch(IllegalAccessException e) {
+					return format(e);
+				}
 			}
+		} catch(ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
 		}
 
-		return c.getSimpleName() + "[" + data.substring(0, data.lastIndexOf(",")) + "]";
+		try {
+			return c.getSimpleName() + "[" + data.substring(0, data.lastIndexOf(",")) + "]";
+		} catch(StringIndexOutOfBoundsException e) {
+			return c.getSimpleName();
+		}
 	}
 
 	/**
