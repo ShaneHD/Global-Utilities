@@ -23,7 +23,6 @@ public class ExpectedArgs {
                 this.args.put(id, StringUtils.cast(provided, type));
             }
         } catch(Exception e) {
-            e.printStackTrace();
             throw new MissingArgumentException(e, expected);
         }
     }
