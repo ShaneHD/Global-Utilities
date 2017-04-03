@@ -126,6 +126,9 @@ public class StringUtils {
 	 * @throws RuntimeException If using non implemented type
      */
 	public static Object cast(String arg, Class type) {
+		if(type.isEnum())
+			return Enum.valueOf(type, arg);
+
 		String s = type.getSimpleName().toLowerCase();
 
 		if (s.equals("string"))
