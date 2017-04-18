@@ -11,26 +11,26 @@ import java.util.Map;
 public class StringUtils {
 	/** The alphabet in {@link String} form */
 	public final static String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	
+
 	/**
 	 * Split a {@link String} by its {@link String#length()}
 	 */
 	public static ArrayList<String> splitByLength(String string, int maxLength) {
 		ArrayList<String> split = new ArrayList<String>();
-		
+
 		if(string.length() <= maxLength)
 			split.add(string);
 		else {
-			for(int i = 0; i <= string.length(); i+= maxLength) 
+			for(int i = 0; i <= string.length(); i+= maxLength)
 				split.add(string.substring(i, Math.min(i + maxLength, string.length())));
 		}
-		
+
 		return split;
 	}
 
 	/**
 	 * Formats a {@link Throwable} like so; <code>class_name - message</code>
-     */
+	 */
 	public static String format(Throwable t) {
 		return t.getClass().getName() + " - " + t.getMessage();
 	}
@@ -84,7 +84,7 @@ public class StringUtils {
 	public static String quote(Object obj) {
 		return "\"" + obj + "\"";
 	}
-	
+
 	/**
 	 * Replace the last occurrence of something in a {@link String}
 	 */
@@ -94,7 +94,7 @@ public class StringUtils {
 		builder.replace(lastIndex, lastIndex + 1, to);
 		return builder.toString();
 	}
-	
+
 	/**
 	 * Group multiple things into a single {@link String}<br>
 	 * Useful for writing quick debug messages
@@ -124,7 +124,7 @@ public class StringUtils {
 	/**
 	 * Cast a string to other formats<br>
 	 * @throws RuntimeException If using non implemented type
-     */
+	 */
 	public static Object cast(String arg, Class type) {
 		if(type.isEnum())
 			return Enum.valueOf(type, arg);
@@ -150,6 +150,12 @@ public class StringUtils {
 		else if(s.equals("long"))
 			return Long.parseLong(arg);
 
+		try {
+			return type.getConstructor(String.class).newInstance(arg);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+
 		throw new RuntimeException("Invalid type: " + type);
 	}
 
@@ -159,17 +165,17 @@ public class StringUtils {
 	 */
 	public static String groupAndQuote(Object... objs) {
 		String grouped = "";
-		
+
 		for(int i = 0; i < objs.length; i++) {
 			grouped+= quote(objs[i]);
-			
+
 			if(i != objs.length - 1)
 				grouped+= " ";
 		}
-		
+
 		return grouped;
 	}
-	
+
 	/**
 	 * Clean HTML tags from a {@link String}<br>
 	 * Only replaces < and > for now<br>
@@ -178,7 +184,7 @@ public class StringUtils {
 	public static String cleanHTML(String s) {
 		return s.replaceAll("<", "[").replaceAll(">", "]");
 	}
-	
+
 	/**
 	 * For {@link HashMap}s<br>
 	 * Uses {@link FileUtils#separator} to seperate keys and values
@@ -186,21 +192,21 @@ public class StringUtils {
 	 */
 	public static String group(HashMap<?, ?> hashmap) {
 		String grouped = "";
-		
+
 		for(Map.Entry<?, ?> entry : hashmap.entrySet())
 			grouped+= entry.getKey() + FileUtils.separator + entry.getValue() + '\n';
-		
+
 		grouped = replaceLast(grouped, "\n", "");
 		return grouped;
 	}
-	
+
 	/**
 	 * Iterate over all lines (\n)
 	 */
 	public static void iterateLines(String string, NewLineIterator iterator) {
 		FileUtils.iterateLines(string, iterator);
 	}
-	
+
 	public static String format_FirstLetterUpper(String string) {
 		char first = string.charAt(0);
 		string = Character.toUpperCase(first) + string.substring(1);
