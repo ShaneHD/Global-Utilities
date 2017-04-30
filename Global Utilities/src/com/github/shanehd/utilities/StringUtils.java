@@ -126,8 +126,16 @@ public class StringUtils {
 	 * @throws RuntimeException If using non implemented type
 	 */
 	public static Object cast(String arg, Class type) {
-		if(type.isEnum())
-			return Enum.valueOf(type, arg);
+		if(arg == null || type == null)
+			return null;
+
+		try {
+			if(type.isEnum())
+				return Enum.valueOf(type, arg);
+		} catch(IllegalArgumentException e) {
+			e.printStackTrace();
+			return null;
+		}
 
 		String s = type.getSimpleName().toLowerCase();
 
