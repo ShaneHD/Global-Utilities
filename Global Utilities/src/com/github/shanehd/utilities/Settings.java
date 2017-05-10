@@ -2,8 +2,8 @@ package com.github.shanehd.utilities;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,7 +32,7 @@ public class Settings<V> extends HashMap<String, V> {
 			return false;
 		
 		
-		ArrayList<String> lines = FileUtils.getFileLines(file);
+		List<String> lines = FileUtils.getFileLines(file);
 		
 		for(String line : lines) {
 			try {
@@ -60,31 +60,31 @@ public class Settings<V> extends HashMap<String, V> {
 	protected Object loadValue(String s, String type) {
 		if(type.contains("String"))
 			return s;
-		
+
 		if(type.contains("Integer"))
 			return Integer.parseInt(s);
-		
+
 		if(type.contains("Float"))
 			return Float.parseFloat(s);
-		
+
 		if(type.contains("Boolean"))
 			return Boolean.parseBoolean(s);
-		
+
 		if(type.contains("Double"))
 			return Double.parseDouble(s);
-		
+
 		if(type.contains("Character"))
 			return s.charAt(0);
-		
+
 		if(type.contains("Byte"))
 			return Byte.parseByte(s);
-		
+
 		if(type.contains("Short"))
 			return Short.parseShort(s);
-		
+
 		if(type.contains("Long"))
 			return Long.parseLong(s);
-		
+
 		return null;
 	}
 		

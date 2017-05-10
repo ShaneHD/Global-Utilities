@@ -63,7 +63,7 @@ fun File.toHashMap() : HashMap<String, String> {
 /**
  * Bundle all of a file's lines into a {@link ArrayList}
  */
-fun File.getLines() : ArrayList<String> {
+fun File.getLines() : List<String> {
 	return FileUtils.getFileLines(this)
 }
 

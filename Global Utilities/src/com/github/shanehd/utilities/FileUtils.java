@@ -2,21 +2,11 @@ package com.github.shanehd.utilities;
 
 import com.github.shanehd.utilities.i.NewLineIterator;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Scanner;
+import java.util.*;
 
 
 /**
@@ -33,6 +23,19 @@ public class FileUtils {
 	public static final String[] VIDEO_FORMATS = {
 			"avi", "mp4", "mkv", "flv", "mov", "mpg", "m4v", "m2ts"
 	};
+
+	private final static boolean USE_APACHE_COMMONS_IO;
+
+	static {
+		boolean commonsIo = false;
+
+		try {
+			FileUtils.class.getClassLoader().loadClass("org.apache.commons.io.IOUtils");
+			commonsIo = true;
+		} catch(ClassNotFoundException e) {}
+
+		USE_APACHE_COMMONS_IO = commonsIo;
+	}
 
 	/**
 	 * @return A list of all the file extensions found inside a directory<br/>
@@ -245,23 +248,32 @@ public class FileUtils {
 	}
 	
 	/**
-	 * Bundle all of a file's lines into a {@link ArrayList}
+	 * Bundle all of a file's lines into a {@link List}
 	 */
-	public static ArrayList<String> getFileLines(File file) {
+	public static List<String> getFileLines(File file) {
+		if(USE_APACHE_COMMONS_IO) {
+			try {
+				return org.apache.commons.io.IOUtils.readLines(new FileReader(file));
+			} catch(IOException e) {
+				//TODO throw this
+				e.printStackTrace();
+			}
+		}
+
 		ArrayList<String> lines = new ArrayList<String>();
-		
+
 		try {
 			Scanner scanner = new Scanner(file);
-			
+
 			while(scanner.hasNextLine())
 				lines.add(scanner.nextLine());
-			
+
 			scanner.close();
 			return lines;
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		throw new RuntimeException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
 	}
 
@@ -273,46 +285,46 @@ public class FileUtils {
 	}
 
 	/**
-	 * Get the contents of a file into a single {@link String}<br>
-	 * uses '\n' for new lines
+	 * Get the contents of a file into a single {@link String}
 	 */
 	public static String getFileContents(File file) {
+		return getFileContents(file, "UTF-8");
+	}
+
+	private static String getFileContents(File file, String encoding) {
+		if(USE_APACHE_COMMONS_IO) {
+			try {
+				return org.apache.commons.io.FileUtils.readFileToString(file, encoding);
+			} catch(IOException e) {
+				//TODO throw this
+				e.printStackTrace();
+			}
+		}
+
+		BufferedReader br;
 		try {
-			Scanner scanner = new Scanner(file);
-			String contents = "";
-			
-			while(scanner.hasNextLine())
-				contents+= scanner.nextLine() + '\n';
-			
-			scanner.close();
-			return contents.trim();
-		} catch(FileNotFoundException e) {
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(file), encoding));
+			String in, lines = "";
+
+			while((in = br.readLine()) != null)
+				lines+= in + "\n";
+
+			br.close();
+			return lines;
+		} catch(Exception e) {
+			//TODO throw this
 			e.printStackTrace();
 		}
-		
+
 		throw new RuntimeException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
 	}
-	
+
 	/**
 	 * Uses UTF-16 encoding
 	 * @see #getFileContents(File)
 	 */
 	public static String getFileContentsUTF16(File file) throws FileNotFoundException {
-		BufferedReader br;
-		try {
-			br = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-16"));
-			String in, lines = "";
-			
-			while((in = br.readLine()) != null)
-				lines+= in + "\n";
-			
-			br.close();
-			return lines;
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		
-		throw new FileNotFoundException("Couldn't find contents of file " + StringUtils.quote(file.getName()));
+		return getFileContents("UTF-16");
 	}
 	
 	/**
@@ -338,9 +350,13 @@ public class FileUtils {
 		write = write.trim();
 		
 		try {
-			FileWriter writer = new FileWriter(file, append.length > 0 ? append[0] : false);
-			writer.write(write);
-			writer.close();
+			if(USE_APACHE_COMMONS_IO) {
+				org.apache.commons.io.FileUtils.writeStringToFile(file, write, append.length > 0 && append[0]);
+			} else {
+				FileWriter writer = new FileWriter(file, append.length > 0 && append[0]);
+				writer.write(write);
+				writer.close();
+			}
 		} catch(Exception e) {
 			e.printStackTrace();
 			return false;
