@@ -98,11 +98,6 @@ public class StringUtils {
 	/**
 	 * Group multiple things into a single {@link String}<br>
 	 * Useful for writing quick debug messages
-	 * Example usage:<pre>
-	 * int x = 3;
-	 * String s = "This is my";
-	 * String otherString = "amazing message, and this is the value of x:";
-	 * String complete = group(s, otherString, x);</pre>
 	 */
 	public static String group(Object... objs) {
 		return group(" ", objs);

@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 /**
  * Convenient way of storing a {@link java.util.logging.Logger} that can be accessed statically
  *
+ * TODO delet this
+ *
  * @author https://www.github.com/ShaneHD
  *         Created by Shane on 27/11/2016.
  */

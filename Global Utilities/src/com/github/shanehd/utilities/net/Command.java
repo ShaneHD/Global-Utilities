@@ -1,6 +1,8 @@
 package com.github.shanehd.utilities.net;
 
 /**
+ *
+ * TODO switch to annotation based commands
  * @author https://www.github.com/ShaneHD
  */
 public interface Command<T extends NetworkHelper> {
