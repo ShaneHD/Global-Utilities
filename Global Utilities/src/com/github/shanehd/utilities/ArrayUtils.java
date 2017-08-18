@@ -1,9 +1,8 @@
-
-	/*
-	 ################################################################
-	################ Auto generated code #############################
-	 ################################################################
-	*/
+/*
+ ################################################################
+################ Auto generated code #############################
+ ################################################################
+*/
 
 package com.github.shanehd.utilities;
 
@@ -11,17 +10,17 @@ import java.util.ArrayList;
 import java.lang.reflect.Array;
 import java.util.List;
 
-	/** @author https://www.github.com/ShaneHD */
+/** @author https://www.github.com/ShaneHD */
 public class ArrayUtils {
 	/**
 	 * Converts a int array to its object equivalent ({@link Integer})[]
 	 */
 	public static Integer[] primToObj(int[] array) {
 		Integer[] clone = new Integer[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -29,10 +28,10 @@ public class ArrayUtils {
 	 */
 	public static Float[] primToObj(float[] array) {
 		Float[] clone = new Float[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -40,10 +39,10 @@ public class ArrayUtils {
 	 */
 	public static Boolean[] primToObj(boolean[] array) {
 		Boolean[] clone = new Boolean[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -51,10 +50,10 @@ public class ArrayUtils {
 	 */
 	public static Double[] primToObj(double[] array) {
 		Double[] clone = new Double[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -62,10 +61,10 @@ public class ArrayUtils {
 	 */
 	public static Character[] primToObj(char[] array) {
 		Character[] clone = new Character[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -73,10 +72,10 @@ public class ArrayUtils {
 	 */
 	public static Byte[] primToObj(byte[] array) {
 		Byte[] clone = new Byte[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -84,10 +83,10 @@ public class ArrayUtils {
 	 */
 	public static Short[] primToObj(short[] array) {
 		Short[] clone = new Short[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -95,10 +94,10 @@ public class ArrayUtils {
 	 */
 	public static Long[] primToObj(long[] array) {
 		Long[] clone = new Long[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -106,10 +105,10 @@ public class ArrayUtils {
 	 */
 	public static int[] objToPrim(Integer[] array) {
 		int[] clone = new int[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -117,10 +116,10 @@ public class ArrayUtils {
 	 */
 	public static float[] objToPrim(Float[] array) {
 		float[] clone = new float[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -128,10 +127,10 @@ public class ArrayUtils {
 	 */
 	public static boolean[] objToPrim(Boolean[] array) {
 		boolean[] clone = new boolean[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -139,10 +138,10 @@ public class ArrayUtils {
 	 */
 	public static double[] objToPrim(Double[] array) {
 		double[] clone = new double[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -150,10 +149,10 @@ public class ArrayUtils {
 	 */
 	public static char[] objToPrim(Character[] array) {
 		char[] clone = new char[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -161,10 +160,10 @@ public class ArrayUtils {
 	 */
 	public static byte[] objToPrim(Byte[] array) {
 		byte[] clone = new byte[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -172,10 +171,10 @@ public class ArrayUtils {
 	 */
 	public static short[] objToPrim(Short[] array) {
 		short[] clone = new short[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -183,10 +182,10 @@ public class ArrayUtils {
 	 */
 	public static long[] objToPrim(Long[] array) {
 		long[] clone = new long[array.length];
-	
+
 		for(int i = 0; i < array.length; i++)
 			clone[i] = array[i];
-	
+
 		return clone;
 	}
 	/**
@@ -197,7 +196,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -208,7 +207,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -219,7 +218,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -230,7 +229,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -241,7 +240,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -252,7 +251,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -263,7 +262,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -274,7 +273,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -285,7 +284,7 @@ public class ArrayUtils {
 			if(cur.equals(find))
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -296,7 +295,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -307,7 +306,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -318,7 +317,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -329,7 +328,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -340,7 +339,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -351,7 +350,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -362,7 +361,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -373,7 +372,7 @@ public class ArrayUtils {
 			if(cur == find)
 				return true;
 		}
-	
+
 		return false;
 	}
 	/**
@@ -382,7 +381,7 @@ public class ArrayUtils {
 	public static void set(Integer[] from, Integer[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -392,7 +391,7 @@ public class ArrayUtils {
 	public static void set(Float[] from, Float[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -402,7 +401,7 @@ public class ArrayUtils {
 	public static void set(Boolean[] from, Boolean[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -412,7 +411,7 @@ public class ArrayUtils {
 	public static void set(Double[] from, Double[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -422,7 +421,7 @@ public class ArrayUtils {
 	public static void set(Character[] from, Character[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -432,7 +431,7 @@ public class ArrayUtils {
 	public static void set(Byte[] from, Byte[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -442,7 +441,7 @@ public class ArrayUtils {
 	public static void set(Short[] from, Short[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -452,7 +451,7 @@ public class ArrayUtils {
 	public static void set(Long[] from, Long[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -462,7 +461,7 @@ public class ArrayUtils {
 	public static void set(Object[] from, Object[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -472,7 +471,7 @@ public class ArrayUtils {
 	public static void set(int[] from, int[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -482,7 +481,7 @@ public class ArrayUtils {
 	public static void set(float[] from, float[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -492,7 +491,7 @@ public class ArrayUtils {
 	public static void set(boolean[] from, boolean[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -502,7 +501,7 @@ public class ArrayUtils {
 	public static void set(double[] from, double[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -512,7 +511,7 @@ public class ArrayUtils {
 	public static void set(char[] from, char[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -522,7 +521,7 @@ public class ArrayUtils {
 	public static void set(byte[] from, byte[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -532,7 +531,7 @@ public class ArrayUtils {
 	public static void set(short[] from, short[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -542,7 +541,7 @@ public class ArrayUtils {
 	public static void set(long[] from, long[] to) {
 		if(from.length != to.length)
 			throw new RuntimeException("Can't set array -> to, because sizes aren't the same");
-	
+
 		for(int i = 0; i < from.length; i++)
 			from[i] = to[i];
 	}
@@ -673,7 +672,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -684,7 +683,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -695,7 +694,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -706,7 +705,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -717,7 +716,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -728,7 +727,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -739,7 +738,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -750,7 +749,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -761,7 +760,7 @@ public class ArrayUtils {
 			if(!cur.equals(value))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -772,7 +771,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -783,7 +782,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -794,7 +793,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -805,7 +804,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -816,7 +815,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -827,7 +826,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -838,7 +837,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -849,7 +848,7 @@ public class ArrayUtils {
 			if(cur != value)
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -857,14 +856,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Integer[] array) {
 		ArrayList<Integer> contents = new ArrayList<Integer>();
-	
+
 		for(Integer cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -872,14 +871,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Float[] array) {
 		ArrayList<Float> contents = new ArrayList<Float>();
-	
+
 		for(Float cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -887,14 +886,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Boolean[] array) {
 		ArrayList<Boolean> contents = new ArrayList<Boolean>();
-	
+
 		for(Boolean cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -902,14 +901,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Double[] array) {
 		ArrayList<Double> contents = new ArrayList<Double>();
-	
+
 		for(Double cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -917,14 +916,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Character[] array) {
 		ArrayList<Character> contents = new ArrayList<Character>();
-	
+
 		for(Character cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -932,14 +931,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Byte[] array) {
 		ArrayList<Byte> contents = new ArrayList<Byte>();
-	
+
 		for(Byte cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -947,14 +946,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Short[] array) {
 		ArrayList<Short> contents = new ArrayList<Short>();
-	
+
 		for(Short cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -962,14 +961,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Long[] array) {
 		ArrayList<Long> contents = new ArrayList<Long>();
-	
+
 		for(Long cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -977,14 +976,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(Object[] array) {
 		ArrayList<Object> contents = new ArrayList<Object>();
-	
+
 		for(Object cur : array) {
 			if(contents.contains(cur))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -992,14 +991,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(int[] array) {
 		ArrayList<Integer> contents = new ArrayList<Integer>();
-	
+
 		for(int cur : array) {
 			if(contents.contains(Integer.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1007,14 +1006,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(float[] array) {
 		ArrayList<Float> contents = new ArrayList<Float>();
-	
+
 		for(float cur : array) {
 			if(contents.contains(Float.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1022,14 +1021,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(boolean[] array) {
 		ArrayList<Boolean> contents = new ArrayList<Boolean>();
-	
+
 		for(boolean cur : array) {
 			if(contents.contains(Boolean.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1037,14 +1036,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(double[] array) {
 		ArrayList<Double> contents = new ArrayList<Double>();
-	
+
 		for(double cur : array) {
 			if(contents.contains(Double.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1052,14 +1051,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(char[] array) {
 		ArrayList<Character> contents = new ArrayList<Character>();
-	
+
 		for(char cur : array) {
 			if(contents.contains(Character.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1067,14 +1066,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(byte[] array) {
 		ArrayList<Byte> contents = new ArrayList<Byte>();
-	
+
 		for(byte cur : array) {
 			if(contents.contains(Byte.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1082,14 +1081,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(short[] array) {
 		ArrayList<Short> contents = new ArrayList<Short>();
-	
+
 		for(short cur : array) {
 			if(contents.contains(Short.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1097,14 +1096,14 @@ public class ArrayUtils {
 	 */
 	public static boolean isExclusivelyPopulated(long[] array) {
 		ArrayList<Long> contents = new ArrayList<Long>();
-	
+
 		for(long cur : array) {
 			if(contents.contains(Long.valueOf(cur)))
 				return false;
-	
+
 			contents.add(cur);
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1113,7 +1112,7 @@ public class ArrayUtils {
 	public static boolean equals(Integer[] array1, Integer[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1121,7 +1120,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1130,7 +1129,7 @@ public class ArrayUtils {
 	public static boolean equals(Float[] array1, Float[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1138,7 +1137,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1147,7 +1146,7 @@ public class ArrayUtils {
 	public static boolean equals(Boolean[] array1, Boolean[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1155,7 +1154,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1164,7 +1163,7 @@ public class ArrayUtils {
 	public static boolean equals(Double[] array1, Double[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1172,7 +1171,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1181,7 +1180,7 @@ public class ArrayUtils {
 	public static boolean equals(Character[] array1, Character[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1189,7 +1188,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1198,7 +1197,7 @@ public class ArrayUtils {
 	public static boolean equals(Byte[] array1, Byte[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1206,7 +1205,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1215,7 +1214,7 @@ public class ArrayUtils {
 	public static boolean equals(Short[] array1, Short[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1223,7 +1222,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1232,7 +1231,7 @@ public class ArrayUtils {
 	public static boolean equals(Long[] array1, Long[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1240,7 +1239,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1249,7 +1248,7 @@ public class ArrayUtils {
 	public static boolean equals(Object[] array1, Object[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] == null || array2[i] == null) {
 				if(array1[i] != array2[i])
@@ -1257,7 +1256,7 @@ public class ArrayUtils {
 			} else if(!array1[i].equals(array2[i]))
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1266,12 +1265,12 @@ public class ArrayUtils {
 	public static boolean equals(int[] array1, int[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1280,12 +1279,12 @@ public class ArrayUtils {
 	public static boolean equals(float[] array1, float[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1294,12 +1293,12 @@ public class ArrayUtils {
 	public static boolean equals(boolean[] array1, boolean[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1308,12 +1307,12 @@ public class ArrayUtils {
 	public static boolean equals(double[] array1, double[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1322,12 +1321,12 @@ public class ArrayUtils {
 	public static boolean equals(char[] array1, char[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1336,12 +1335,12 @@ public class ArrayUtils {
 	public static boolean equals(byte[] array1, byte[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1350,12 +1349,12 @@ public class ArrayUtils {
 	public static boolean equals(short[] array1, short[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1364,12 +1363,12 @@ public class ArrayUtils {
 	public static boolean equals(long[] array1, long[] array2) {
 		if(array1.length != array2.length)
 			return false;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			if(array1[i] != array2[i])
 				return false;
 		}
-	
+
 		return true;
 	}
 	/**
@@ -1377,17 +1376,17 @@ public class ArrayUtils {
 	 */
 	public static Integer[] join(Integer[] array1, Integer[] array2) {
 		Integer[] joined = new Integer[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1395,17 +1394,17 @@ public class ArrayUtils {
 	 */
 	public static Float[] join(Float[] array1, Float[] array2) {
 		Float[] joined = new Float[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1413,17 +1412,17 @@ public class ArrayUtils {
 	 */
 	public static Boolean[] join(Boolean[] array1, Boolean[] array2) {
 		Boolean[] joined = new Boolean[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1431,17 +1430,17 @@ public class ArrayUtils {
 	 */
 	public static Double[] join(Double[] array1, Double[] array2) {
 		Double[] joined = new Double[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1449,17 +1448,17 @@ public class ArrayUtils {
 	 */
 	public static Character[] join(Character[] array1, Character[] array2) {
 		Character[] joined = new Character[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1467,17 +1466,17 @@ public class ArrayUtils {
 	 */
 	public static Byte[] join(Byte[] array1, Byte[] array2) {
 		Byte[] joined = new Byte[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1485,17 +1484,17 @@ public class ArrayUtils {
 	 */
 	public static Short[] join(Short[] array1, Short[] array2) {
 		Short[] joined = new Short[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1503,36 +1502,35 @@ public class ArrayUtils {
 	 */
 	public static Long[] join(Long[] array1, Long[] array2) {
 		Long[] joined = new Long[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
 	 * Join two arrays into one array
 	 */
-	@SuppressWarnings("unchecked")
 	public static <T> T[] join(T[] array1, T[] array2) {
 		T[] joined = (T[]) Array.newInstance(array1.getClass().getComponentType(), array1.length + array2.length);
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1540,17 +1538,17 @@ public class ArrayUtils {
 	 */
 	public static int[] join(int[] array1, int[] array2) {
 		int[] joined = new int[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1558,17 +1556,17 @@ public class ArrayUtils {
 	 */
 	public static float[] join(float[] array1, float[] array2) {
 		float[] joined = new float[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1576,17 +1574,17 @@ public class ArrayUtils {
 	 */
 	public static boolean[] join(boolean[] array1, boolean[] array2) {
 		boolean[] joined = new boolean[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1594,17 +1592,17 @@ public class ArrayUtils {
 	 */
 	public static double[] join(double[] array1, double[] array2) {
 		double[] joined = new double[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1612,17 +1610,17 @@ public class ArrayUtils {
 	 */
 	public static char[] join(char[] array1, char[] array2) {
 		char[] joined = new char[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1630,17 +1628,17 @@ public class ArrayUtils {
 	 */
 	public static byte[] join(byte[] array1, byte[] array2) {
 		byte[] joined = new byte[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1648,17 +1646,17 @@ public class ArrayUtils {
 	 */
 	public static short[] join(short[] array1, short[] array2) {
 		short[] joined = new short[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
 	/**
@@ -1666,20 +1664,274 @@ public class ArrayUtils {
 	 */
 	public static long[] join(long[] array1, long[] array2) {
 		long[] joined = new long[array1.length + array2.length];
-	
+
 		int last = 0;
-	
+
 		for(int i = 0; i < array1.length; i++) {
 			joined[i] = array1[i];
 			last = i;
 		}
-	
+
 		for(int i = 0; i < array2.length; i++)
 			joined[++last] = array2[i];
-	
+
 		return joined;
 	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Integer[] shift(int count, Integer[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
 
+		Integer[] clone = new Integer[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Float[] shift(int count, Float[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		Float[] clone = new Float[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Boolean[] shift(int count, Boolean[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		Boolean[] clone = new Boolean[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Double[] shift(int count, Double[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		Double[] clone = new Double[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Character[] shift(int count, Character[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		Character[] clone = new Character[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Byte[] shift(int count, Byte[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		Byte[] clone = new Byte[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Short[] shift(int count, Short[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		Short[] clone = new Short[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static Long[] shift(int count, Long[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		Long[] clone = new Long[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static <T> T[] shift(int count, T[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		T[] clone = (T[]) Array.newInstance(array.getClass().getComponentType(), array.length - count);
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static int[] shift(int count, int[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		int[] clone = new int[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static float[] shift(int count, float[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		float[] clone = new float[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static boolean[] shift(int count, boolean[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		boolean[] clone = new boolean[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static double[] shift(int count, double[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		double[] clone = new double[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static char[] shift(int count, char[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		char[] clone = new char[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static byte[] shift(int count, byte[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		byte[] clone = new byte[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static short[] shift(int count, short[] array) {
+		if(count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		short[] clone = new short[array.length - count];
+
+		for(int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
+	/**
+	 * Shifts the array left, removing items
+	 */
+	public static long[] shift(int count, long[] array) {
+		if (count < 1 || count > array.length)
+			throw new RuntimeException("Value cannot be above the array's size.");
+
+		long[] clone = new long[array.length - count];
+
+		for (int i = count; i < array.length; i++) {
+			clone[i - count] = array[i];
+		}
+
+		return clone;
+	}
 }
 	/*
 	 ################################################################
